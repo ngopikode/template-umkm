@@ -23,10 +23,11 @@ const server = http.createServer((req, res) => {
 
     // Clean up request URL path
     let filePath = req.url === '/' ? '/index.html' : req.url;
-    filePath = path.join(__dirname, filePath);
+    const publicPath = path.join(__dirname, 'public');
+    filePath = path.join(publicPath, filePath);
 
     // Safeguard against directory traversal attacks
-    if (!filePath.startsWith(__dirname)) {
+    if (!filePath.startsWith(publicPath)) {
         res.statusCode = 403;
         res.setHeader('Content-Type', 'text/plain');
         res.end('Access Denied');
@@ -82,7 +83,7 @@ function serveFile(filePath, contentType, res) {
 }
 
 function serve404(res) {
-    const errorPagePath = path.join(__dirname, '404.html');
+    const errorPagePath = path.join(__dirname, 'public', '404.html');
     fs.readFile(errorPagePath, (err, data) => {
         res.statusCode = 404;
         res.setHeader('Content-Type', 'text/html');

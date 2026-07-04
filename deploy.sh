@@ -4,30 +4,27 @@
 set -e
 
 # Target paths
-TARGET_DIR="/var/www/template-umkm"
-NGINX_CONF_NAME="template-umkm.conf"
+TARGET_DIR="/var/www/templates-ngopikode"
+NGINX_CONF_NAME="templates.conf"
 NGINX_AVAILABLE="/etc/nginx/sites-available/$NGINX_CONF_NAME"
 NGINX_ENABLED="/etc/nginx/sites-enabled/$NGINX_CONF_NAME"
 
-echo "=== Starting Deployment for template-umkm.ngopikode.space ==="
+echo "=== Starting Deployment for templates.ngopikode.space ==="
 
-# 1. Sync static files
-read -p "Deploy static web assets to $TARGET_DIR? (y/n): " confirm_assets
+# 1. Sync static public files
+read -p "Deploy public directory to $TARGET_DIR? (y/n): " confirm_assets
 if [[ "$confirm_assets" =~ ^[Yy]$ ]]; then
     echo "Creating target directory..."
     sudo mkdir -p "$TARGET_DIR"
     
-    echo "Copying files to $TARGET_DIR..."
-    # Copy portal pages
-    sudo cp index.html portal-style.css 404.html "$TARGET_DIR/"
-    
-    # Copy templates folder structure recursively
-    sudo cp -r templates "$TARGET_DIR/"
+    echo "Copying public directory to $TARGET_DIR..."
+    # Copy public subfolder recursively
+    sudo cp -r public "$TARGET_DIR/"
     
     # Ensure correct permissions
     sudo chown -R www-data:www-data "$TARGET_DIR"
     sudo chmod -R 755 "$TARGET_DIR"
-    echo "✔ Static assets successfully deployed."
+    echo "✔ Public static assets successfully deployed."
 else
     echo "Skipped static assets deployment."
 fi
