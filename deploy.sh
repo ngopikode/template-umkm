@@ -3,43 +3,32 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
-# Target paths
-TARGET_DIR="/var/www/templates-ngopikode"
+# Get current working directory path
+PUBLIC_DIR="$(pwd)/public"
+
 NGINX_CONF_NAME="templates.ngopikode.space.conf"
 NGINX_AVAILABLE="/etc/nginx/sites-available/$NGINX_CONF_NAME"
 NGINX_ENABLED="/etc/nginx/sites-enabled/$NGINX_CONF_NAME"
 
 echo "=== Starting Deployment for templates.ngopikode.space ==="
+echo "Target Nginx root path: $PUBLIC_DIR"
 
-# 1. Sync static public files
-read -p "Deploy public directory to $TARGET_DIR? (y/n): " confirm_assets
-if [[ "$confirm_assets" =~ ^[Yy]$ ]]; then
-    echo "Creating target directory..."
-    sudo mkdir -p "$TARGET_DIR"
-    
-    echo "Copying public directory to $TARGET_DIR..."
-    # Copy public subfolder recursively
-    sudo cp -r public "$TARGET_DIR/"
-    
-    # Ensure correct permissions
-    sudo chown -R www-data:www-data "$TARGET_DIR"
-    sudo chmod -R 755 "$TARGET_DIR"
-    echo "✔ Public static assets successfully deployed."
-else
-    echo "Skipped static assets deployment."
-fi
-
-# 2. Copy Nginx Config
-read -p "Copy Nginx configuration to sites-available? (y/n): " confirm_conf
+# 1. Update and Copy Nginx Config
+read -p "Configure and copy Nginx server block to sites-available? (y/n): " confirm_conf
 if [[ "$confirm_conf" =~ ^[Yy]$ ]]; then
-    echo "Copying Nginx configuration file..."
-    sudo cp "$NGINX_CONF_NAME" "$NGINX_AVAILABLE"
-    echo "✔ Nginx configuration copied to $NGINX_AVAILABLE"
+    echo "Generating temporary Nginx configuration with current path..."
+    # Replace root directive with the local public folder path
+    sed "s|root .*;|root $PUBLIC_DIR;|g" "$NGINX_CONF_NAME" > temp_nginx.conf
+    
+    echo "Copying configuration to $NGINX_AVAILABLE..."
+    sudo cp temp_nginx.conf "$NGINX_AVAILABLE"
+    rm temp_nginx.conf
+    echo "✔ Nginx configuration successfully copied."
 else
     echo "Skipped Nginx configuration copy."
 fi
 
-# 3. Create Nginx Symlink
+# 2. Create Nginx Symlink
 read -p "Enable site by creating symlink in sites-enabled? (y/n): " confirm_symlink
 if [[ "$confirm_symlink" =~ ^[Yy]$ ]]; then
     echo "Creating symlink..."
@@ -49,17 +38,17 @@ else
     echo "Skipped symlink creation."
 fi
 
-# 4. Test and reload Nginx
+# 3. Test and reload Nginx
 echo "Testing Nginx configuration syntax..."
 sudo nginx -t
 
-read -p "Reload Nginx to apply new configurations? (y/n): " confirm_reload
+read -p "Reload Nginx to apply changes? (y/n): " confirm_reload
 if [[ "$confirm_reload" =~ ^[Yy]$ ]]; then
     echo "Reloading Nginx service..."
     sudo systemctl reload nginx
     echo "✔ Nginx successfully reloaded!"
 else
-    echo "Skipped Nginx reload. Please reload Nginx manually using: sudo systemctl reload nginx"
+    echo "Skipped Nginx reload. Please reload manually: sudo systemctl reload nginx"
 fi
 
 echo "=== Deployment script completed. ==="
