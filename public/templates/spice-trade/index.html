@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orient Spices Trading | Premium Spices & Agricultural Export</title>
+    <meta name="description" content="Orient Spices Trading is an international exporter of premium quality cardamoms, cloves, black pepper, and agricultural spice lots.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Karla"', 'sans-serif'],
+                        heading: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        spicewarm: '#FDF8F5',
+                        terracotta: '#C2410C',
+                        nutmeg: '#431407',
+                        gingerGold: '#CA8A04',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-spicewarm text-nutmeg font-sans min-h-screen relative overflow-x-hidden selection:bg-terracotta selection:text-white">
+
+    <!-- Top Info Bar (Liyosa Style) -->
+    <div class="bg-[#290d05] text-[#fed7aa] text-[10px] font-bold uppercase tracking-widest py-3 px-6 hidden md:block border-b border-[#C2410C]/10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-gingerGold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    export@orientspices.com
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-gingerGold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    +91 484 2224567
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-gingerGold">
+                <span>SPICES BOARD OF INDIA REGISTERED</span>
+                <span>•</span>
+                <span>HACCP COMPLIANT EXPORTS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="border-b border-[#C2410C]/10 sticky top-0 bg-spicewarm/95 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-6 h-24 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col select-none">
+                <span class="font-heading font-black text-2xl text-terracotta tracking-tight leading-none">ORIENT SPICES</span>
+                <span class="text-[9px] text-[#CA8A04] font-bold uppercase tracking-[0.25em] mt-1.5">Premium Exporters</span>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-bold text-xs uppercase tracking-wider text-nutmeg/85">
+                <a href="#about" class="hover:text-terracotta transition py-2">About Us</a>
+                <a href="#features" class="hover:text-terracotta transition py-2">Our Pillars</a>
+                <a href="#products" class="hover:text-terracotta transition py-2">Our Spices</a>
+                <a href="#infra" class="hover:text-terracotta transition py-2">Infrastructure</a>
+                <a href="#compliance" class="hover:text-terracotta transition py-2">Compliance</a>
+                <a href="#inquiry" class="hover:text-terracotta transition py-2">Contact</a>
+            </nav>
+
+            <a href="#inquiry" class="bg-terracotta hover:bg-nutmeg text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 transition duration-300">
+                Inquire Samples
+            </a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        
+        <!-- Hero Section (Terracotta Accent & Spice Cover Image) -->
+        <section class="relative min-h-[85vh] flex items-center justify-center py-20 border-b border-[#C2410C]/10" style="background-image: radial-gradient(circle at 80% 20%, rgba(194, 65, 12, 0.1), transparent 50%), radial-gradient(circle at 20% 80%, rgba(202, 138, 4, 0.05), transparent 50%), #FDF8F5;">
+            <div class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <span class="text-xs font-bold text-terracotta uppercase tracking-widest block mb-4">Direct Farmgate Sourcing House</span>
+                    <h1 class="font-heading font-black text-5xl sm:text-6xl md:text-7xl text-nutmeg leading-none mb-8 tracking-tight">
+                        Exporters of <span class="italic text-terracotta">Premium Grade</span> Spices.
+                    </h1>
+                    <p class="text-nutmeg/80 text-base leading-relaxed font-light mb-10 max-w-md">
+                        Sourcing whole and ground spices directly from Cochin plantation hubs. We deliver steam-sterilized cardamoms, hand-sorted cloves, and high-curcumin turmeric to bulk food brands worldwide.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#products" class="bg-terracotta hover:bg-nutmeg text-white font-bold text-xs uppercase tracking-widest px-8 py-4 transition text-center">
+                            Explore Spices
+                        </a>
+                        <a href="#inquiry" class="bg-white/50 hover:bg-white/80 text-nutmeg font-bold text-xs uppercase tracking-widest px-8 py-4 transition border border-terracotta/10 text-center">
+                            Request Price Lot
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Frame -->
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-[4/5] bg-white border border-[#C2410C]/10 p-4 rounded-3xl shadow-xl overflow-hidden relative">
+                        <div class="h-4/5 overflow-hidden rounded-2xl mb-4">
+                            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=500" class="w-full h-full object-cover" alt="Spices Pile">
+                        </div>
+                        <div class="flex justify-between items-center px-2">
+                            <div class="font-heading font-bold text-sm text-nutmeg">Cochin Sourcing Hub</div>
+                            <span class="text-[9px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded">HACCP Vetted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Welcome / Profile Overview (About Us) -->
+        <section id="about" class="py-24 bg-white border-b border-[#C2410C]/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold text-terracotta uppercase tracking-widest block">Corporate Profile</span>
+                    <h2 class="font-heading font-extrabold text-3xl md:text-4xl text-nutmeg uppercase tracking-tight leading-tight">
+                        Quality Spice Sourcing and Trade Stability
+                    </h2>
+                    <p class="text-nutmeg/75 text-sm leading-relaxed">
+                        Orient Spices Trading has been at the forefront of the global spice corridor since inception. Based out of Cochin, Kerala, we collaborate with plantation networks to harvest high-density black pepper, cardamom pods, and premium seeds.
+                    </p>
+                    <p class="text-nutmeg/75 text-sm leading-relaxed">
+                        We screen and process all lots in automated mills to guarantee low moisture limits, zero pesticide residues, and consistent essential oil percentages.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-[#C2410C]/10 text-nutmeg font-bold text-center">
+                        <div>
+                            <div class="text-3xl font-black text-terracotta">25+</div>
+                            <div class="text-[9px] text-slate-400 uppercase tracking-wider mt-1">Export Markets</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-terracotta">8,500+</div>
+                            <div class="text-[9px] text-slate-400 uppercase tracking-wider mt-1">Tons Shipped</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-terracotta">100%</div>
+                            <div class="text-[9px] text-slate-400 uppercase tracking-wider mt-1">Direct-Sourced</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Collage -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="h-80 overflow-hidden border border-[#C2410C]/10 rounded-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=400" class="w-full h-full object-cover" alt="Spices Pile">
+                    </div>
+                    <div class="h-80 overflow-hidden border border-[#C2410C]/10 rounded-2xl relative mt-8">
+                        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=400" class="w-full h-full object-cover" alt="Rice and Grains">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Pillars Section -->
+        <section id="features" class="py-24 bg-spicewarm/30 border-b border-[#C2410C]/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white border border-[#C2410C]/5 p-8 rounded-2xl shadow-md hover:border-terracotta/20 transition duration-300">
+                        <div class="w-12 h-12 bg-terracotta/10 rounded-lg flex items-center justify-center text-terracotta mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-nutmeg mb-3 uppercase">Steam Sterilized</h3>
+                        <p class="text-nutmeg/70 text-xs leading-relaxed">
+                            Steam processing chambers lower microbial loads to meet EU/FDA sanitation codes.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-white border border-[#C2410C]/5 p-8 rounded-2xl shadow-md hover:border-terracotta/20 transition duration-300">
+                        <div class="w-12 h-12 bg-terracotta/10 rounded-lg flex items-center justify-center text-terracotta mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-nutmeg mb-3 uppercase">Pesticide Screening</h3>
+                        <p class="text-nutmeg/70 text-xs leading-relaxed">
+                            Rigorous gas chromatography scans verify that spice lots are chemical-residue free.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white border border-[#C2410C]/5 p-8 rounded-2xl shadow-md hover:border-terracotta/20 transition duration-300">
+                        <div class="w-12 h-12 bg-terracotta/10 rounded-lg flex items-center justify-center text-terracotta mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-nutmeg mb-3 uppercase">Fair Sourcing SOP</h3>
+                        <p class="text-nutmeg/70 text-xs leading-relaxed">
+                            Trading direct at farmgate ensures growers receive transparent market value.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white border border-[#C2410C]/5 p-8 rounded-2xl shadow-md hover:border-terracotta/20 transition duration-300">
+                        <div class="w-12 h-12 bg-terracotta/10 rounded-lg flex items-center justify-center text-terracotta mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-nutmeg mb-3 uppercase">Lot Registry</h3>
+                        <p class="text-nutmeg/70 text-xs leading-relaxed">
+                            Each shipping batch is tagged with a lot code for digital specification tracking.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product showcase grid (Spices Catalog) -->
+        <section id="products" class="py-24 bg-white border-b border-[#C2410C]/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="text-xs font-bold text-terracotta uppercase tracking-widest block mb-2">Our Premium Spices</span>
+                    <h2 class="font-heading font-extrabold text-4xl text-nutmeg uppercase">Export Specifications Catalog</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Spice 1 -->
+                    <div class="border border-[#C2410C]/10 p-6 rounded-2xl bg-spicewarm/5 hover:border-terracotta transition duration-300">
+                        <span class="text-[9px] font-bold bg-terracotta/10 text-terracotta px-2 py-0.5 rounded">CARDAMOM</span>
+                        <h3 class="font-heading font-bold text-lg text-nutmeg mt-4 mb-2 uppercase">Grade-A Bold Pods</h3>
+                        <p class="text-nutmeg/70 text-xs leading-relaxed mb-6">
+                            Deep green Indian Cardamom pods. Moisture max 10.5%, bulk density min 435 g/l. Whole and sound.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-[#CA8A04] hover:text-terracotta flex items-center gap-1.5">
+                            Verify Lot Specs <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Spice 2 -->
+                    <div class="border border-[#C2410C]/10 p-6 rounded-2xl bg-spicewarm/5 hover:border-terracotta transition duration-300">
+                        <span class="text-[9px] font-bold bg-terracotta/10 text-terracotta px-2 py-0.5 rounded">CLOVES</span>
+                        <h3 class="font-heading font-bold text-lg text-nutmeg mt-4 mb-2 uppercase">Lal Pari Cloves</h3>
+                        <p class="text-nutmeg/70 text-xs leading-relaxed mb-6">
+                            Handpicked Madagascar / Zanzibar grade. Moisture max 9.5%, volatile oils min 15.0%, minimal headless.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-[#CA8A04] hover:text-terracotta flex items-center gap-1.5">
+                            Verify Lot Specs <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Spice 3 -->
+                    <div class="border border-[#C2410C]/10 p-6 rounded-2xl bg-spicewarm/5 hover:border-terracotta transition duration-300">
+                        <span class="text-[9px] font-bold bg-terracotta/10 text-terracotta px-2 py-0.5 rounded">BLACK PEPPER</span>
+                        <h3 class="font-heading font-bold text-lg text-nutmeg mt-4 mb-2 uppercase">Malabar Black 550 GL</h3>
+                        <p class="text-nutmeg/70 text-xs leading-relaxed mb-6">
+                            High-density Malabar black pepper. Piperine index min 4.8%, moisture limit 11.5%, zero light berries.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-[#CA8A04] hover:text-terracotta flex items-center gap-1.5">
+                            Verify Lot Specs <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Spice 4 -->
+                    <div class="border border-[#C2410C]/10 p-6 rounded-2xl bg-spicewarm/5 hover:border-terracotta transition duration-300">
+                        <span class="text-[9px] font-bold bg-terracotta/10 text-terracotta px-2 py-0.5 rounded">NUTMEG</span>
+                        <h3 class="font-heading font-bold text-lg text-nutmeg mt-4 mb-2 uppercase">Whole Nutmeg with Mace</h3>
+                        <p class="text-nutmeg/70 text-xs leading-relaxed mb-6">
+                            Whole dried nutmeg shells. Volatile oil min 6.0%, moisture max 8.5%, zero mold infestation.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-[#CA8A04] hover:text-terracotta flex items-center gap-1.5">
+                            Verify Lot Specs <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / Infrastructure & Processing -->
+        <section id="infra" class="py-24 bg-spicewarm/30 border-b border-[#C2410C]/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-terracotta uppercase tracking-widest block mb-2">Processing Mill</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-nutmeg uppercase tracking-tight leading-tight">Sanitary Mill Facilities</h2>
+                    <p class="text-nutmeg/80 text-xs leading-relaxed mt-4">
+                        We run automated cleaning, steam sanitation, and sorting mills to refine spice lots prior to shipping dispatch.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-nutmeg/70">
+                    <div class="border border-[#C2410C]/10 bg-white p-6 rounded-xl">
+                        <div class="text-terracotta font-extrabold text-lg mb-2">01</div>
+                        <h4 class="font-heading font-bold text-sm text-nutmeg uppercase mb-2">Steam Chamber</h4>
+                        <p class="leading-relaxed">Automated dry steam injection sterilizes microbial mold loads without depleting spice oils.</p>
+                    </div>
+                    <div class="border border-[#C2410C]/10 bg-white p-6 rounded-xl">
+                        <div class="text-terracotta font-extrabold text-lg mb-2">02</div>
+                        <h4 class="font-heading font-bold text-sm text-nutmeg uppercase mb-2">Air Flow Dehydrators</h4>
+                        <p class="leading-relaxed">Horizontal wind tunnels dry spice seeds to precise moisture parameters below 10.0% limits.</p>
+                    </div>
+                    <div class="border border-[#C2410C]/10 bg-white p-6 rounded-xl">
+                        <div class="text-terracotta font-extrabold text-lg mb-2">03</div>
+                        <h4 class="font-heading font-bold text-sm text-nutmeg uppercase mb-2">CCD Sorting</h4>
+                        <p class="leading-relaxed">Optical CCD lens tables sort seeds to separate empty shells and organic weed seeds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance & Certifications Section -->
+        <section id="compliance" class="py-24 bg-[#290d05] text-white border-b border-[#C2410C]/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-[#fed7aa] uppercase tracking-widest block mb-2">Spice Accreditations</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-white">Global Food Safety Compliance</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-xs font-bold text-white">
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-[#fed7aa] mb-1 font-mono">FSSAI / FDA</div>
+                        <div class="text-[9px] text-gray-400 uppercase">Food Safety Reg</div>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-[#fed7aa] mb-1 font-mono">ISO 22000</div>
+                        <div class="text-[9px] text-gray-400 uppercase">HACCP Certified</div>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-[#fed7aa] mb-1 font-mono">HALAL / KOSHER</div>
+                        <div class="text-[9px] text-gray-400 uppercase">Process Vetted</div>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-[#fed7aa] mb-1 font-mono">SPICES BOARD</div>
+                        <div class="text-[9px] text-gray-400 uppercase">Export License</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Cargo Calculator / B2B Inquiry Desk -->
+        <section id="inquiry" class="py-24 bg-[#faf5f0]">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="border-2 border-terracotta bg-white rounded-3xl p-8 md:p-12 shadow-xl relative">
+                    <div class="text-center max-w-xl mx-auto mb-10">
+                        <span class="text-xs font-bold text-terracotta uppercase tracking-widest block mb-2">B2B Sourcing Desk</span>
+                        <h3 class="font-heading font-black text-3xl text-nutmeg uppercase tracking-tight">Cargo Weight & Spec Estimator</h3>
+                        <p class="text-xs text-slate-500 mt-2">Pilih komoditas rempah untuk melihat parameter lot fisik, minimal order, dan volume kontainer.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-2 mb-8">
+                        <label class="text-[10px] font-bold uppercase tracking-wider text-slate-400" for="calcRoute">Select Spice Product</label>
+                        <select id="calcRoute" onchange="runCalculator()" class="w-full border border-terracotta/10 focus:border-terracotta focus:outline-none p-4 text-xs font-bold bg-spicewarm/10 rounded-lg text-nutmeg">
+                            <option value="CARDAMOM">Indian Cardamom (Bold green 8mm) - Min Order 1 Ton</option>
+                            <option value="CLOVES">Lal Pari Cloves (Whole hand-sorted) - Min Order 5 Tons</option>
+                            <option value="BLACKPEPPER">Black Pepper (550 GL Density) - Min Order 10 Tons</option>
+                        </select>
+                    </div>
+
+                    <!-- Readout Details -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-spicewarm/25 border border-terracotta/10 p-6 rounded-2xl font-mono text-xs text-nutmeg/80 mb-8">
+                        <div class="border-b sm:border-b-0 sm:border-r border-terracotta/10 pb-4 sm:pb-0 sm:pr-6 space-y-3">
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Standard Container Volume</span>
+                                <div class="font-bold text-nutmeg mt-0.5" id="readoutDays">FCL 20ft (approx 12 Tons cargo)</div>
+                            </div>
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Volatile Essential Oils (Min)</span>
+                                <div class="font-bold text-nutmeg mt-0.5" id="readoutDemurrage">3.5% Essential Oils</div>
+                            </div>
+                        </div>
+                        <div class="space-y-3 pl-0 sm:pl-2">
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Steam Sanitized Code</span>
+                                <div class="font-bold text-nutmeg mt-0.5" id="readoutCode">ST-COCHIN-9912</div>
+                            </div>
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Est FOB Cochin Price / Ton</span>
+                                <div class="font-bold text-terracotta mt-0.5" id="readoutPrice">$14,500.00 USD</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B2B Submission Email -->
+                    <form id="rateForm" class="flex flex-col sm:flex-row gap-3 border-t border-terracotta/10 pt-8">
+                        <input type="email" id="submitEmail" required class="flex-grow border border-terracotta/10 focus:border-terracotta focus:outline-none p-3.5 text-xs font-bold rounded-lg" placeholder="purchasing@company.com">
+                        <button type="submit" class="bg-terracotta hover:bg-nutmeg text-white font-bold text-xs uppercase px-8 py-3.5 transition rounded-lg">
+                            Request Price Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#290d05] text-[#cbdad0] py-20 text-xs border-t border-[#C2410C]/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16 items-start">
+                <div>
+                    <span class="font-heading font-black text-white text-lg">ORIENT SPICES<span class="text-[#CA8A04]">.</span></span>
+                    <p class="text-slate-400 text-xs leading-relaxed my-6 font-light">
+                        Integrated spice export-import division and sanitizing mill house. Shipping pure cloves, cardamoms, and black pepper globally.
+                    </p>
+                    <div class="flex flex-col gap-2 text-white">
+                        <span>Email: export@orientspices.com</span>
+                        <span>Tel: +91 484 2224567</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Cochin Main Office</h4>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        Plot 12, Export Processing Zone, Cochin, Kerala - 682037. India.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Trade Associations</h4>
+                    <ul class="space-y-3 text-slate-400 font-light">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span> Spices Board of India Member</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span> Indian Pepper & Spice Trade Association</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span> All India Spices Exporters Forum</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500">
+                <p>© 2026 Orient Spices Trading Pvt Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript interactions -->
+    <script>
+        const ROUTE_DATA = {
+            "CARDAMOM": {
+                days: "FCL 20ft (approx 12 Tons cargo)",
+                demurrage: "3.5% Essential Oils",
+                code: "ST-COCHIN-9912",
+                price: "$14,500.00 USD"
+            },
+            "CLOVES": {
+                days: "FCL 20ft (approx 10 Tons cargo)",
+                demurrage: "15.0% Essential Oils",
+                code: "ST-COCHIN-9913",
+                price: "$8,250.00 USD"
+            },
+            "BLACKPEPPER": {
+                days: "FCL 20ft (approx 15 Tons cargo)",
+                demurrage: "4.8% Piperine Index",
+                code: "ST-COCHIN-9914",
+                price: "$4,800.00 USD"
+            }
+        };
+
+        function runCalculator() {
+            const routeId = document.getElementById('calcRoute').value;
+            const data = ROUTE_DATA[routeId];
+
+            document.getElementById('readoutDays').innerText = data.days;
+            document.getElementById('readoutDemurrage').innerText = data.demurrage;
+            document.getElementById('readoutCode').innerText = data.code;
+            document.getElementById('readoutPrice').innerText = data.price;
+        }
+
+        const rateForm = document.getElementById('rateForm');
+        if (rateForm) {
+            rateForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('submitEmail').value;
+                const routeId = document.getElementById('calcRoute').value;
+                alert(`Spice quotation request logged!\n\nWe have logged your query for ${routeId}. A finalized FOB pricing offer sheet will be sent to ${email} shortly.`);
+                rateForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
