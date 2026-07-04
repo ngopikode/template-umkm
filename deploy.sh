@@ -5,7 +5,7 @@ set -e
 
 # Target paths
 TARGET_DIR="/var/www/templates-ngopikode"
-NGINX_CONF_NAME="templates.conf"
+NGINX_CONF_NAME="templates.ngopikode.space.conf"
 NGINX_AVAILABLE="/etc/nginx/sites-available/$NGINX_CONF_NAME"
 NGINX_ENABLED="/etc/nginx/sites-enabled/$NGINX_CONF_NAME"
 
