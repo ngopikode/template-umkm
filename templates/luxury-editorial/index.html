@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Luxury Botanical Exporter | Nexus Estates</title>
+    <meta name="description" content="Company Profile of Nexus Estates. Curators of estate-grown single-origin spices, grade-A vanilla beans, and luxury agricultural crops.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        forest: '#0F2E1E',     /* Forest Green */
+                        cream: '#FDFBF7',      /* Luxury Cream */
+                        goldAccent: '#D4AF37',  /* Metallic Gold */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-[#1a2e22] font-sans min-h-screen relative overflow-x-hidden selection:bg-goldAccent selection:text-white">
+
+    <!-- Header -->
+    <header class="border-b border-forest/10 sticky top-0 bg-cream/90 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-6 h-22 flex justify-between items-center">
+            <a href="#" class="font-serif font-semibold text-xl tracking-tight text-forest">
+                NEXUS<span class="text-goldAccent">.</span>ESTATES
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-10 font-sans text-xs font-semibold tracking-widest text-[#2f4a3a] uppercase">
+                <a href="#about" class="hover:text-goldAccent transition">Profile</a>
+                <a href="#inspector" class="hover:text-goldAccent transition">Crop Inspector</a>
+                <a href="#ledger" class="hover:text-goldAccent transition">Shipment Ledger</a>
+                <a href="#infra" class="hover:text-goldAccent transition">Infrastructure</a>
+                <a href="#compliance" class="hover:text-goldAccent transition">Compliance</a>
+                <a href="#cart" class="hover:text-goldAccent transition">Sample Cart</a>
+            </nav>
+
+            <a href="#cart" class="bg-forest hover:bg-goldAccent text-white px-6 py-3 rounded-none font-bold text-xs uppercase tracking-wider transition duration-300">
+                Order Samples
+            </a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        
+        <!-- Hero Section (Upgraded Elegant Split Editorial Showcase) -->
+        <section class="py-20 md:py-28 bg-forest text-[#e2ede6] flex items-center min-h-[85vh] border-b-2 border-goldAccent/20 relative overflow-hidden" style="background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.12), transparent 60%), #0F2E1E;">
+            <div class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <!-- Left: Luxury Magazine Header -->
+                <div class="lg:col-span-6 flex flex-col justify-center">
+                    <span class="text-xs font-bold text-goldAccent uppercase tracking-widest block mb-4">Nexus Estates Curations</span>
+                    <h1 class="font-serif font-light text-5xl sm:text-6xl md:text-7xl text-white leading-none tracking-tight mb-8">
+                        Sourcing the world's most <span class="italic text-goldAccent font-normal">exclusive</span> single-origin botanicals.
+                    </h1>
+                    <p class="text-slate-300 text-base leading-relaxed font-light mb-10 max-w-sm">
+                        We cooperate with century-old estate unions in Madagascar, Sumatra, and India to deliver hand-harvested spices and cured crop pods to luxury culinary and fragrance makers globally.
+                    </p>
+                    <div>
+                        <a href="#cart" class="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-widest text-goldAccent border-b-2 border-goldAccent pb-2 hover:text-white hover:border-white transition">
+                            Curated Sample Vials <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Large Gold-Bordered Showcase Frame -->
+                <div class="lg:col-span-6 relative border-4 border-goldAccent p-6 bg-[#1a3828]/60 backdrop-blur-md shadow-2xl overflow-hidden flex flex-col justify-between min-h-[22rem]">
+                    <div class="h-64 overflow-hidden relative border border-white/10 mb-4">
+                        <img src="https://images.unsplash.com/photo-1628557118391-729f6dc2452c?q=80&w=600" class="w-full h-full object-cover" alt="Bourbon Vanilla">
+                    </div>
+                    <div class="flex justify-between items-baseline font-mono text-[9px] text-slate-300 font-bold uppercase tracking-widest">
+                        <span>Lot 29</span>
+                        <span class="text-goldAccent">Madagascar Origin</span>
+                        <span>Bourbon Selection</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Profile & Vision -->
+        <section id="about" class="py-24 bg-forest text-[#e2ede6]">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-goldAccent uppercase tracking-widest block mb-2">Corporate Identity</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-white">Visi & Integritas Origin</h2>
+                </div>
+                <div class="lg:col-span-8 space-y-6 text-sm font-light leading-relaxed">
+                    <p>
+                        Nexus Estates lahir untuk mengembalikan keanggunan sejati dalam rantai pasok B2B. Kami menolak standardisasi bulk tanpa jiwa; sebaliknya, kami memperlakukan biji vanili, biji kopi, dan kapulaga layaknya karya seni pertanian terkurasi. 
+                    </p>
+                    <p>
+                        Setiap varietas dipanen pada tingkat kematangan puncak secara manual, diproses melalui shade curing lambat, dan diverifikasi keaslian teritorialnya (DO) guna memastikan senyawa minyak volatil aktif terkunci sempurna hingga pintu distribusi Anda.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Crop Specimen Inspector (Split Grid layout) -->
+        <section id="inspector" class="py-24 border-b border-forest/10 bg-cream">
+            <div class="max-w-6xl mx-auto px-6">
+                
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="text-xs font-bold text-goldAccent uppercase tracking-widest block mb-2">Crop Inspector</span>
+                    <h2 class="font-serif text-4xl text-forest">Sensory & Chemical Profiles</h2>
+                    <p class="text-xs text-slate-500 mt-2">Click on a botanical category below to inspect its detailed specifications.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left: Interactive Commodity Selectors -->
+                    <div class="lg:col-span-5 space-y-6">
+                        
+                        <!-- Option 1 -->
+                        <div onclick="inspectCrop('vanilla', 'https://images.unsplash.com/photo-1628557118391-729f6dc2452c?q=80&w=500', 'VANILLA GRADE-A BOURBON', '2.2% Vanillin Content', '14.2% Max Humidity', 'Antalaha Estates')" 
+                             id="btn-vanilla" class="border-2 border-forest p-6 bg-white cursor-pointer transition duration-300">
+                            <h3 class="font-serif text-xl font-bold uppercase">Bourbon Vanilla Pods</h3>
+                            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Madagascar</span>
+                        </div>
+                        
+                        <!-- Option 2 -->
+                        <div onclick="inspectCrop('cardamom', 'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=500', 'GREEN CARDAMOM 8MM BOLD', '4.8% Volatile Oils', '8.4% Max Humidity', 'Kerala Highlands')" 
+                             id="btn-cardamom" class="border border-forest/20 p-6 bg-[#fcfaf7] cursor-pointer hover:border-forest transition duration-300">
+                            <h3 class="font-serif text-xl font-bold uppercase">Green Cardamom Bold</h3>
+                            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">India</span>
+                        </div>
+                        
+                        <!-- Option 3 -->
+                        <div onclick="inspectCrop('coffee', 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=500', 'SUMATRA MANDHELING G-1', 'Volatile Lipids 16.5%', '11.8% Max Humidity', 'Sumatra Co-op')" 
+                             id="btn-coffee" class="border border-forest/20 p-6 bg-[#fcfaf7] cursor-pointer hover:border-forest transition duration-300">
+                            <h3 class="font-serif text-xl font-bold uppercase">Sumatra Arabica G-1</h3>
+                            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Indonesia</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Large SPEC CARD & dynamic image -->
+                    <div class="lg:col-span-7 bg-white border-2 border-forest p-8 brutal-shadow">
+                        <div class="h-64 overflow-hidden relative mb-6">
+                            <img id="inspectorImg" src="https://images.unsplash.com/photo-1628557118391-729f6dc2452c?q=80&w=500" class="w-full h-full object-cover transition-all duration-500" alt="Crops">
+                        </div>
+                        
+                        <div class="space-y-4 font-mono text-xs" id="specsData">
+                            <div class="flex justify-between border-b border-slate-100 pb-2">
+                                <span class="text-slate-400">Specimen Classification:</span>
+                                <span class="font-bold text-forest" id="specName">VANILLA GRADE-A BOURBON</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-2">
+                                <span class="text-slate-400">Active Compound Index:</span>
+                                <span class="font-bold text-forest" id="specActive">2.2% Vanillin Content</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-2">
+                                <span class="text-slate-400">Moisture Limit:</span>
+                                <span class="font-bold text-forest" id="specMoisture">14.2% Max Humidity</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Origin Estate Source:</span>
+                                <span class="font-bold text-forest" id="specSource">Antalaha Estates</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transit Ledger Table Section -->
+        <section id="ledger" class="py-24 border-b border-forest/10 bg-cream">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-left mb-16">
+                    <span class="text-xs font-bold text-goldAccent uppercase tracking-widest block mb-2">Transit Ledger</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-forest uppercase">Vessel Departure Timetable</h2>
+                </div>
+
+                <div class="overflow-x-auto border border-forest/10 bg-white rounded-lg">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-forest text-white border-b border-forest/20 text-xs uppercase tracking-wider font-serif">
+                                <th class="p-5">Trade Route</th>
+                                <th class="p-5">Vessel Identity</th>
+                                <th class="p-5">Est. Transit Duration</th>
+                                <th class="p-5">Customs Manifest Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-xs font-bold text-[#2f4a3a]">
+                            <tr>
+                                <td class="p-5">Madagascar to Rotterdam Hub</td>
+                                <td class="p-5 font-mono">Aethelgard-XI</td>
+                                <td class="p-5">22 Days</td>
+                                <td class="p-5 text-emerald-600">USDA Certified / Cleared</td>
+                            </tr>
+                            <tr>
+                                <td class="p-5">Port of Cochin to Hamburg Port</td>
+                                <td class="p-5 font-mono">Oceanis-III</td>
+                                <td class="p-5">18 Days</td>
+                                <td class="p-5 text-emerald-600">Phytosanitary Board Sealed</td>
+                            </tr>
+                            <tr>
+                                <td class="p-5">Port of Belawan to New York Hub</td>
+                                <td class="p-5 font-mono">SumatraStar-VIII</td>
+                                <td class="p-5">26 Days</td>
+                                <td class="p-5 text-amber-600">Filing Upload Verification</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infrastructure & Estate processing Section (New Addition) -->
+        <section id="infra" class="py-24 border-b border-forest/10 bg-[#fcfaf7]">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-goldAccent uppercase tracking-widest block mb-2">Infrastruktur Kebun</span>
+                    <h2 class="font-serif text-3xl text-forest uppercase">Estate Facilities</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs text-[#2f4a3a]">
+                    <div class="border border-forest/10 p-6 bg-white">
+                        <h3 class="font-serif text-base text-forest mb-2 font-semibold">Elevated Drying Tables</h3>
+                        <p class="leading-relaxed font-light">
+                            Meja penjemuran gantung berventilasi kawat kasa halus untuk dehidrasi vanilla secara higienis, terlindung dari kontak tanah langsung.
+                        </p>
+                    </div>
+                    <div class="border border-forest/10 p-6 bg-white">
+                        <h3 class="font-serif text-base text-forest mb-2 font-semibold">Curing Warehouses</h3>
+                        <p class="leading-relaxed font-light">
+                            Gudang pemeraman khusus dengan kontrol kelembapan udara konstan guna memicu proses sekresi kristal vanilin secara maksimal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance registries section -->
+        <section id="compliance" class="py-24 bg-forest text-white">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-goldAccent uppercase tracking-widest block mb-2">Verified Registries</span>
+                    <h2 class="font-serif text-3xl text-white">Corporate Compliance Registries</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs font-bold text-slate-300">
+                    <div class="border border-white/10 p-6 bg-white/5">
+                        <div class="text-goldAccent mb-1">REGISTRY IEC (IMPORT EXPORT CODE)</div>
+                        <div class="text-sm">0416047249</div>
+                    </div>
+                    <div class="border border-white/10 p-6 bg-white/5">
+                        <div class="text-goldAccent mb-1">SPICES BOARD LICENSE</div>
+                        <div class="text-sm">SB/REG/2026/0912</div>
+                    </div>
+                    <div class="border border-white/10 p-6 bg-white/5">
+                        <div class="text-goldAccent mb-1">FOOD SAFETY SYSTEM CERTIFICATE</div>
+                        <div class="text-sm">ISO 22000 & HACCP Registered</div>
+                    </div>
+                    <div class="border border-white/10 p-6 bg-white/5">
+                        <div class="text-goldAccent mb-1">US FDA COMPLIANCE REGISTRY</div>
+                        <div class="text-sm">Registered Facility ID: 1982736294</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Request Cart Form -->
+        <section id="cart" class="py-24 bg-cream">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="border border-forest/10 bg-white p-8 md:p-12 shadow-md">
+                    
+                    <div class="text-center max-w-xl mx-auto mb-10">
+                        <span class="text-xs font-bold text-goldAccent uppercase tracking-widest block mb-2">Evaluation Samples</span>
+                        <h3 class="font-serif text-3xl text-forest uppercase">Sample Request Ledger</h3>
+                        <p class="text-xs text-slate-500 mt-2">Select up to 3 botanical sample vials to add to your evaluation packet.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-xs font-bold">
+                        <!-- Card 1 -->
+                        <div class="border border-forest/10 p-6 bg-cream flex justify-between items-center cursor-pointer" onclick="toggleCartItem('vanillaVial')">
+                            <div>
+                                <h4 class="font-serif text-sm">Vanilla Pods Vial</h4>
+                                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Madagascar</span>
+                            </div>
+                            <input type="checkbox" id="vanillaVial" class="w-4 h-4 accent-forest pointer-events-none">
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="border border-forest/10 p-6 bg-cream flex justify-between items-center cursor-pointer" onclick="toggleCartItem('cardamomVial')">
+                            <div>
+                                <h4 class="font-serif text-sm">Cardamom Pods Vial</h4>
+                                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">India</span>
+                            </div>
+                            <input type="checkbox" id="cardamomVial" class="w-4 h-4 accent-forest pointer-events-none">
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="border border-forest/10 p-6 bg-cream flex justify-between items-center cursor-pointer" onclick="toggleCartItem('coffeeVial')">
+                            <div>
+                                <h4 class="font-serif text-sm">Coffee Bean Vial</h4>
+                                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Indonesia</span>
+                            </div>
+                            <input type="checkbox" id="coffeeVial" class="w-4 h-4 accent-forest pointer-events-none">
+                        </div>
+                    </div>
+
+                    <!-- Cart display counter -->
+                    <div class="flex justify-between items-center bg-cream/60 border border-forest/10 px-5 py-3.5 rounded-none font-mono text-[10px] text-slate-500 mb-8">
+                        <span class="text-slate-400">Total Vials Selected:</span>
+                        <span class="text-forest font-bold text-xs" id="cartCounter">0 / 3 selected</span>
+                    </div>
+
+                    <!-- Submit Inquiry Email -->
+                    <form id="luxurySampleForm" class="flex flex-col sm:flex-row gap-4 border-t border-forest/10 pt-8">
+                        <input type="email" id="submitEmail" required class="flex-grow border border-forest/20 p-3.5 text-xs font-bold focus:border-forest focus:outline-none" placeholder="trade@company.com">
+                        <button type="submit" class="bg-forest hover:bg-goldAccent text-white font-bold text-xs uppercase px-8 py-3.5 transition duration-300">
+                            Request Sample Pack
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b1710] text-[#cbdad0] py-16 text-xs">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span class="font-serif font-bold text-white text-lg">NEXUS<span class="text-goldAccent">.</span>ESTATES</span>
+            <p>© 2026 Nexus Estates. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript interactions -->
+    <script>
+        // Interactive crop spec inspector
+        function inspectCrop(cropId, imageUrl, specName, activeComp, moisture, source) {
+            const list = ['vanilla', 'cardamom', 'coffee'];
+            list.forEach(item => {
+                const btn = document.getElementById(`btn-${item}`);
+                if (item === cropId) {
+                    btn.className = "border-2 border-forest p-6 bg-white cursor-pointer transition duration-300";
+                } else {
+                    btn.className = "border border-forest/20 p-6 bg-[#fcfaf7] cursor-pointer hover:border-forest transition duration-300";
+                }
+            });
+
+            // Update content values
+            document.getElementById('inspectorImg').src = imageUrl;
+            document.getElementById('specName').innerText = specName;
+            document.getElementById('specActive').innerText = activeComp;
+            document.getElementById('specMoisture').innerText = moisture;
+            document.getElementById('specSource').innerText = source;
+        }
+
+        // Toggle Vial Sample Cart Selection
+        function toggleCartItem(checkboxId) {
+            const box = document.getElementById(checkboxId);
+            box.checked = !box.checked;
+            updateCartCounter();
+        }
+
+        function updateCartCounter() {
+            const ids = ['vanillaVial', 'cardamomVial', 'coffeeVial'];
+            let count = 0;
+            ids.forEach(id => {
+                if (document.getElementById(id).checked) {
+                    count++;
+                }
+            });
+            document.getElementById('cartCounter').innerText = `${count} / 3 selected`;
+        }
+
+        // Submit alert
+        const luxuryForm = document.getElementById('luxurySampleForm');
+        if (luxuryForm) {
+            luxuryForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('submitEmail').value;
+                alert(`Sample package request submitted successfully!\n\nWe have logged your target crop selection. A shipping confirmation will be sent to ${email} within 12 business hours.`);
+                luxuryForm.reset();
+                updateCartCounter();
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* Design tokens for Modern Luxury Corporate Forest Green & Cream template */
+:root {
+    --color-forest: #0F2E1E;
+    --color-cream: #FDFBF7;
+    --color-gold: #D4AF37;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+/* Custom interactive active states and focus visible rings */
+*:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 4px;
+}
+
+/* Custom transitions on profile indicators */
+#specsData div {
+    transition: all 0.3s ease;
+}

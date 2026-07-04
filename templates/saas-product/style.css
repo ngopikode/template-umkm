@@ -1,0 +1,27 @@
+/* Design tokens and base overrides for Tech-Driven Logistics dashboard */
+:root {
+    --color-bg-dark: #070b13;
+    --color-cyan: #06b6d4;
+    --color-emerald: #10b981;
+}
+
+/* Base custom focus outlines */
+*:focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 4px;
+}
+
+/* Scrollbar customization for live terminal logs */
+#terminalStream::-webkit-scrollbar {
+    width: 4px;
+}
+#terminalStream::-webkit-scrollbar-track {
+    background: transparent;
+}
+#terminalStream::-webkit-scrollbar-thumb {
+    background: rgba(6, 182, 212, 0.2);
+    border-radius: 2px;
+}
+#terminalStream::-webkit-scrollbar-thumb:hover {
+    background: rgba(6, 182, 212, 0.4);
+}

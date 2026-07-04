@@ -1,0 +1,18 @@
+/* Custom design tokens and overrides for Boutique Agro & Organics */
+:root {
+    --color-clay: #c84b31;
+    --color-warmbg: #fcfaf7;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+/* Accessibility focus styles */
+*:focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 4px;
+}
+
+/* Transitions for editorial links */
+a {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}

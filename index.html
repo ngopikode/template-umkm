@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Export-Import Landing Page Templates - Showcase Portal</title>
+    <meta name="description" content="Browse our curated collection of four premium Export-Import landing page and company profile templates. Pure HTML & CSS.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            300: '#f0d78c',
+                            400: '#e5c158',
+                            500: '#d4af37',
+                            600: '#b8860b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Glowing background mesh animation */
+        @keyframes drift {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-drift-1 {
+            animation: drift 20s infinite alternate ease-in-out;
+        }
+        .animate-drift-2 {
+            animation: drift 25s infinite alternate-reverse ease-in-out;
+        }
+        
+        /* Card border glow gradient */
+        .glowing-card {
+            position: relative;
+            background: #111827;
+            border-radius: 1.5rem;
+        }
+        .glowing-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.4), rgba(6, 182, 212, 0.4));
+            border-radius: 1.5rem;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .glowing-card:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-gray-400 font-sans min-h-screen relative overflow-x-hidden py-16 flex flex-col justify-center">
+
+    <!-- Ambient Glowing Blobs -->
+    <div class="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-amber-500/10 rounded-full blur-[100px] pointer-events-none animate-drift-1"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[45rem] h-[45rem] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none animate-drift-2"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <!-- Header -->
+        <header class="text-center max-w-2xl mx-auto mb-16">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 font-bold text-xs tracking-widest uppercase mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-ping"></span> Design System Gallery
+            </span>
+            <h1 class="font-heading font-extrabold text-5xl md:text-6xl text-white tracking-tight leading-none mb-6">
+                Apex <span>Global Trade</span>
+            </h1>
+            <p class="text-gray-400 text-lg leading-relaxed font-light">
+                Four highly innovative, Awwwards-grade company profile & landing page designs for the **Export-Import** industry.
+            </p>
+        </header>
+
+        <!-- Bento Showcase Grid (4 Columns) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            
+            <!-- Design A: Swiss Modernism -->
+            <div class="glowing-card flex flex-col h-full group">
+                <div class="h-44 w-full bg-gradient-to-br from-[#07162c] to-[#0a1f3d] rounded-t-3xl flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                    <span class="px-5 py-2.5 rounded-xl border border-gold-500/30 bg-[#07162c]/90 text-gold-400 font-bold font-heading text-sm shadow-2xl tracking-wider">APEX Global</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-gold-500 uppercase tracking-widest mb-2 block">Design A: Classic Navy & Gold</span>
+                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-gold-400 transition-colors">Classic Premium Corporate</h2>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                        A highly trusted corporate landing page utilizing deep navy space backdrops, gold accents, structured bento cards, and detailed B2B specs.
+                    </p>
+                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-gold-500"></span> Deep navy glossy overlay</li>
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-gold-500"></span> Heavy B2B photographic cards</li>
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-gold-500"></span> Interactive LOI desk sheet</li>
+                    </ul>
+                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <a href="templates/b2b-export/" class="inline-flex items-center justify-center gap-1 bg-gold-500 hover:bg-white text-gray-900 font-bold text-[10px] uppercase py-3 rounded-lg tracking-wider cursor-pointer transition">
+                            Preview
+                        </a>
+                        <a href="templates/b2b-export/style.css" class="inline-flex items-center justify-center gap-1 bg-gray-800 hover:bg-gray-700 text-white font-bold text-[10px] uppercase py-3 rounded-lg tracking-wider cursor-pointer transition border border-gray-700">
+                            CSS Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design B: Boutique Agro & Organics -->
+            <div class="glowing-card flex flex-col h-full group">
+                <div class="h-44 w-full bg-gradient-to-br from-[#fcfaf7] to-[#f5f1eb] rounded-t-3xl flex items-center justify-center relative overflow-hidden border-b border-gray-800">
+                    <span class="px-5 py-2.5 rounded-xl bg-gray-900 text-gray-200 font-serif italic text-sm shadow-2xl tracking-wider border border-white/5">NEXUS.AGRO</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-[#c84b31] uppercase tracking-widest mb-2 block">Design B: Boutique Agro</span>
+                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-[#c84b31] transition-colors">Boutique Curations</h2>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                        An editorial high-contrast magazine style. Features mouse-following macro crop magnifier lens tools and compliance registries.
+                    </p>
+                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-[#c84b31]"></span> Macro Crop Magnifier</li>
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-[#c84b31]"></span> Sourcing protocols SOP</li>
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-[#c84b31]"></span> Floating label B2B forms</li>
+                    </ul>
+                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <a href="templates/creative-agency/" class="inline-flex items-center justify-center gap-1 bg-[#c84b31] hover:bg-white hover:text-gray-900 text-white font-bold text-[10px] uppercase py-3 rounded-lg tracking-wider cursor-pointer transition">
+                            Preview
+                        </a>
+                        <a href="templates/creative-agency/style.css" class="inline-flex items-center justify-center gap-1 bg-gray-800 hover:bg-gray-700 text-white font-bold text-[10px] uppercase py-3 rounded-lg tracking-wider cursor-pointer transition border border-gray-700">
+                            CSS Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design C: Sleek Neo-Minimalist -->
+            <div class="glowing-card flex flex-col h-full group">
+                <div class="h-44 w-full bg-gradient-to-br from-[#18181b] to-[#27272a] rounded-t-3xl flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                    <span class="px-5 py-2.5 rounded-xl border border-blue-500/30 bg-[#18181b]/90 text-blue-400 font-bold font-heading text-sm shadow-2xl tracking-wider">APEX Neo</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2 block">Design C: Apple Style</span>
+                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-blue-400 transition-colors">Neo-Minimalist</h2>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                        A clean, light Apple-style layout utilizing zinc border dividers. Equipped with interactive container volume sizing engines.
+                    </p>
+                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-blue-500"></span> Container size calculator</li>
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-blue-500"></span> Sourcing step steppers</li>
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-blue-500"></span> Verification checklists</li>
+                    </ul>
+                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <a href="templates/neo-minimalist/" class="inline-flex items-center justify-center gap-1 bg-blue-500 hover:bg-white text-gray-900 font-bold text-[10px] uppercase py-3 rounded-lg tracking-wider cursor-pointer transition">
+                            Preview
+                        </a>
+                        <a href="templates/neo-minimalist/style.css" class="inline-flex items-center justify-center gap-1 bg-gray-800 hover:bg-gray-700 text-white font-bold text-[10px] uppercase py-3 rounded-lg tracking-wider cursor-pointer transition border border-gray-700">
+                            CSS Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design D: Modern Luxury Corporate -->
+            <div class="glowing-card flex flex-col h-full group">
+                <div class="h-44 w-full bg-gradient-to-br from-[#0c2619] to-[#0f2e1e] rounded-t-3xl flex items-center justify-center relative overflow-hidden">
+                    <span class="px-5 py-2.5 rounded-xl border border-amber-500/30 bg-[#0c2619]/90 text-amber-400 font-serif text-sm shadow-2xl tracking-wider">NEXUS.ESTATES</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest mb-2 block">Design D: Luxury Green</span>
+                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-amber-400 transition-colors">Luxury Editorial</h2>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                        An elegant forest green & cream magazine style. Highlights interactive sensory profiles and sample vial ordering desk carts.
+                    </p>
+                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-amber-500"></span> Sensory profile inspector</li>
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-amber-500"></span> Sample request order cart</li>
+                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-amber-500"></span> Departure ledger timetables</li>
+                    </ul>
+                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <a href="templates/luxury-editorial/" class="inline-flex items-center justify-center gap-1 bg-amber-500 hover:bg-white text-gray-900 font-bold text-[10px] uppercase py-3 rounded-lg tracking-wider cursor-pointer transition">
+                            Preview
+                        </a>
+                        <a href="templates/luxury-editorial/style.css" class="inline-flex items-center justify-center gap-1 bg-gray-800 hover:bg-gray-700 text-white font-bold text-[10px] uppercase py-3 rounded-lg tracking-wider cursor-pointer transition border border-gray-700">
+                            CSS Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Node Server Instruction -->
+        <section class="max-w-md mx-auto bg-gray-900/60 border border-gray-800/80 rounded-2xl p-6 text-center">
+            <h3 class="font-heading font-bold text-sm text-white mb-2">How to serve templates locally</h3>
+            <p class="text-xs text-gray-500 mb-4">A zero-dependency HTTP server is already running. Press Ctrl+C in terminal to stop.</p>
+            <div class="font-mono text-xs bg-[#0b0f19] border border-gray-800 px-4 py-2.5 rounded-xl text-gold-400 select-all">node server.js</div>
+        </section>
+    </div>
+
+</body>
+</html>

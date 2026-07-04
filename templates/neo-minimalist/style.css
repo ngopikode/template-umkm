@@ -1,0 +1,28 @@
+/* Design tokens for Sleek Neo-Minimalist Apple Style corporate profile */
+:root {
+    --color-bg: #FAFAFA;
+    --color-text: #09090B;
+    --color-accent: #2563EB;
+}
+
+/* Custom interactive active states and focus visible rings */
+*:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+}
+
+/* Form input clean alignments */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #e4e4e7;
+    height: 6px;
+    border-radius: 3px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    background: var(--color-accent);
+    border: 2px solid #ffffff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-top: -5px;
+    appearance: none;
+}

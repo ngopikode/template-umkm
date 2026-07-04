@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique Agro & Organic Exporters | Premium Commodities Curators</title>
+    <meta name="description" content="Company Profile of Nexus Agro, a premium trade curator sourcing single-origin spices, grade-A vanilla beans, and rare botanical crops direct from estate growers.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        clay: '#c84b31',      /* Terracotta Clay */
+                        warmbg: '#fcfaf7',    /* Alabaster */
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Floating label focus states */
+        .form-input:focus ~ .form-label,
+        .form-input:not(:placeholder-shown) ~ .form-label {
+            top: -1rem;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #c84b31;
+        }
+
+        /* Magnifier Lens Styling */
+        .magnifier-lens {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3), inset 0 0 15px rgba(0,0,0,0.2);
+            pointer-events: none;
+            display: none;
+            z-index: 40;
+            background-repeat: no-repeat;
+        }
+        
+        /* Floating Metadata Box styling */
+        .magnifier-meta {
+            position: absolute;
+            background: rgba(18, 18, 18, 0.95);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #ffffff;
+            padding: 12px 16px;
+            border-radius: 8px;
+            pointer-events: none;
+            display: none;
+            z-index: 40;
+            font-family: monospace;
+            font-size: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        /* Rotating gold seal badge */
+        @keyframes spinSeal {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .spin-seal {
+            animation: spinSeal 25s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#fcfaf7] text-slate-900 font-sans min-h-screen relative overflow-x-hidden selection:bg-[#c84b31] selection:text-white">
+
+    <!-- Header -->
+    <header class="border-b border-slate-200/60 sticky top-0 bg-[#fcfaf7]/90 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-6 h-22 flex justify-between items-center">
+            <a href="#" class="font-serif font-bold text-xl tracking-tight text-slate-900 hover:text-clay transition">
+                NEXUS<span class="text-clay">.</span>AGRO
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-10 font-sans text-xs font-semibold tracking-widest text-slate-800 uppercase">
+                <a href="#about" class="hover:text-clay transition">Profile</a>
+                <a href="#crops" class="hover:text-clay transition">Crops</a>
+                <a href="#sourcing" class="hover:text-clay transition">SOP & Map</a>
+                <a href="#infra" class="hover:text-clay transition">Infrastructure</a>
+                <a href="#compliance" class="hover:text-clay transition">Compliance</a>
+                <a href="#contact" class="hover:text-clay transition">Request Samples</a>
+            </nav>
+
+            <button id="mobileMenuBtn" class="md:hidden text-slate-900 hover:text-clay transition cursor-pointer" aria-label="Open Menu">
+                <svg class="w-6.5 h-6.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 bg-[#121212]/98 z-[60] flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-500 ease-in-out">
+        <button id="closeMobileMenu" class="absolute top-6 right-6 text-white hover:text-clay transition cursor-pointer" aria-label="Close Menu">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <a href="#about" class="mobile-link font-serif text-2xl text-white hover:text-clay transition">Profile</a>
+        <a href="#crops" class="mobile-link font-serif text-2xl text-white hover:text-clay transition">Crops</a>
+        <a href="#sourcing" class="mobile-link font-serif text-2xl text-white hover:text-clay transition">SOP & Map</a>
+        <a href="#infra" class="mobile-link font-serif text-2xl text-white hover:text-clay transition">Infrastructure</a>
+        <a href="#compliance" class="mobile-link font-serif text-2xl text-white hover:text-clay transition">Compliance</a>
+        <a href="#contact" class="mobile-link font-serif text-2xl text-white hover:text-clay transition">Request Samples</a>
+    </div>
+
+    <!-- Main -->
+    <main>
+        
+        <!-- Hero Section (Upgraded Magazine Cover Collage Layout) -->
+        <section class="py-20 md:py-28 relative border-b border-slate-200/60 overflow-hidden" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 48c-2 0-3 1-4 2v4c0 1-1 2-2 2h-4c-1 0-2-1-2-2v-4c0-1-1-2-2-2h-4c-1 0-2 1-2 2v4c0 1-1 2-2 2H22c-1 0-2-1-2-2v-4c0-1-1-2-2-2h-4c-1 0-2 1-2 2v4c0 1-1 2-2 2H2c-1 0-2-1-2-2v-4c0-1 1-2 2-2h4c1 0 2-1 2-2v-4c0-1 1-2 2-2h4c1 0 2 1 2 2v4c0 1 1 2 2 2h4c1 0 2-1 2-2v-4c0-1 1-2 2-2h4c1 0 2 1 2 2v4c0 1 1 2 2 2h4c1 0 2-1 2-2v-4c0-1-1-2-2-2h4c1 0 2 1 2 2v4c0 1 1 2 2 2h4z' fill='%23c84b31' fill-opacity='0.015' fill-rule='evenodd'/%3E%3C/svg%3E&quot;); background-color: #fcfaf7;">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left: Massive Magazine Header text -->
+                <div class="lg:col-span-7 flex flex-col justify-center relative z-10">
+                    <span class="text-xs font-semibold text-clay uppercase tracking-widest block mb-4">Nexus Agro Estates</span>
+                    <h1 class="font-serif font-light text-5xl sm:text-6xl md:text-7xl text-slate-900 leading-none tracking-tight mb-8">
+                        We export the world's most <span class="italic text-clay font-normal">refined</span> agricultural crops.
+                    </h1>
+                    <p class="text-slate-600 text-base leading-relaxed font-light mb-10 max-w-md">
+                        Nexus Agro is a premium trade curator sourcing single-origin spices, grade-A vanilla beans, and rare botanical crops direct from estate growers for global food, cosmetic, and retail brands.
+                    </p>
+                    <div>
+                        <a href="#contact" class="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-widest text-slate-900 border-b-2 border-slate-900 pb-2 hover:text-clay hover:border-clay transition cursor-pointer">
+                            Request Crop Samples <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Upgraded Cover Grid with rotating Gold Seal -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4 relative">
+                    <!-- Rotating Gold Seal stamp -->
+                    <div class="absolute -top-6 -left-6 w-20 h-20 z-20 spin-seal pointer-events-none hidden sm:block">
+                        <svg class="w-full h-full text-clay" viewBox="0 0 100 100">
+                            <path id="curve" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                            <text class="font-mono text-[6.5px] font-bold fill-clay tracking-wider">
+                                <textPath xlink:href="#curve">100% DIRECT FROM ESTATE CO-OPS • 100% DIRECT FROM ESTATE CO-OPS •</textPath>
+                            </text>
+                        </svg>
+                    </div>
+
+                    <!-- Card 1 -->
+                    <div class="aspect-[3/4] bg-white border border-slate-200/60 p-3 shadow-md hover:-translate-y-1.5 transition duration-300">
+                        <div class="h-4/5 overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1628557118391-729f6dc2452c?q=80&w=300" class="w-full h-full object-cover" alt="Vanilla Curing">
+                        </div>
+                        <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Bourbon Vanilla</div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="aspect-[3/4] bg-white border border-slate-200/60 p-3 shadow-md hover:-translate-y-1.5 transition duration-300 mt-6">
+                        <div class="h-4/5 overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=300" class="w-full h-full object-cover" alt="Cardamom Harvest">
+                        </div>
+                        <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Cardamom Bold</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Profile & Vision -->
+        <section id="about" class="py-24 bg-[#fcfaf7]">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-semibold text-clay uppercase tracking-widest block mb-2">Corporate Identity</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-slate-900">Kurasi Botani Premium</h2>
+                </div>
+                <div class="lg:col-span-8 space-y-6 text-slate-600 text-sm leading-relaxed">
+                    <p>
+                        Sebagai perusahaan kurator ekspor komoditas, Nexus Agro memadukan keahlian pertanian tradisional dengan standar logistik modern. Kami berfokus pada kualitas estetika komoditas serta kandungan senyawa aktif di dalamnya—memastikan setiap vanili, kopi, dan kapulaga dikirim dalam kemurnian penuh.
+                    </p>
+                    <p>
+                        Visi kami adalah mengamankan rantai pasok berkelanjutan, memastikan para petani mitra kami mendapatkan nilai perdagangan yang adil (FairTrade) dan lahan mereka terlindungi dari degradasi lingkungan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Specimen Catalog (Magnifier tool) -->
+        <section id="crops" class="py-24 border-t border-slate-200 bg-[#f5f1eb]/40 relative">
+            
+            <!-- Magnifier lens elements -->
+            <div id="lens" class="magnifier-lens"></div>
+            <div id="lensMeta" class="magnifier-meta"></div>
+
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-left mb-16">
+                    <span class="text-xs font-semibold text-clay uppercase tracking-widest block mb-2">Specimen Catalog</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-slate-900">Premium Commodities</h2>
+                    <p class="text-slate-500 text-xs mt-3">Hover over any crop card to examine structural details and read quality metrics.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    
+                    <!-- Crop 1 -->
+                    <div class="flex flex-col gap-6 group cursor-pointer relative" onmousemove="runMagnifier(event, 'https://images.unsplash.com/photo-1628557118391-729f6dc2452c?q=80&w=600', 'VANILLA', 'Grade-A Bourbon', '14.2%', 'Antalaha co-op')" onmouseleave="hideMagnifier()">
+                        <div class="w-full aspect-[4/5] bg-slate-100 overflow-hidden relative border border-slate-200/40 rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1628557118391-729f6dc2452c?q=80&w=600" class="w-full h-full object-cover" alt="Madagascar Vanilla beans">
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-slate-200 pb-4">
+                            <h3 class="font-serif text-2xl text-slate-900">Bourbon Vanilla</h3>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">Madagascar / Pods</span>
+                        </div>
+                    </div>
+
+                    <!-- Crop 2 -->
+                    <div class="flex flex-col gap-6 group cursor-pointer relative mt-12" onmousemove="runMagnifier(event, 'https://images.unsplash.com/photo-1587132137056-bfbf0166836e?q=80&w=600', 'CACAO', 'Premium Forestero', '7.2%', 'Ghana Union')" onmouseleave="hideMagnifier()">
+                        <div class="w-full aspect-[4/5] bg-slate-100 overflow-hidden relative border border-slate-200/40 rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?q=80&w=600" class="w-full h-full object-cover" alt="Cocoa beans in basket">
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-slate-200 pb-4">
+                            <h3 class="font-serif text-2xl text-slate-900">Single-Origin Cacao</h3>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">Forestero / Beans</span>
+                        </div>
+                    </div>
+
+                    <!-- Crop 3 -->
+                    <div class="flex flex-col gap-6 group cursor-pointer relative" onmousemove="runMagnifier(event, 'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=600', 'CARDAMOM', '8mm Bold Green', '8.4%', 'Kerala Estates')" onmouseleave="hideMagnifier()">
+                        <div class="w-full aspect-[4/5] bg-slate-100 overflow-hidden relative border border-slate-200/40 rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=600" class="w-full h-full object-cover" alt="Cardamom pods seeds">
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-slate-200 pb-4">
+                            <h3 class="font-serif text-2xl text-slate-900">Wild Cardamom</h3>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">India / 8mm Bold</span>
+                        </div>
+                    </div>
+
+                    <!-- Crop 4 -->
+                    <div class="flex flex-col gap-6 group cursor-pointer relative mt-12" onmousemove="runMagnifier(event, 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600', 'COFFEE', 'Grade-1 Arabica', '11.8%', 'Yirgacheffe Union')" onmouseleave="hideMagnifier()">
+                        <div class="w-full aspect-[4/5] bg-slate-100 overflow-hidden relative border border-slate-200/40 rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600" class="w-full h-full object-cover" alt="Roasted coffee beans">
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-slate-200 pb-4">
+                            <h3 class="font-serif text-2xl text-slate-900">Highland Arabica</h3>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">Ethiopia / G-1</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SOP Sourcing Section -->
+        <section id="sourcing" class="py-24 bg-[#fcfaf7] border-t border-slate-200">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <span class="text-xs font-semibold text-clay uppercase tracking-widest block mb-2">Harvesting SOP</span>
+                    <h2 class="font-serif text-4xl text-slate-900 leading-tight">Standard Operating Protocols</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed mt-6">
+                        We cooperate with regional farm unions to lock in crops at their harvest peaks. Standardizing slow drying, moisture checks, and hand-sorting steps yields premium agricultural exports.
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Standard 1 -->
+                    <div class="border-b border-slate-200 pb-6">
+                        <h3 class="font-serif text-xl text-slate-900 mb-2">Ethical Direct Sourcing</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed">
+                            Buying directly from farm collectives ensures fair crop pricing for growers and enables complete soil pesticide trail monitoring.
+                        </p>
+                    </div>
+                    <!-- Standard 2 -->
+                    <div class="border-b border-slate-200 pb-6">
+                        <h3 class="font-serif text-xl text-slate-900 mb-2">Slow Shade Drying</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed">
+                            Cacao and vanilla undergo slow shade curing to allow complex sugars to stabilize, maintaining visual pod oils.
+                        </p>
+                    </div>
+                    <!-- Standard 3 -->
+                    <div class="border-b border-slate-200 pb-6">
+                        <h3 class="font-serif text-xl text-slate-900 mb-2">Nitrogen-Flushed Packs</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed">
+                            Vacuum food-grade bags or nitrogen-flushed packages preserve aromatic oils and moisture tolerances during ocean freight.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infrastructure & Cleaning Section (New Addition) -->
+        <section id="infra" class="py-24 border-t border-slate-200 bg-[#fcfaf7]">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-semibold text-clay uppercase tracking-widest block mb-2">Processing Mill</span>
+                    <h2 class="font-serif text-3xl text-slate-900 uppercase">Gudang & Sarana Sortir</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs text-slate-500">
+                    <div class="border border-slate-200 p-6 bg-white rounded-lg">
+                        <h3 class="font-serif text-base text-slate-900 mb-2">Sortex Color Sort</h3>
+                        <p class="leading-relaxed">
+                            Beras Basmati dan rempah biji diproses menggunakan pemilah otomatis untuk menyaring kotoran fisik dan partikel batu kecil sebelum disortir ukuran manual.
+                        </p>
+                    </div>
+                    <div class="border border-slate-200 p-6 bg-white rounded-lg">
+                        <h3 class="font-serif text-base text-slate-900 mb-2">Dehydration Rack System</h3>
+                        <p class="leading-relaxed">
+                            Rak dehidrasi bertingkat dengan sirkulasi udara konstan untuk menjaga kapulaga hijau tetap berwarna cerah alami tanpa merusak tekstur pods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance & Certifications Manifest -->
+        <section id="compliance" class="py-24 border-t border-slate-200 bg-[#f5f1eb]/30">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-semibold text-clay uppercase tracking-widest block mb-2">Verified Credentials</span>
+                    <h2 class="font-serif text-3xl text-slate-900 uppercase tracking-tight">Compliance & Certifications</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs font-semibold text-slate-700">
+                    <div class="border border-slate-200 p-6 bg-white rounded-lg">
+                        <div class="text-clay mb-1 uppercase font-bold tracking-widest">USDA Organic</div>
+                        <div>Certified organic crop production standards (NOP/USDA).</div>
+                    </div>
+                    <div class="border border-slate-200 p-6 bg-white rounded-lg">
+                        <div class="text-clay mb-1 uppercase font-bold tracking-widest">FairTrade Registry</div>
+                        <div>Securing fair trade values direct to farming cooperatives.</div>
+                    </div>
+                    <div class="border border-slate-200 p-6 bg-white rounded-lg">
+                        <div class="text-clay mb-1 uppercase font-bold tracking-widest">Rainforest Alliance</div>
+                        <div>Preserving surrounding wildlife habitats during harvest.</div>
+                    </div>
+                    <div class="border border-slate-200 p-6 bg-white rounded-lg">
+                        <div class="text-clay mb-1 uppercase font-bold tracking-widest">Phytosanitary Board</div>
+                        <div>Fully compliant custom seals and phyto documentation.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-24 bg-[#f5f1eb]/30 border-t border-b border-slate-200/60 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <p class="font-serif italic text-2xl md:text-3xl text-slate-900 leading-relaxed mb-8">
+                    "Nexus Agro supplies our global patisseries with vanilla pods of unprecedented oil density. Their commitment to harvest timing makes them a stellar partner."
+                </p>
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Elena Rostova, Sourcing Director at Maison Cacao</span>
+            </div>
+        </section>
+
+        <!-- Sample Request Section (Floating labels) -->
+        <section id="contact" class="py-24 bg-[#fcfaf7]">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <span class="text-xs font-semibold text-clay uppercase tracking-widest block mb-2">Evaluation Samples</span>
+                    <h2 class="font-serif text-4xl text-slate-900">Request a Specimen Crop Batch</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed mt-6">
+                        We distribute certified crop sample packs to verified food importers and commercial buyers for quality testing.
+                    </p>
+                    
+                    <div class="space-y-6 mt-12 text-xs font-bold">
+                        <div>
+                            <div class="text-[9px] text-clay uppercase tracking-widest mb-1">Trade Desk</div>
+                            <div class="text-slate-800 font-serif text-md">samples@nexusagro.co</div>
+                        </div>
+                        <div>
+                            <div class="text-[9px] text-clay uppercase tracking-widest mb-1">Phone Line</div>
+                            <div class="text-slate-800 font-serif text-md">+1 (212) 908-4381</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Label Form -->
+                <form class="space-y-10" id="agroSampleForm">
+                    <div class="relative border-b border-slate-300 pb-2">
+                        <input type="text" id="clientName" required class="form-input w-full bg-transparent border-none text-slate-900 text-sm focus:outline-none py-1 placeholder-transparent" placeholder="Name">
+                        <label class="form-label absolute left-0 top-1 text-slate-400 text-sm pointer-events-none transition-all duration-300" for="clientName">Your Name</label>
+                    </div>
+                    
+                    <div class="relative border-b border-slate-300 pb-2">
+                        <input type="email" id="clientEmail" required class="form-input w-full bg-transparent border-none text-slate-900 text-sm focus:outline-none py-1 placeholder-transparent" placeholder="Email">
+                        <label class="form-label absolute left-0 top-1 text-slate-400 text-sm pointer-events-none transition-all duration-300" for="clientEmail">Corporate Email</label>
+                    </div>
+
+                    <div class="relative border-b border-slate-300 pb-2">
+                        <input type="text" id="targetCrop" required class="form-input w-full bg-transparent border-none text-slate-900 text-sm focus:outline-none py-1 placeholder-transparent" placeholder="Crop">
+                        <label class="form-label absolute left-0 top-1 text-slate-400 text-sm pointer-events-none transition-all duration-300" for="targetCrop">Target Crop & Annual Tonnage</label>
+                    </div>
+
+                    <div class="relative border-b border-slate-300 pb-2">
+                        <input type="text" id="cropSpecs" required class="form-input w-full bg-transparent border-none text-slate-900 text-sm focus:outline-none py-1 placeholder-transparent" placeholder="Specs">
+                        <label class="form-label absolute left-0 top-1 text-slate-400 text-sm pointer-events-none transition-all duration-300" for="cropSpecs">Crop Specifications / Grade Parameters</label>
+                    </div>
+
+                    <button type="submit" class="bg-slate-900 hover:bg-clay text-white font-sans font-bold text-xs uppercase tracking-widest py-4 px-10 transition cursor-pointer">
+                        Submit Sample Request
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#121212] text-[#f5f5f5] py-16 text-xs border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <span class="font-serif font-bold text-lg">NEXUS<span class="text-clay">.</span>AGRO</span>
+            <p class="text-slate-500">© 2026 Nexus Agro. All rights reserved.</p>
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-white transition">Sustainability Report</a>
+                <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript interactions (Magnifier Tool) -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.add('opacity-100');
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('opacity-100');
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        };
+        closeMobileMenu.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // Magnifier lens followers
+        const lens = document.getElementById('lens');
+        const lensMeta = document.getElementById('lensMeta');
+
+        function runMagnifier(event, imageUrl, cropCode, grade, moisture, coOp) {
+            const card = event.currentTarget;
+            const cardRect = card.getBoundingClientRect();
+            
+            // Mouse coordinates relative to card
+            const mouseX = event.clientX - cardRect.left;
+            const mouseY = event.clientY - cardRect.top;
+
+            // Make sure lens elements are visible
+            lens.style.display = 'block';
+            lensMeta.style.display = 'block';
+
+            // Position lens inside the current hovered card (centered on cursor)
+            lens.style.left = `${mouseX - 70}px`;
+            lens.style.top = `${mouseY - 70}px`;
+            
+            // Position metadata box slightly offset from lens
+            lensMeta.style.left = `${mouseX + 85}px`;
+            lensMeta.style.top = `${mouseY - 45}px`;
+
+            // Set zoom background image
+            lens.style.backgroundImage = `url('${imageUrl}')`;
+            lens.style.backgroundSize = `${cardRect.width * 2.5}px ${cardRect.height * 2.5}px`;
+
+            // Calculate background position relative to mouse coordinate ratios
+            const ratioX = mouseX / cardRect.width;
+            const ratioY = mouseY / cardRect.height;
+            const bgX = (ratioX * 100).toFixed(2);
+            const bgY = (ratioY * 100).toFixed(2);
+
+            lens.style.backgroundPosition = `${bgX}% ${bgY}%`;
+
+            // Write metadata variables
+            lensMeta.innerHTML = `
+                <div style="color: #c84b31; font-weight: 700; margin-bottom: 4px;">SPECIMEN CODE: ${cropCode}</div>
+                <div>GRADE: ${grade}</div>
+                <div>MOISTURE: ${moisture}</div>
+                <div>SOURCE: ${coOp}</div>
+            `;
+            
+            // Colocate lens elements inside hovered card container
+            if (lens.parentElement !== card) {
+                card.appendChild(lens);
+                card.appendChild(lensMeta);
+            }
+        }
+
+        function hideMagnifier() {
+            lens.style.display = 'none';
+            lensMeta.style.display = 'none';
+        }
+
+        // Form handling
+        const sampleForm = document.getElementById('agroSampleForm');
+        if (sampleForm) {
+            sampleForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('clientName').value;
+                const email = document.getElementById('clientEmail').value;
+                
+                alert(`Sample request submitted!\n\nThank you ${name}. Our trade desk will verify your company status and reply to ${email} with sample shipping tracking numbers.`);
+                sampleForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
