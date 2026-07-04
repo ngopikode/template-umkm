@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthy Harvest | Organic Agricultural & Estate Coffee Exporters</title>
+    <meta name="description" content="Earthy Harvest is a premier supplier of shade-grown estate cacao, specialty coffee beans, and organic agricultural products.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        heading: ['"Lora"', 'serif'],
+                    },
+                    colors: {
+                        earthyBg: '#FDFBF7',
+                        coffeeBrown: '#3B2314',
+                        warmOchre: '#D97706',
+                        leafGreen: '#15803D',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-earthyBg text-slate-800 font-sans min-h-screen relative overflow-x-hidden selection:bg-coffeeBrown selection:text-white">
+
+    <!-- Top Info Bar (Liyosa Style) -->
+    <div class="bg-coffeeBrown text-amber-100 text-[10px] font-bold uppercase tracking-widest py-3 px-6 hidden md:block border-b border-amber-900/10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-warmOchre" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    estate@earthyharvest.com
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-warmOchre" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    +62 811 9902 445
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-warmOchre">
+                <span>RAINFOREST ALLIANCE PARTNER</span>
+                <span>•</span>
+                <span>SINGLE-ORIGIN TRACEABILITY</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="border-b border-amber-900/10 sticky top-0 bg-[#FDFBF7]/95 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-6 h-24 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col select-none">
+                <span class="font-heading font-black text-2xl text-coffeeBrown tracking-tight leading-none">EARTHY HARVEST</span>
+                <span class="text-[9px] text-warmOchre font-bold uppercase tracking-[0.25em] mt-1.5">Agricultural Estates</span>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-bold text-xs uppercase tracking-wider text-slate-700">
+                <a href="#about" class="hover:text-warmOchre transition py-2">About Us</a>
+                <a href="#features" class="hover:text-warmOchre transition py-2">Our Pillars</a>
+                <a href="#products" class="hover:text-warmOchre transition py-2">Estates</a>
+                <a href="#infra" class="hover:text-warmOchre transition py-2">Milling</a>
+                <a href="#compliance" class="hover:text-warmOchre transition py-2">Compliance</a>
+                <a href="#inquiry" class="hover:text-warmOchre transition py-2">Contact</a>
+            </nav>
+
+            <a href="#inquiry" class="bg-coffeeBrown hover:bg-warmOchre text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 transition duration-300">
+                Inquire Estate Cargo
+            </a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center justify-center py-20 border-b border-amber-900/10" style="background-image: radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.04), transparent 50%), #FDFBF7;">
+            <div class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <span class="text-xs font-bold text-leafGreen uppercase tracking-widest block mb-4">Shade-Grown Estate Sourcing</span>
+                    <h1 class="font-heading font-black text-5xl sm:text-6xl md:text-7xl text-coffeeBrown leading-none mb-8 tracking-tight">
+                        Earthy Agricultural <span class="italic font-normal text-warmOchre">Estates</span>.
+                    </h1>
+                    <p class="text-slate-600 text-base leading-relaxed font-light mb-10 max-w-md">
+                        Sourcing single-origin cocoa, estate coffee beans, and organic botanical crops directly from Shade-Grown partner estates in Sumatra & Sulawesi.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#products" class="bg-coffeeBrown hover:bg-warmOchre text-white font-bold text-xs uppercase tracking-widest px-8 py-4 transition text-center">
+                            Explore Estates
+                        </a>
+                        <a href="#inquiry" class="bg-white hover:bg-slate-100 text-coffeeBrown font-bold text-xs uppercase tracking-widest px-8 py-4 transition border border-amber-900/10 text-center">
+                            Request Samples
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Frame -->
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-[4/5] bg-white border border-amber-900/10 p-4 rounded-3xl shadow-lg overflow-hidden relative">
+                        <div class="h-4/5 overflow-hidden rounded-2xl mb-4">
+                            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=500" class="w-full h-full object-cover" alt="Estate Coffee Dry">
+                        </div>
+                        <div class="flex justify-between items-center px-2">
+                            <div class="font-heading font-bold text-sm text-coffeeBrown">Specialty Gayo Arabica</div>
+                            <span class="text-[9px] font-bold bg-amber-100 text-warmOchre px-2 py-0.5 rounded">UTZ Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="py-24 bg-white border-b border-amber-900/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold text-warmOchre uppercase tracking-widest block">Our Legacy</span>
+                    <h2 class="font-heading font-extrabold text-3xl md:text-4xl text-coffeeBrown uppercase tracking-tight leading-tight">
+                        Honoring Sustainable Agriculture
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Earthy Harvest manages direct sourcing alliances with cocoa and coffee estates in Gayo (Aceh) and Toraja (Sulawesi). We specialize in shade-grown agriculture that preserves biodiversity and improves soil health.
+                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Each lot undergoes strict grading to check moisture content, bean count, and fermentation quality parameters before shipment.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-amber-900/10 text-slate-800 font-bold text-center">
+                        <div>
+                            <div class="text-3xl font-black text-coffeeBrown">12+</div>
+                            <div class="text-[9px] text-slate-500 uppercase tracking-wider mt-1">Direct Estates</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-coffeeBrown">4,500+</div>
+                            <div class="text-[9px] text-slate-500 uppercase tracking-wider mt-1">Metric Tons / Yr</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-coffeeBrown">100%</div>
+                            <div class="text-[9px] text-slate-500 uppercase tracking-wider mt-1">Biodegradable Pack</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Collage -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="h-80 overflow-hidden border border-amber-900/10 rounded-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=400" class="w-full h-full object-cover" alt="Coffee Cherries">
+                    </div>
+                    <div class="h-80 overflow-hidden border border-amber-900/10 rounded-2xl relative mt-8">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=400" class="w-full h-full object-cover" alt="Agriculture field">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Pillars Section -->
+        <section id="features" class="py-24 bg-earthyBg border-b border-amber-900/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white border border-amber-900/5 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-warmOchre/10 rounded-lg flex items-center justify-center text-warmOchre mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-coffeeBrown mb-3 uppercase">Solar Patios</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Natural sun-drying on raised patios preserves delicate bean flavors.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-white border border-amber-900/5 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-warmOchre/10 rounded-lg flex items-center justify-center text-warmOchre mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-coffeeBrown mb-3 uppercase">Shade Grown</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Cacao and coffee trees are planted under canopy shade trees to enrich the soil ecosystem.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white border border-amber-900/5 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-warmOchre/10 rounded-lg flex items-center justify-center text-warmOchre mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-coffeeBrown mb-3 uppercase">Micro-Lot Trace</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Every bag of beans is marked with its exact altitude, estate owner, and harvest date.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white border border-amber-900/5 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-warmOchre/10 rounded-lg flex items-center justify-center text-warmOchre mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-coffeeBrown mb-3 uppercase">Fermentation control</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Securing temperature and moisture profiles during wooden box fermentation phases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product showcase grid -->
+        <section id="products" class="py-24 bg-white border-b border-amber-900/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="text-xs font-bold text-warmOchre uppercase tracking-widest block mb-2">Our Estates</span>
+                    <h2 class="font-heading font-extrabold text-4xl text-coffeeBrown uppercase">Specialty Agricultural Crops</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="border border-amber-900/10 p-8 rounded-2xl bg-earthyBg hover:border-coffeeBrown transition duration-300">
+                        <span class="text-[9px] font-bold bg-[#3B2314]/10 text-[#3B2314] px-2 py-0.5 rounded">CACAO</span>
+                        <h3 class="font-heading font-bold text-lg text-coffeeBrown mt-4 mb-2 uppercase">Toraja Organic Cocoa</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                            Single-origin raw fermented cocoa beans. Bean count 90-100 per 100g, moisture max 7.5%, mold limit 1.0%.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-warmOchre hover:text-coffeeBrown flex items-center gap-1.5">
+                            Inquire Estate Lot <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="border border-amber-900/10 p-8 rounded-2xl bg-earthyBg hover:border-coffeeBrown transition duration-300">
+                        <span class="text-[9px] font-bold bg-[#3B2314]/10 text-[#3B2314] px-2 py-0.5 rounded">COFFEE</span>
+                        <h3 class="font-heading font-bold text-lg text-coffeeBrown mt-4 mb-2 uppercase">Specialty Gayo Arabica</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                            Grade-1 double-picked Gayo green coffee beans. Altitude 1,400m, moisture max 12.0%, defect count max 5%.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-warmOchre hover:text-coffeeBrown flex items-center gap-1.5">
+                            Inquire Estate Lot <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="border border-amber-900/10 p-8 rounded-2xl bg-earthyBg hover:border-coffeeBrown transition duration-300">
+                        <span class="text-[9px] font-bold bg-[#3B2314]/10 text-[#3B2314] px-2 py-0.5 rounded">NUTS</span>
+                        <h3 class="font-heading font-bold text-lg text-coffeeBrown mt-4 mb-2 uppercase">Sulawesi Cashew Nuts</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                            Selected Grade-A raw cashew kernels. Moisture max 5.0%, count per lb 240, defect rate max 3%.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-warmOchre hover:text-coffeeBrown flex items-center gap-1.5">
+                            Inquire Estate Lot <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milling & Processing -->
+        <section id="infra" class="py-24 bg-earthyBg border-b border-amber-900/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-warmOchre uppercase tracking-widest block mb-2">Processing Mill</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-coffeeBrown uppercase tracking-tight leading-tight">Density Separation</h2>
+                    <p class="text-slate-600 text-xs leading-relaxed mt-4">
+                        Our processing plants use density separation tables and catador hullers to separate coffee parchment and cocoa husks from high-grade export kernels.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-slate-600">
+                    <div class="border border-amber-900/10 bg-white p-6 rounded-xl">
+                        <div class="text-coffeeBrown font-extrabold text-lg mb-2">01</div>
+                        <h4 class="font-heading font-bold text-sm text-coffeeBrown uppercase mb-2">Hulling & Peeling</h4>
+                        <p class="leading-relaxed">Mechanical hullers extract dry green coffee beans and cacao kernels from protective shells.</p>
+                    </div>
+                    <div class="border border-amber-900/10 bg-white p-6 rounded-xl">
+                        <div class="text-coffeeBrown font-extrabold text-lg mb-2">02</div>
+                        <h4 class="font-heading font-bold text-sm text-coffeeBrown uppercase mb-2">Catador Sorting</h4>
+                        <p class="leading-relaxed">Air flow classification separation separates lighter debris and hollow beans from dense kernels.</p>
+                    </div>
+                    <div class="border border-amber-900/10 bg-white p-6 rounded-xl">
+                        <div class="text-coffeeBrown font-extrabold text-lg mb-2">03</div>
+                        <h4 class="font-heading font-bold text-sm text-coffeeBrown uppercase mb-2">Hand-Polishing</h4>
+                        <p class="leading-relaxed">Experienced sorting teams manually check and double-pick export lots to remove defect beans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance & Certifications Section -->
+        <section id="compliance" class="py-24 bg-coffeeBrown text-white border-b border-amber-950/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-warmOchre uppercase tracking-widest block mb-2">Purity Credentials</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-white">Estate Safety Compliance</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-xs font-bold text-white">
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-warmOchre mb-1 font-mono">FDA Registered</div>
+                        <div class="text-[9px] text-amber-200/60 uppercase">Import Vetted</div>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-warmOchre mb-1 font-mono">UTZ Certified</div>
+                        <div class="text-[9px] text-amber-200/60 uppercase">Process Audit</div>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-warmOchre mb-1 font-mono">HACCP Vetted</div>
+                        <div class="text-[9px] text-amber-200/60 uppercase">Critical Control</div>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-warmOchre mb-1 font-mono">HALAL / KOSHER</div>
+                        <div class="text-[9px] text-amber-200/60 uppercase">Process Audit</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cargo Calculator / B2B Inquiry Desk -->
+        <section id="inquiry" class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="border border-amber-900/10 bg-earthyBg rounded-3xl p-8 md:p-12 shadow-md relative">
+                    <div class="text-center max-w-xl mx-auto mb-10">
+                        <span class="text-xs font-bold text-coffeeBrown uppercase tracking-widest block mb-2">Estate Specification Desk</span>
+                        <h3 class="font-heading font-black text-3xl text-coffeeBrown uppercase tracking-tight">Cargo Specification Verifier</h3>
+                        <p class="text-xs text-slate-500 mt-2">Select an estate commodity lot below to retrieve quality inspection certificates.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-2 mb-8">
+                        <label class="text-[10px] font-bold uppercase tracking-wider text-slate-500" for="calcRoute">Cargo Lot ID</label>
+                        <select id="calcRoute" onchange="runCalculator()" class="w-full border border-amber-900/10 focus:border-warmOchre focus:outline-none p-4 text-xs font-bold bg-white rounded-lg text-slate-800">
+                            <option value="LOT-COCOA-90">LOT-COCOA-90 (Toraja Organic Raw Cacao) - Min 12 MT</option>
+                            <option value="LOT-COFFEE-05">LOT-COFFEE-05 (Gayo Arabica Grade-1 DP) - Min 18 MT</option>
+                        </select>
+                    </div>
+
+                    <!-- Readout Details -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-white border border-amber-900/10 p-6 rounded-2xl font-mono text-xs text-slate-700 mb-8">
+                        <div class="border-b sm:border-b-0 sm:border-r border-amber-900/10 pb-4 sm:pb-0 sm:pr-6 space-y-3">
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Bean Moisture / Defect Rate</span>
+                                <div class="font-bold text-slate-800 mt-0.5" id="readoutDays">Moisture: 7.2% (Defects &lt; 1%)</div>
+                            </div>
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Standard Packing Weight</span>
+                                <div class="font-bold text-slate-800 mt-0.5" id="readoutDemurrage">60 kg Jute Bags</div>
+                            </div>
+                        </div>
+                        <div class="space-y-3 pl-0 sm:pl-2">
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Estate Origin Certificate</span>
+                                <div class="font-bold text-slate-800 mt-0.5" id="readoutCode">ORIGIN-TORAJA-4402</div>
+                            </div>
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Est FOB Price / Ton</span>
+                                <div class="font-bold text-warmOchre mt-0.5" id="readoutPrice">$2,850.00 USD</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B2B Submission Email -->
+                    <form id="rateForm" class="flex flex-col sm:flex-row gap-3 border-t border-amber-900/10 pt-8">
+                        <input type="email" id="submitEmail" required class="flex-grow border border-amber-900/10 focus:border-warmOchre focus:outline-none p-3.5 text-xs font-bold rounded-lg bg-white text-slate-800" placeholder="purchasing@company.com">
+                        <button type="submit" class="bg-coffeeBrown hover:bg-warmOchre text-white font-bold text-xs uppercase px-8 py-3.5 transition rounded-lg">
+                            Request Price Offer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-coffeeBrown text-amber-100/60 py-20 text-xs border-t border-amber-950/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16 items-start">
+                <div>
+                    <span class="font-heading font-black text-white text-lg">EARTHY HARVEST<span class="text-warmOchre">.</span></span>
+                    <p class="text-amber-100/40 text-xs leading-relaxed my-6 font-light">
+                        Shade-grown agricultural estate exporters. Supply partners for specialty cocoa, coffee, and forest nutmeg.
+                    </p>
+                    <div class="flex flex-col gap-2 text-white">
+                        <span>Email: estate@earthyharvest.com</span>
+                        <span>Tel: +62 811 9902 445</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-amber-100/40 uppercase tracking-widest mb-6">Processing Center</h4>
+                    <p class="text-amber-100/40 leading-relaxed font-light">
+                        Jalan Raya Toraja-Rantepao KM 7, Toraja Utara, Sulawesi Selatan - 91823. Indonesia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-amber-100/40 uppercase tracking-widest mb-6">Trade Associations</h4>
+                    <ul class="space-y-3 text-amber-100/40 font-light">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-warmOchre"></span> Specialty Coffee Association of Indonesia (SCAI)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-warmOchre"></span> Indonesian Cocoa Industry Association</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-warmOchre"></span> Sustainable Agriculture Network Partner</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-amber-950/20 pt-8 flex flex-col md:flex-row justify-between items-center text-amber-100/30">
+                <p>© 2026 Earthy Harvest Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript interactions -->
+    <script>
+        const ROUTE_DATA = {
+            "LOT-COCOA-90": {
+                days: "Moisture: 7.2% (Defects < 1%)",
+                demurrage: "60 kg Jute Bags",
+                code: "ORIGIN-TORAJA-4402",
+                price: "$2,850.00 USD"
+            },
+            "LOT-COFFEE-05": {
+                days: "Moisture: 11.5% (Defects < 5%)",
+                demurrage: "60 kg GrainPro Bags",
+                code: "ORIGIN-GAYO-9912",
+                price: "$4,650.00 USD"
+            }
+        };
+
+        function runCalculator() {
+            const routeId = document.getElementById('calcRoute').value;
+            const data = ROUTE_DATA[routeId];
+
+            document.getElementById('readoutDays').innerText = data.days;
+            document.getElementById('readoutDemurrage').innerText = data.demurrage;
+            document.getElementById('readoutCode').innerText = data.code;
+            document.getElementById('readoutPrice').innerText = data.price;
+        }
+
+        const rateForm = document.getElementById('rateForm');
+        if (rateForm) {
+            rateForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('submitEmail').value;
+                const routeId = document.getElementById('calcRoute').value;
+                alert(`Quotation request logged!\n\nWe have logged your query for ${routeId}. A finalized FOB pricing offer sheet will be sent to ${email} shortly.`);
+                rateForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>

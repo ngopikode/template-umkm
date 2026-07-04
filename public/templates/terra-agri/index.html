@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Agribusiness | Smart Agricultural Sourcing & Trade</title>
+    <meta name="description" content="Terra Agribusiness is a leading exporter of premium agricultural commodities utilizing smart agronomic monitoring and direct sourcing.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        heading: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        terraBg: '#FAFDFB',
+                        terraGreen: '#022C22',
+                        terraLime: '#84CC16',
+                        terraZinc: '#F4F4F5',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-terraBg text-slate-800 font-sans min-h-screen relative overflow-x-hidden selection:bg-terraGreen selection:text-white">
+
+    <!-- Top Info Bar (Liyosa Style) -->
+    <div class="bg-terraGreen text-emerald-100 text-[10px] font-bold uppercase tracking-widest py-3 px-6 hidden md:block border-b border-emerald-950/20">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-terraLime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    supply@terraagri.com
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-terraLime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    +62 24 766 8801
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-terraLime">
+                <span>ISO 22000 COMPLIANT</span>
+                <span>•</span>
+                <span>DIGITAL AGRIBUSINESS CERTIFIED</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="border-b border-emerald-950/10 sticky top-0 bg-[#FAFDFB]/95 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-6 h-24 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col select-none">
+                <span class="font-heading font-black text-2xl text-terraGreen tracking-tight leading-none">TERRA<span class="text-terraLime">.</span>AGRI</span>
+                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-[0.25em] mt-1.5">Agribusiness Sourcing</span>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-bold text-xs uppercase tracking-wider text-slate-700">
+                <a href="#about" class="hover:text-terraLime transition py-2">About Us</a>
+                <a href="#features" class="hover:text-terraLime transition py-2">Our Pillars</a>
+                <a href="#products" class="hover:text-terraLime transition py-2">Products</a>
+                <a href="#infra" class="hover:text-terraLime transition py-2">Infrastructure</a>
+                <a href="#compliance" class="hover:text-terraLime transition py-2">Compliance</a>
+                <a href="#inquiry" class="hover:text-terraLime transition py-2">Contact</a>
+            </nav>
+
+            <a href="#inquiry" class="bg-terraGreen hover:bg-terraLime text-white hover:text-terraGreen font-bold text-xs uppercase tracking-wider px-6 py-3.5 transition duration-300">
+                Inquire Batch Cargo
+            </a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center justify-center py-20 border-b border-emerald-950/10" style="background-image: radial-gradient(circle at 80% 20%, rgba(132, 204, 22, 0.05), transparent 50%), #FAFDFB;">
+            <div class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <span class="text-xs font-bold text-terraGreen uppercase tracking-widest block mb-4">Digitized Agriculture Supply</span>
+                    <h1 class="font-heading font-black text-5xl sm:text-6xl md:text-7xl text-terraGreen leading-none mb-8 tracking-tight">
+                        Precision Sourced <span class="text-terraLime">Agribusiness</span> Commodities.
+                    </h1>
+                    <p class="text-slate-600 text-base leading-relaxed font-light mb-10 max-w-md">
+                        Combining IoT farmgate trace grids with global export channels. We distribute high-yield agricultural goods directly from managed farming networks.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#products" class="bg-terraLime hover:bg-terraGreen hover:text-white text-terraGreen font-bold text-xs uppercase tracking-widest px-8 py-4 transition text-center">
+                            Explore Commodities
+                        </a>
+                        <a href="#inquiry" class="bg-white hover:bg-slate-100 text-terraGreen font-bold text-xs uppercase tracking-widest px-8 py-4 transition border border-emerald-950/10 text-center">
+                            Request Batch Data
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Frame -->
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-[4/5] bg-white border border-emerald-950/10 p-4 rounded-3xl shadow-lg overflow-hidden relative">
+                        <div class="h-4/5 overflow-hidden rounded-2xl mb-4">
+                            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=500" class="w-full h-full object-cover" alt="Agribusiness Monitoring">
+                        </div>
+                        <div class="flex justify-between items-center px-2">
+                            <div class="font-heading font-bold text-sm text-terraGreen">Precision Organic Cassava</div>
+                            <span class="text-[9px] font-bold bg-emerald-100 text-terraGreen px-2 py-0.5 rounded">IoT Traceable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="py-24 bg-white border-b border-emerald-950/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold text-terraLime uppercase tracking-widest block">Corporate Profile</span>
+                    <h2 class="font-heading font-extrabold text-3xl md:text-4xl text-terraGreen uppercase tracking-tight leading-tight">
+                        Pioneering Digital Agribusiness Trade
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Terra Agribusiness operates contract farming networks in Central Java and East Indonesia. We apply smart soil analysis and crop health sensors to guarantee consistent quality of agricultural products.
+                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        By bypassing middle brokers, we offer direct agribusiness transactions that optimize supply chains, reduce carbon footprints, and pay fair prices to local growers.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-emerald-950/10 text-slate-800 font-bold text-center">
+                        <div>
+                            <div class="text-3xl font-black text-terraGreen">3,500+</div>
+                            <div class="text-[9px] text-slate-500 uppercase tracking-wider mt-1">Growers Network</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-terraGreen">12k+</div>
+                            <div class="text-[9px] text-slate-500 uppercase tracking-wider mt-1">Metric Tons / Yr</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-terraGreen">100%</div>
+                            <div class="text-[9px] text-slate-500 uppercase tracking-wider mt-1">Batch Traceable</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Collage -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="h-80 overflow-hidden border border-emerald-950/10 rounded-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=400" class="w-full h-full object-cover" alt="Cassava field">
+                    </div>
+                    <div class="h-80 overflow-hidden border border-emerald-950/10 rounded-2xl relative mt-8">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=400" class="w-full h-full object-cover" alt="Agri drone">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Pillars Section -->
+        <section id="features" class="py-24 bg-terraBg border-b border-emerald-950/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white border border-emerald-950/5 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-terraLime/10 rounded-lg flex items-center justify-center text-terraLime mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-terraGreen mb-3 uppercase">IoT Screening</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Continuous data monitoring records soil moisture, temperature, and nitrogen profiles.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-white border border-emerald-950/5 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-terraLime/10 rounded-lg flex items-center justify-center text-terraLime mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-terraGreen mb-3 uppercase">Carbon Clean</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Implementing carbon offset schemes across our domestic trucking and port operations.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white border border-emerald-950/5 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-terraLime/10 rounded-lg flex items-center justify-center text-terraLime mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-terraGreen mb-3 uppercase">Fair Wages</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Buying directly from farmgates secures higher revenue splits for farming communities.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white border border-emerald-950/5 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-terraLime/10 rounded-lg flex items-center justify-center text-terraLime mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-terraGreen mb-3 uppercase">Geomapped Lots</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Geomapping coordinates trace each export shipping container back to its source field.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product showcase grid -->
+        <section id="products" class="py-24 bg-white border-b border-emerald-950/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="text-xs font-bold text-terraLime uppercase tracking-widest block mb-2">Our Commodities</span>
+                    <h2 class="font-heading font-extrabold text-4xl text-terraGreen uppercase">Precision Sourced Agriculture</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="border border-emerald-950/10 p-8 rounded-2xl bg-terraBg hover:border-terraLime transition duration-300">
+                        <span class="text-[9px] font-bold bg-[#022C22]/10 text-[#022C22] px-2 py-0.5 rounded">TUBERS</span>
+                        <h3 class="font-heading font-bold text-lg text-terraGreen mt-4 mb-2 uppercase">Premium Cassava Starch</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                            High-purity industrial cassava starch. Moisture max 12.0%, starch content min 85.0%, mesh count 100.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-terraLime hover:text-terraGreen flex items-center gap-1.5">
+                            Request Batch Data <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="border border-emerald-950/10 p-8 rounded-2xl bg-terraBg hover:border-terraLime transition duration-300">
+                        <span class="text-[9px] font-bold bg-[#022C22]/10 text-[#022C22] px-2 py-0.5 rounded">ROOTS</span>
+                        <h3 class="font-heading font-bold text-lg text-terraGreen mt-4 mb-2 uppercase">Sliced Dried Ginger</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                            Selected sliced sun-dried ginger. Essential oils min 2.0%, moisture max 10.0%, ash limit 6.0%.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-terraLime hover:text-terraGreen flex items-center gap-1.5">
+                            Request Batch Data <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="border border-emerald-950/10 p-8 rounded-2xl bg-terraBg hover:border-terraLime transition duration-300">
+                        <span class="text-[9px] font-bold bg-[#022C22]/10 text-[#022C22] px-2 py-0.5 rounded">NUTS</span>
+                        <h3 class="font-heading font-bold text-lg text-terraGreen mt-4 mb-2 uppercase">Organic Raw Peanuts</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                            Aflatoxin-tested premium raw peanuts. Moisture limit 8.0%, oil content min 48.0%, sorting density 99%.
+                        </p>
+                        <a href="#inquiry" class="text-xs font-bold uppercase tracking-widest text-terraLime hover:text-terraGreen flex items-center gap-1.5">
+                            Request Batch Data <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milling & Processing -->
+        <section id="infra" class="py-24 bg-terraBg border-b border-emerald-950/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-terraLime uppercase tracking-widest block mb-2">Processing Mill</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-terraGreen uppercase tracking-tight leading-tight">Decanter Separators</h2>
+                    <p class="text-slate-600 text-xs leading-relaxed mt-4">
+                        Our centralized milling facilities utilize industrial decanters and automated screen separators to process raw tubers and roots under ISO sanitary parameters.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-slate-600">
+                    <div class="border border-emerald-950/10 bg-white p-6 rounded-xl">
+                        <div class="text-[#022C22] font-extrabold text-lg mb-2">01</div>
+                        <h4 class="font-heading font-bold text-sm text-terraGreen uppercase mb-2">Washing & Peeling</h4>
+                        <p class="leading-relaxed">Automated roller peelers wash raw root crops to strip soil and micro flora.</p>
+                    </div>
+                    <div class="border border-emerald-950/10 bg-white p-6 rounded-xl">
+                        <div class="text-[#022C22] font-extrabold text-lg mb-2">02</div>
+                        <h4 class="font-heading font-bold text-sm text-terraGreen uppercase mb-2">Centrifugal Decanting</h4>
+                        <p class="leading-relaxed">High-volume starch decanters separate fibers from pure liquid starches.</p>
+                    </div>
+                    <div class="border border-emerald-950/10 bg-white p-6 rounded-xl">
+                        <div class="text-[#022C22] font-extrabold text-lg mb-2">03</div>
+                        <h4 class="font-heading font-bold text-sm text-terraGreen uppercase mb-2">Pneumatic Flash Drying</h4>
+                        <p class="leading-relaxed">High-pressure hot air cyclones dry starch particles instantly, keeping moisture below 12.0%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance & Certifications Section -->
+        <section id="compliance" class="py-24 bg-terraGreen text-white border-b border-emerald-950/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-terraLime uppercase tracking-widest block mb-2">Purity Credentials</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-white">Agribusiness Compliance</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-xs font-bold text-white">
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-terraLime mb-1 font-mono">FDA Registered</div>
+                        <div class="text-[9px] text-emerald-200/60 uppercase">Import Vetted</div>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-terraLime mb-1 font-mono">ISO 22000</div>
+                        <div class="text-[9px] text-emerald-200/60 uppercase">Safety Certified</div>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-terraLime mb-1 font-mono">HACCP Vetted</div>
+                        <div class="text-[9px] text-emerald-200/60 uppercase">Critical Control</div>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-xl">
+                        <div class="text-terraLime mb-1 font-mono">HALAL / KOSHER</div>
+                        <div class="text-[9px] text-emerald-200/60 uppercase">Process Audit</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Batch Cargo Calculator / B2B Inquiry Desk -->
+        <section id="inquiry" class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="border border-emerald-950/10 bg-terraZinc rounded-3xl p-8 md:p-12 shadow-md relative">
+                    <div class="text-center max-w-xl mx-auto mb-10">
+                        <span class="text-xs font-bold text-terraGreen uppercase tracking-widest block mb-2">Agribusiness Data Desk</span>
+                        <h3 class="font-heading font-black text-3xl text-terraGreen uppercase tracking-tight">Cargo Specification Verifier</h3>
+                        <p class="text-xs text-slate-500 mt-2">Select an agribusiness cargo lot below to retrieve digital trace parameters.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-2 mb-8">
+                        <label class="text-[10px] font-bold uppercase tracking-wider text-slate-500" for="calcRoute">Cargo Lot ID</label>
+                        <select id="calcRoute" onchange="runCalculator()" class="w-full border border-emerald-950/10 focus:border-terraLime focus:outline-none p-4 text-xs font-bold bg-white rounded-lg text-slate-800">
+                            <option value="LOT-CASSAVA-10">LOT-CASSAVA-10 (Industrial Cassava Starch) - Min 20 MT</option>
+                            <option value="LOT-GINGER-77">LOT-GINGER-77 (Sliced Dried Ginger) - Min 10 MT</option>
+                        </select>
+                    </div>
+
+                    <!-- Readout Details -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-white border border-emerald-950/10 p-6 rounded-2xl font-mono text-xs text-slate-700 mb-8">
+                        <div class="border-b sm:border-b-0 sm:border-r border-emerald-950/10 pb-4 sm:pb-0 sm:pr-6 space-y-3">
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Starch Index / Moisture density</span>
+                                <div class="font-bold text-slate-800 mt-0.5" id="readoutDays">Starch: 85.5% (Moisture 11.8%)</div>
+                            </div>
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Standard Packing Weight</span>
+                                <div class="font-bold text-slate-800 mt-0.5" id="readoutDemurrage">50 kg Woven PP Bags</div>
+                            </div>
+                        </div>
+                        <div class="space-y-3 pl-0 sm:pl-2">
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Digital Phytosanitary Trace</span>
+                                <div class="font-bold text-slate-800 mt-0.5" id="readoutCode">TR-TERRA-SEMARANG-09</div>
+                            </div>
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Est FOB Price / Ton</span>
+                                <div class="font-bold text-terraLime mt-0.5" id="readoutPrice">$580.00 USD</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B2B Submission Email -->
+                    <form id="rateForm" class="flex flex-col sm:flex-row gap-3 border-t border-emerald-950/10 pt-8">
+                        <input type="email" id="submitEmail" required class="flex-grow border border-emerald-950/10 focus:border-terraLime focus:outline-none p-3.5 text-xs font-bold rounded-lg bg-white text-slate-800" placeholder="purchasing@company.com">
+                        <button type="submit" class="bg-terraGreen hover:bg-terraLime text-white hover:text-terraGreen font-bold text-xs uppercase px-8 py-3.5 transition rounded-lg">
+                            Request Price Offer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-terraGreen text-emerald-100/60 py-20 text-xs border-t border-emerald-950/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16 items-start">
+                <div>
+                    <span class="font-heading font-black text-white text-lg">TERRA.AGRI<span class="text-terraLime">.</span></span>
+                    <p class="text-emerald-100/40 text-xs leading-relaxed my-6 font-light">
+                        Industrial agribusiness exporters and trace network operators. Distributing starch, roots, and oilseeds globally.
+                    </p>
+                    <div class="flex flex-col gap-2 text-white">
+                        <span>Email: supply@terraagri.com</span>
+                        <span>Tel: +62 24 766 8801</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-emerald-100/40 uppercase tracking-widest mb-6">Processing Center</h4>
+                    <p class="text-emerald-100/40 leading-relaxed font-light">
+                        Kawasan Industri Candi Blok A-12, Semarang, Jawa Tengah - 50146. Indonesia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-emerald-100/40 uppercase tracking-widest mb-6">Trade Associations</h4>
+                    <ul class="space-y-3 text-emerald-100/40 font-light">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terraLime"></span> Indonesia Agricultural Exporters Association (AEI)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terraLime"></span> Central Java Agribusiness Council</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-terraLime"></span> Global Trace Alliance Partner</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-emerald-950/20 pt-8 flex flex-col md:flex-row justify-between items-center text-emerald-100/30">
+                <p>© 2026 Terra Agribusiness Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript interactions -->
+    <script>
+        const ROUTE_DATA = {
+            "LOT-CASSAVA-10": {
+                days: "Starch: 85.5% (Moisture 11.8%)",
+                demurrage: "50 kg Woven PP Bags",
+                code: "TR-TERRA-SEMARANG-09",
+                price: "$580.00 USD"
+            },
+            "LOT-GINGER-77": {
+                days: "Essential Oil: 2.15% (Moisture 9.2%)",
+                demurrage: "25 kg Multi-layer Kraft Paper Bags",
+                code: "TR-TERRA-SURABAYA-201",
+                price: "$1,850.00 USD"
+            }
+        };
+
+        function runCalculator() {
+            const routeId = document.getElementById('calcRoute').value;
+            const data = ROUTE_DATA[routeId];
+
+            document.getElementById('readoutDays').innerText = data.days;
+            document.getElementById('readoutDemurrage').innerText = data.demurrage;
+            document.getElementById('readoutCode').innerText = data.code;
+            document.getElementById('readoutPrice').innerText = data.price;
+        }
+
+        const rateForm = document.getElementById('rateForm');
+        if (rateForm) {
+            rateForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('submitEmail').value;
+                const routeId = document.getElementById('calcRoute').value;
+                alert(`Quotation request logged!\n\nWe have logged your query for ${routeId}. A finalized FOB pricing offer sheet will be sent to ${email} shortly.`);
+                rateForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
