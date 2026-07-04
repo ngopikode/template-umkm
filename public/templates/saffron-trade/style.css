@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #EAB308;
+    --color-secondary: #F59E0B;
+    --color-cta: #F59E0B;
+    --color-bg: #0F172A;
+    --color-text: #F8FAFC;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+}
+
+*:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
