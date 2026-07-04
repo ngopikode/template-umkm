@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Export-Import Landing Page Templates - Showcase Portal</title>
-    <meta name="description" content="Browse our curated collection of four premium Export-Import landing page and company profile templates. Pure HTML & CSS.">
+    <title>Ngopikode Template Showcase | Premium Spices & Agro Exporters</title>
+    <meta name="description" content="Browse our curated collection of seven premium Export-Import landing page and company profile templates. Pure HTML & CSS.">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,17 +16,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif'],
-                    },
-                    colors: {
-                        gold: {
-                            300: '#f0d78c',
-                            400: '#e5c158',
-                            500: '#d4af37',
-                            600: '#b8860b',
-                        }
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        heading: ['"Archivo"', 'sans-serif'],
                     }
                 }
             }
@@ -34,81 +25,51 @@
     </script>
     
     <style>
-        /* Glowing background mesh animation */
-        @keyframes drift {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.95); }
-            100% { transform: translate(0px, 0px) scale(1); }
+        .gallery-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .animate-drift-1 {
-            animation: drift 20s infinite alternate ease-in-out;
-        }
-        .animate-drift-2 {
-            animation: drift 25s infinite alternate-reverse ease-in-out;
-        }
-        
-        /* Card border glow gradient */
-        .glowing-card {
-            position: relative;
-            background: #111827;
-            border-radius: 1.5rem;
-        }
-        .glowing-card::before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.4), rgba(6, 182, 212, 0.4));
-            border-radius: 1.5rem;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .glowing-card:hover::before {
-            opacity: 1;
+        .gallery-card:hover {
+            transform: translateY(-6px);
+            border-color: #18181b;
+            box-shadow: 0 30px 60px rgba(24, 24, 27, 0.08);
         }
     </style>
 </head>
-<body class="bg-[#0b0f19] text-gray-400 font-sans min-h-screen relative overflow-x-hidden py-16 flex flex-col justify-center">
+<body class="bg-[#FAFAFA] text-[#09090B] font-sans min-h-screen py-20 flex flex-col justify-center select-none">
 
-    <!-- Ambient Glowing Blobs -->
-    <div class="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-amber-500/10 rounded-full blur-[100px] pointer-events-none animate-drift-1"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-[45rem] h-[45rem] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none animate-drift-2"></div>
-
-    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+    <div class="max-w-6xl mx-auto px-6 w-full">
         <!-- Header -->
-        <header class="text-center max-w-3xl mx-auto mb-16">
-            <h1 class="font-heading font-extrabold text-4xl sm:text-5xl text-white tracking-tight mb-4">
+        <header class="text-center max-w-2xl mx-auto mb-20">
+            <span class="text-xs font-bold uppercase tracking-widest text-zinc-400 block mb-3">NGOPIKODE // DESIGN SYSTEM GALLERY</span>
+            <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-zinc-900 tracking-tight leading-none mb-6">
                 Ngopikode Template Showcase
             </h1>
-            <p class="text-gray-400 text-sm leading-relaxed font-light">
+            <p class="text-zinc-500 text-sm leading-relaxed max-w-xl mx-auto">
                 Koleksi desain website profil perusahaan ekspor-impor rempah & komoditas pertanian premium.
             </p>
         </header>
 
-
         <!-- Bento Showcase Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             
             <!-- Design A: Swiss Modernism -->
-            <div class="glowing-card flex flex-col h-full group">
-                <div class="h-44 w-full bg-gradient-to-br from-[#07162c] to-[#0a1f3d] rounded-t-3xl flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                    <span class="px-5 py-2.5 rounded-xl border border-gold-500/30 bg-[#07162c]/90 text-gold-400 font-bold font-heading text-sm shadow-2xl tracking-wider">APEX Global</span>
+            <div class="gallery-card flex flex-col h-full bg-white border border-zinc-200/80 rounded-3xl overflow-hidden">
+                <div class="h-44 w-full bg-[#07162c] flex items-center justify-center relative overflow-hidden">
+                    <span class="px-5 py-2.5 rounded-xl border border-yellow-500/20 bg-[#0a1f3d]/90 text-yellow-400 font-bold font-heading text-sm shadow-xl tracking-wider">APEX Global</span>
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <span class="text-xs font-bold text-gold-500 uppercase tracking-widest mb-2 block">Design A: Classic Navy & Gold</span>
-                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-gold-400 transition-colors">Classic Premium Corporate</h2>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                <div class="p-8 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-yellow-600 uppercase tracking-widest mb-2 block">Design A: Navy & Gold</span>
+                    <h2 class="font-heading font-black text-xl text-zinc-900 mb-3">Classic Premium Corporate</h2>
+                    <p class="text-zinc-500 text-xs leading-relaxed mb-6 flex-grow">
                         A highly trusted corporate landing page utilizing deep navy space backdrops, gold accents, structured bento cards, and detailed B2B specs.
                     </p>
-                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-gold-500"></span> Deep navy glossy overlay</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-gold-500"></span> Heavy B2B photographic cards</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-gold-500"></span> Interactive LOI desk sheet</li>
+                    <ul class="space-y-2 mb-6 border-t border-zinc-100 pt-4 text-[10px] text-zinc-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500"></span> Deep navy glossy overlay</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500"></span> Heavy B2B photographic cards</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-yellow-500"></span> Interactive LOI desk sheet</li>
                     </ul>
                     <div class="mt-auto">
-                        <a href="templates/b2b-export/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-1 bg-gold-500 hover:bg-white text-gray-900 font-bold text-[10px] uppercase py-3.5 rounded-lg tracking-wider cursor-pointer transition">
+                        <a href="templates/b2b-export/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs uppercase py-3.5 rounded-xl transition duration-300">
                             Preview Template
                         </a>
                     </div>
@@ -116,23 +77,23 @@
             </div>
 
             <!-- Design B: Boutique Agro & Organics -->
-            <div class="glowing-card flex flex-col h-full group">
-                <div class="h-44 w-full bg-gradient-to-br from-[#fcfaf7] to-[#f5f1eb] rounded-t-3xl flex items-center justify-center relative overflow-hidden border-b border-gray-800">
-                    <span class="px-5 py-2.5 rounded-xl bg-gray-900 text-gray-200 font-serif italic text-sm shadow-2xl tracking-wider border border-white/5">NEXUS.AGRO</span>
+            <div class="gallery-card flex flex-col h-full bg-white border border-zinc-200/80 rounded-3xl overflow-hidden">
+                <div class="h-44 w-full bg-[#fcfaf7] flex items-center justify-center relative overflow-hidden border-b border-zinc-100">
+                    <span class="px-5 py-2.5 rounded-xl bg-zinc-900 text-zinc-200 font-serif italic text-sm shadow-xl tracking-wider border border-white/5">NEXUS.AGRO</span>
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
+                <div class="p-8 flex flex-col flex-grow">
                     <span class="text-xs font-bold text-[#c84b31] uppercase tracking-widest mb-2 block">Design B: Boutique Agro</span>
-                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-[#c84b31] transition-colors">Boutique Curations</h2>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                    <h2 class="font-heading font-black text-xl text-zinc-900 mb-3">Boutique Curations</h2>
+                    <p class="text-zinc-500 text-xs leading-relaxed mb-6 flex-grow">
                         An editorial high-contrast magazine style. Features mouse-following macro crop magnifier lens tools and compliance registries.
                     </p>
-                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-[#c84b31]"></span> Macro Crop Magnifier</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-[#c84b31]"></span> Sourcing protocols SOP</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-[#c84b31]"></span> Floating label B2B forms</li>
+                    <ul class="space-y-2 mb-6 border-t border-zinc-100 pt-4 text-[10px] text-zinc-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-[#c84b31]"></span> Macro Crop Magnifier</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-[#c84b31]"></span> Sourcing protocols SOP</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-[#c84b31]"></span> Floating label B2B forms</li>
                     </ul>
                     <div class="mt-auto">
-                        <a href="templates/creative-agency/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-1 bg-[#c84b31] hover:bg-white hover:text-gray-900 text-white font-bold text-[10px] uppercase py-3.5 rounded-lg tracking-wider cursor-pointer transition">
+                        <a href="templates/creative-agency/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs uppercase py-3.5 rounded-xl transition duration-300">
                             Preview Template
                         </a>
                     </div>
@@ -140,24 +101,23 @@
             </div>
 
             <!-- Design C: Sleek Neo-Minimalist -->
-            <div class="glowing-card flex flex-col h-full group">
-                <div class="h-44 w-full bg-gradient-to-br from-[#18181b] to-[#27272a] rounded-t-3xl flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                    <span class="px-5 py-2.5 rounded-xl border border-blue-500/30 bg-[#18181b]/90 text-blue-400 font-bold font-heading text-sm shadow-2xl tracking-wider">APEX Neo</span>
+            <div class="gallery-card flex flex-col h-full bg-white border border-zinc-200/80 rounded-3xl overflow-hidden">
+                <div class="h-44 w-full bg-[#18181b] flex items-center justify-center relative overflow-hidden">
+                    <span class="px-5 py-2.5 rounded-xl border border-blue-500/20 bg-zinc-900 text-blue-400 font-bold font-heading text-sm shadow-xl tracking-wider">APEX Neo</span>
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2 block">Design C: Apple Style</span>
-                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-blue-400 transition-colors">Neo-Minimalist</h2>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                <div class="p-8 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2 block">Design C: Apple Style</span>
+                    <h2 class="font-heading font-black text-xl text-zinc-900 mb-3">Neo-Minimalist</h2>
+                    <p class="text-zinc-500 text-xs leading-relaxed mb-6 flex-grow">
                         A clean, light Apple-style layout utilizing zinc border dividers. Equipped with interactive container volume sizing engines.
                     </p>
-                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-blue-500"></span> Container size calculator</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-blue-500"></span> Sourcing step steppers</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-blue-500"></span> Verification checklists</li>
+                    <ul class="space-y-2 mb-6 border-t border-zinc-100 pt-4 text-[10px] text-zinc-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-blue-500"></span> Container size calculator</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-blue-500"></span> Sourcing step steppers</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-blue-500"></span> Verification checklists</li>
                     </ul>
                     <div class="mt-auto">
-                        <a href="templates/neo-minimalist/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-1 bg-blue-500 hover:bg-white text-gray-900 font-bold text-[10px] uppercase py-3.5 rounded-lg tracking-wider cursor-pointer transition">
+                        <a href="templates/neo-minimalist/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs uppercase py-3.5 rounded-xl transition duration-300">
                             Preview Template
                         </a>
                     </div>
@@ -165,23 +125,23 @@
             </div>
 
             <!-- Design D: Modern Luxury Corporate -->
-            <div class="glowing-card flex flex-col h-full group">
-                <div class="h-44 w-full bg-gradient-to-br from-[#0c2619] to-[#0f2e1e] rounded-t-3xl flex items-center justify-center relative overflow-hidden">
-                    <span class="px-5 py-2.5 rounded-xl border border-amber-500/30 bg-[#0c2619]/90 text-amber-400 font-serif text-sm shadow-2xl tracking-wider">NEXUS.ESTATES</span>
+            <div class="gallery-card flex flex-col h-full bg-white border border-zinc-200/80 rounded-3xl overflow-hidden">
+                <div class="h-44 w-full bg-[#0c2619] flex items-center justify-center relative overflow-hidden">
+                    <span class="px-5 py-2.5 rounded-xl border border-amber-500/20 bg-zinc-900 text-amber-400 font-serif text-sm shadow-xl tracking-wider">NEXUS.ESTATES</span>
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest mb-2 block">Design D: Luxury Green</span>
-                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-amber-400 transition-colors">Luxury Editorial</h2>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                <div class="p-8 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-amber-500 uppercase tracking-widest mb-2 block">Design D: Luxury Green</span>
+                    <h2 class="font-heading font-black text-xl text-zinc-900 mb-3">Luxury Editorial</h2>
+                    <p class="text-zinc-500 text-xs leading-relaxed mb-6 flex-grow">
                         An elegant forest green & cream magazine style. Highlights interactive sensory profiles and sample vial ordering desk carts.
                     </p>
-                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-amber-500"></span> Sensory profile inspector</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-amber-500"></span> Sample request order cart</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-amber-500"></span> Departure ledger timetables</li>
+                    <ul class="space-y-2 mb-6 border-t border-zinc-100 pt-4 text-[10px] text-zinc-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-500"></span> Sensory profile inspector</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-500"></span> Sample request order cart</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-500"></span> Departure ledger timetables</li>
                     </ul>
                     <div class="mt-auto">
-                        <a href="templates/luxury-editorial/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-1 bg-amber-500 hover:bg-white text-gray-900 font-bold text-[10px] uppercase py-3.5 rounded-lg tracking-wider cursor-pointer transition">
+                        <a href="templates/luxury-editorial/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs uppercase py-3.5 rounded-xl transition duration-300">
                             Preview Template
                         </a>
                     </div>
@@ -189,23 +149,23 @@
             </div>
 
             <!-- Design E: Organic Biophilic -->
-            <div class="glowing-card flex flex-col h-full group">
-                <div class="h-44 w-full bg-gradient-to-br from-[#064e3b] to-[#043327] rounded-t-3xl flex items-center justify-center relative overflow-hidden">
-                    <span class="px-5 py-2.5 rounded-xl border border-emerald-500/30 bg-[#064e3b]/90 text-emerald-400 font-serif text-sm shadow-2xl tracking-wider">GREEN.HILLS</span>
+            <div class="gallery-card flex flex-col h-full bg-white border border-zinc-200/80 rounded-3xl overflow-hidden">
+                <div class="h-44 w-full bg-[#064e3b] flex items-center justify-center relative overflow-hidden">
+                    <span class="px-5 py-2.5 rounded-xl border border-emerald-500/20 bg-zinc-900 text-emerald-400 font-serif text-sm shadow-xl tracking-wider">GREEN.HILLS</span>
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-2 block">Design E: Organic Sage</span>
-                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-emerald-400 transition-colors">Organic Sourcing</h2>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                <div class="p-8 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-emerald-500 uppercase tracking-widest mb-2 block">Design E: Organic Sage</span>
+                    <h2 class="font-heading font-black text-xl text-zinc-900 mb-3">Organic Sourcing</h2>
+                    <p class="text-zinc-500 text-xs leading-relaxed mb-6 flex-grow">
                         A sustainable agricultural profile utilizing fresh sage gradients, Lora serif headers, and lot verification B2B widgets.
                     </p>
-                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-emerald-400"></span> Sage biophilic gradient</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-emerald-400"></span> Traceability Lot Verifier</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-emerald-400"></span> Interactive Lora headers</li>
+                    <ul class="space-y-2 mb-6 border-t border-zinc-100 pt-4 text-[10px] text-zinc-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-emerald-500"></span> Sage biophilic gradient</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-emerald-500"></span> Traceability Lot Verifier</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-emerald-500"></span> Interactive Lora headers</li>
                     </ul>
                     <div class="mt-auto">
-                        <a href="templates/organic-trade/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-1 bg-emerald-400 hover:bg-white text-gray-900 font-bold text-[10px] uppercase py-3.5 rounded-lg tracking-wider cursor-pointer transition">
+                        <a href="templates/organic-trade/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs uppercase py-3.5 rounded-xl transition duration-300">
                             Preview Template
                         </a>
                     </div>
@@ -213,23 +173,23 @@
             </div>
 
             <!-- Design F: Maritime Logistics -->
-            <div class="glowing-card flex flex-col h-full group">
-                <div class="h-44 w-full bg-gradient-to-br from-[#1e40af] to-[#111827] rounded-t-3xl flex items-center justify-center relative overflow-hidden">
-                    <span class="px-5 py-2.5 rounded-xl border border-orange-500/30 bg-[#1e40af]/90 text-orange-400 font-heading font-black text-sm shadow-2xl tracking-wider">PACIFIC.MARITIME</span>
+            <div class="gallery-card flex flex-col h-full bg-white border border-zinc-200/80 rounded-3xl overflow-hidden">
+                <div class="h-44 w-full bg-[#1e40af] flex items-center justify-center relative overflow-hidden">
+                    <span class="px-5 py-2.5 rounded-xl border border-orange-500/20 bg-zinc-900 text-orange-400 font-heading font-black text-sm shadow-xl tracking-wider">PACIFIC.MARITIME</span>
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <span class="text-xs font-bold text-orange-400 uppercase tracking-widest mb-2 block">Design F: Tracking Blue</span>
-                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-orange-400 transition-colors">Maritime Logistics</h2>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                <div class="p-8 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2 block">Design F: Tracking Blue</span>
+                    <h2 class="font-heading font-black text-xl text-zinc-900 mb-3">Maritime Logistics</h2>
+                    <p class="text-zinc-500 text-xs leading-relaxed mb-6 flex-grow">
                         An international shipping & logistics landing page utilizing delivery orange accents, bold headers, and custom shipping rate tools.
                     </p>
-                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-orange-400"></span> Tracking blue/orange accents</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-orange-400"></span> B2B rate estimate desk</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-orange-400"></span> Clean corporate grids</li>
+                    <ul class="space-y-2 mb-6 border-t border-zinc-100 pt-4 text-[10px] text-zinc-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span> Tracking blue/orange accents</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span> B2B rate estimate desk</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span> Clean corporate grids</li>
                     </ul>
                     <div class="mt-auto">
-                        <a href="templates/maritime-trade/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-1 bg-orange-400 hover:bg-white text-gray-900 font-bold text-[10px] uppercase py-3.5 rounded-lg tracking-wider cursor-pointer transition">
+                        <a href="templates/maritime-trade/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs uppercase py-3.5 rounded-xl transition duration-300">
                             Preview Template
                         </a>
                     </div>
@@ -237,23 +197,23 @@
             </div>
 
             <!-- Design G: Spice Trade -->
-            <div class="glowing-card flex flex-col h-full group">
-                <div class="h-44 w-full bg-gradient-to-br from-[#c2410c] to-[#290d05] rounded-t-3xl flex items-center justify-center relative overflow-hidden">
-                    <span class="px-5 py-2.5 rounded-xl border border-orange-600/30 bg-[#c2410c]/90 text-orange-200 font-heading font-black text-sm shadow-2xl tracking-wider">ORIENT.SPICES</span>
+            <div class="gallery-card flex flex-col h-full bg-white border border-zinc-200/80 rounded-3xl overflow-hidden">
+                <div class="h-44 w-full bg-[#c2410c] flex items-center justify-center relative overflow-hidden">
+                    <span class="px-5 py-2.5 rounded-xl border border-orange-600/20 bg-zinc-900 text-orange-200 font-heading font-black text-sm shadow-xl tracking-wider">ORIENT.SPICES</span>
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
+                <div class="p-8 flex flex-col flex-grow">
                     <span class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2 block">Design G: Warm Terracotta</span>
-                    <h2 class="font-heading font-extrabold text-xl text-white mb-3 group-hover:text-orange-300 transition-colors">Spice Export House</h2>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6 flex-grow">
+                    <h2 class="font-heading font-black text-xl text-zinc-900 mb-3">Spice Export House</h2>
+                    <p class="text-zinc-500 text-xs leading-relaxed mb-6 flex-grow">
                         A warm terracotta & nutmeg spice exporter template. Focuses on premium whole cloves, green cardamoms, and weight estimators.
                     </p>
-                    <ul class="space-y-2 mb-6 border-t border-gray-800/80 pt-4 text-[11px]">
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-orange-500"></span> Warm spice terracotta/nutmeg theme</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-orange-500"></span> Cargo weight & spec estimator</li>
-                        <li class="flex items-center gap-2 text-white"><span class="w-1 h-1 rounded-full bg-orange-500"></span> Bold Playfair Display serif</li>
+                    <ul class="space-y-2 mb-6 border-t border-zinc-100 pt-4 text-[10px] text-zinc-400">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span> Warm spice terracotta theme</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span> Cargo weight & spec estimator</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-orange-500"></span> Bold Playfair Display serif</li>
                     </ul>
                     <div class="mt-auto">
-                        <a href="templates/spice-trade/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-1 bg-orange-500 hover:bg-white text-gray-900 font-bold text-[10px] uppercase py-3.5 rounded-lg tracking-wider cursor-pointer transition">
+                        <a href="templates/spice-trade/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs uppercase py-3.5 rounded-xl transition duration-300">
                             Preview Template
                         </a>
                     </div>
@@ -263,13 +223,13 @@
         </div>
 
         <!-- Ngopikode Agency Branding Footer -->
-        <footer class="mt-20 pt-8 border-t border-gray-800/60 text-center">
+        <footer class="mt-24 pt-8 border-t border-zinc-200 text-center">
             <div class="flex flex-col items-center gap-4">
-                <span class="font-heading font-black text-lg text-white tracking-widest uppercase">NGOPIKODE</span>
-                <p class="text-gray-500 text-xs max-w-md leading-relaxed">
+                <span class="font-heading font-black text-xl text-zinc-900 tracking-widest uppercase">NGOPIKODE</span>
+                <p class="text-zinc-500 text-xs max-w-md leading-relaxed">
                     Premium B2B Export-Import templates collection. Crafted with high visual fidelity, performance standards, and security compliance to digitize local products for the global stage.
                 </p>
-                <div class="text-[10px] text-gray-600 font-bold uppercase tracking-wider mt-2">
+                <div class="text-[10px] text-zinc-400 font-bold uppercase tracking-wider mt-2">
                     © 2026 Ngopikode Web Development Agency. All rights reserved.
                 </div>
             </div>
