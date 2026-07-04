@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sleek Neo-Minimalist Commodity Exporter | Apex Neo</title>
+    <title>Apex Neo | Sleek Neo-Minimalist Commodity Sourcing</title>
     <meta name="description" content="Company Profile of Apex Neo. A high-trust minimalist commodity exporter utilizing digital telemetry and direct farmgate sourcing pipelines.">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,6 +17,7 @@
                 extend: {
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
                     },
                     colors: {
                         zincbg: '#FAFAFA',
@@ -27,39 +28,28 @@
             }
         }
     </script>
-    
-    <style>
-        @keyframes dash {
-            to {
-                stroke-dashoffset: -20;
-            }
-        }
-        .pulse-line {
-            stroke-dasharray: 5, 3;
-            animation: dash 5s linear infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-zincbg text-slateText font-sans min-h-screen relative overflow-x-hidden selection:bg-accent selection:text-white">
+<body class="bg-[#FFFFFF] text-slateText font-sans min-h-screen relative overflow-x-hidden selection:bg-slateText selection:text-white">
 
-    <!-- Header -->
-    <header class="border-b border-zinc-200 sticky top-0 bg-zincbg/90 backdrop-blur-md z-50">
+    <!-- Header (Extreme Swiss Minimalism) -->
+    <header class="border-b border-zinc-200 sticky top-0 bg-white/90 backdrop-blur-md z-50">
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="#" class="font-bold text-lg tracking-tight uppercase flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-accent"></span> apex.neo
+            <a href="#" class="font-mono font-bold text-base tracking-tight uppercase flex items-center gap-2 select-none">
+                <span class="w-2.5 h-2.5 bg-slateText"></span> APEX.NEO
             </a>
             
-            <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-500">
-                <a href="#about" class="hover:text-slateText transition">Profile</a>
-                <a href="#stepper" class="hover:text-slateText transition">SOP Steps</a>
-                <a href="#portfolio" class="hover:text-slateText transition">Commodities</a>
-                <a href="#infra" class="hover:text-slateText transition">Infrastructure</a>
-                <a href="#compliance" class="hover:text-slateText transition">Compliance</a>
-                <a href="#calculator" class="hover:text-slateText transition">Container Engine</a>
+            <nav class="hidden md:flex items-center gap-8 text-[11px] font-mono uppercase tracking-wider text-slate-400">
+                <a href="#about" class="hover:text-slateText transition">01 / Profile</a>
+                <a href="#sop" class="hover:text-slateText transition">02 / SOP Steps</a>
+                <a href="#catalog" class="hover:text-slateText transition">03 / Commodities</a>
+                <a href="#infra" class="hover:text-slateText transition">04 / Facility</a>
+                <a href="#compliance" class="hover:text-slateText transition">05 / Compliance</a>
+                <a href="#calculator" class="hover:text-slateText transition">06 / Calculator</a>
             </nav>
 
-            <a href="#calculator" class="bg-slateText hover:bg-accent text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition duration-200 shadow-sm">
-                Get B2B Quote
+            <a href="#calculator" class="bg-slateText hover:bg-zinc-800 text-white px-5 py-2.5 text-xs font-mono uppercase tracking-wider transition duration-200">
+                Inquire Container
             </a>
         </div>
     </header>
@@ -67,295 +57,306 @@
     <!-- Main -->
     <main>
         
-        <!-- Hero Section (Upgraded with Pulse Supply Chain Flowchart) -->
-        <section class="py-20 md:py-28 border-b border-zinc-200" style="background-image: radial-gradient(rgba(37, 99, 235, 0.04) 1px, transparent 0); background-size: 24px 24px; background-color: #FAFAFA;">
+        <!-- Hero Section (Pure Typography & Lines - RADICAL DESIGN DIFFERENCE) -->
+        <section class="py-24 border-b border-zinc-200" style="background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 24px 24px;">
             <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <!-- Left Column text -->
-                <div class="lg:col-span-6">
-                    <span class="inline-flex items-center gap-1.5 text-xs font-bold text-accent uppercase tracking-widest block mb-4">
-                        <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span> Certified Crop Shipper
+                <div class="lg:col-span-8">
+                    <span class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 uppercase tracking-widest mb-4">
+                        [ SYSTEM INITIALIZED // ACTIVE SOURCE ]
                     </span>
-                    <h1 class="font-extrabold text-5xl sm:text-6xl text-slateText tracking-tight leading-none mb-6">
-                        Direct Farmgate <br>Supply Chains.
+                    <h1 class="font-sans font-black text-5xl sm:text-6xl lg:text-7xl text-slateText tracking-tighter leading-none mb-8">
+                        Direct Farmgate Sourcing. <br><span class="text-slate-400">Zero Middle Brokers.</span>
                     </h1>
-                    <p class="text-slate-500 text-base font-light leading-relaxed mb-10 max-w-md">
+                    <p class="text-slate-500 text-sm font-light leading-relaxed mb-10 max-w-lg">
                         We build highly clean, direct B2B supply lines for agricultural crops, spices, and premium grains. Directly vetted at source, shipped with direct carrier routes.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#calculator" class="bg-slateText hover:bg-accent text-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider transition">
-                            Simulate Container Size
+                    <div class="flex gap-4 font-mono text-xs">
+                        <a href="#catalog" class="bg-slateText hover:bg-zinc-800 text-white px-6 py-4 uppercase tracking-widest transition">
+                            Browse Catalog
+                        </a>
+                        <a href="#calculator" class="border border-zinc-300 hover:border-slateText text-slateText px-6 py-4 uppercase tracking-widest transition">
+                            Volume Engine
                         </a>
                     </div>
                 </div>
                 
-                <!-- Right Column: Upgraded Supply Chain Flowchart Diagram -->
-                <div class="lg:col-span-6 border border-zinc-200 p-8 bg-white shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[22rem]">
-                    <div class="flex justify-between items-center mb-6">
-                        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Active Pipeline Flowchart</span>
-                        <span class="flex items-center gap-1 text-[9px] text-accent font-bold"><span class="w-1.5 h-1.5 rounded-full bg-accent animate-ping"></span> Live</span>
+                <!-- Right Column: Micro telemetry stats -->
+                <div class="lg:col-span-4 border border-zinc-200 p-8 bg-zincbg font-mono text-[11px] text-slate-500 space-y-4">
+                    <div class="flex justify-between border-b border-zinc-200 pb-2">
+                        <span>ORIGIN ID:</span>
+                        <span class="text-slateText font-bold">PT-NEO-ID</span>
                     </div>
-
-                    <!-- SVG Flowchart -->
-                    <div class="flex-grow flex items-center justify-center py-4">
-                        <svg class="w-full max-w-md h-auto" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Dashed Pulsing Connecting Lines -->
-                            <line x1="60" y1="60" x2="140" y2="60" stroke="#2563EB" stroke-width="1.5" class="pulse-line" />
-                            <line x1="160" y1="60" x2="240" y2="60" stroke="#2563EB" stroke-width="1.5" class="pulse-line" />
-                            <line x1="260" y1="60" x2="340" y2="60" stroke="#2563EB" stroke-width="1.5" class="pulse-line" />
-
-                            <!-- Node 1: Sourcing -->
-                            <circle cx="50" cy="60" r="14" fill="#F3F4F6" stroke="#09090B" stroke-width="2" class="cursor-pointer" onclick="showFlowDetail('sourceNode')" />
-                            <text x="50" y="64" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">EST</text>
-                            <text x="50" y="90" font-size="8" font-family="sans-serif" fill="#9CA3AF" text-anchor="middle">Estate</text>
-
-                            <!-- Node 2: Testing -->
-                            <circle cx="150" cy="60" r="14" fill="#F3F4F6" stroke="#09090B" stroke-width="2" class="cursor-pointer" onclick="showFlowDetail('labNode')" />
-                            <text x="150" y="64" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">LAB</text>
-                            <text x="150" y="90" font-size="8" font-family="sans-serif" fill="#9CA3AF" text-anchor="middle">Testing</text>
-
-                            <!-- Node 3: Sealing -->
-                            <circle cx="250" cy="60" r="14" fill="#F3F4F6" stroke="#09090B" stroke-width="2" class="cursor-pointer" onclick="showFlowDetail('sealNode')" />
-                            <text x="250" y="64" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">SEAL</text>
-                            <text x="250" y="90" font-size="8" font-family="sans-serif" fill="#9CA3AF" text-anchor="middle">Packing</text>
-
-                            <!-- Node 4: Transit -->
-                            <circle cx="350" cy="60" r="14" fill="#2563EB" stroke="#09090B" stroke-width="2" class="cursor-pointer" onclick="showFlowDetail('transitNode')" />
-                            <text x="350" y="64" font-size="8" font-family="sans-serif" font-weight="bold" fill="white" text-anchor="middle">SHIP</text>
-                            <text x="350" y="90" font-size="8" font-family="sans-serif" fill="#9CA3AF" text-anchor="middle">Transit</text>
-                        </svg>
+                    <div class="flex justify-between border-b border-zinc-200 pb-2">
+                        <span>ACTIVE PORTS:</span>
+                        <span class="text-slateText font-bold">14 TERMINALS</span>
                     </div>
-
-                    <!-- Dynamic Readout -->
-                    <div class="mt-4 border-t border-zinc-100 pt-4 text-center text-[10px] font-bold text-slate-400" id="flowReadoutPanel">
-                        Click on diagram nodes to inspect cargo flow protocols.
+                    <div class="flex justify-between border-b border-zinc-200 pb-2">
+                        <span>ANNUAL TONNAGE:</span>
+                        <span class="text-slateText font-bold">12,400 MT</span>
+                    </div>
+                    <div class="flex justify-between border-b border-zinc-200 pb-2">
+                        <span>QUALITY STANDARD:</span>
+                        <span class="text-slateText font-bold">HPLC VERIFIED</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Company Profile & Vision -->
-        <section id="about" class="py-20 border-b border-zinc-200 bg-white">
-            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <div class="lg:col-span-4">
-                    <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">Profile Perusahaan</span>
-                    <h2 class="font-extrabold text-3xl text-slateText uppercase tracking-tight">Visi & Kepercayaan</h2>
-                </div>
-                <div class="lg:col-span-8 space-y-6 text-slate-500 text-sm leading-relaxed">
-                    <p>
-                        Apex Neo didirikan dengan visi menghadirkan transparansi penuh pada perdagangan komoditas B2B global. Kami bermitra langsung dengan serikat petani lokal untuk mengunci kargo langsung dari lahan tani, menguji residu pestisida, dan menyalurkannya menggunakan logistik kontainer laut yang efisien.
+        <!-- Welcome Profile / About Us -->
+        <section id="about" class="py-24 border-b border-zinc-200 bg-white">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs font-mono text-slate-400 uppercase tracking-widest block">01 // PROFILE</span>
+                    <h2 class="font-sans font-black text-3xl md:text-4xl text-slateText uppercase tracking-tight leading-none">
+                        Vetted Sourcing. Direct Logistics.
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed font-light">
+                        Apex Neo operates direct agricultural trade routes. We deploy automated sorting systems at primary crop depots to secure premium lot quality before port loading.
                     </p>
-                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-zinc-200 text-slateText font-bold text-center">
-                        <div>
-                            <div class="text-3xl font-extrabold">30+</div>
-                            <div class="text-[9px] text-slate-400 uppercase tracking-wider mt-1">Countries Vetted</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-extrabold">50,000+</div>
-                            <div class="text-[9px] text-slate-400 uppercase tracking-wider mt-1">Metric Tons Shipped</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-extrabold">Zero</div>
-                            <div class="text-[9px] text-slate-400 uppercase tracking-wider mt-1">Broker Middlemen</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sourcing Route Milestone Stepper -->
-        <section id="stepper" class="py-20 border-b border-zinc-200 bg-[#F9FAFB]">
-            <div class="max-w-5xl mx-auto px-6">
-                <div class="text-center max-w-xl mx-auto mb-16">
-                    <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">SOP & Rantai Pasok</span>
-                    <h2 class="font-extrabold text-3xl uppercase tracking-tight">Cargo Sourcing Milestones</h2>
-                    <p class="text-xs text-slate-500 mt-2">Hover over the steps below to inspect specific quality parameters.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed font-light">
+                        All shipments are verified under phytosanitary and custom manifests to ensure seamless releases at European and North American destination ports.
+                    </p>
                 </div>
 
-                <!-- Stepper Widget -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <!-- Step 1 -->
-                    <div class="border border-zinc-200 bg-white p-6 shadow-sm hover:border-accent transition duration-200 group cursor-pointer" onmousemove="updateStepDetail('1')" onmouseleave="clearStepDetail()">
-                        <div class="w-8 h-8 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center text-accent font-bold text-xs mb-4">1</div>
-                        <h3 class="font-bold text-xs uppercase tracking-wider mb-2">Farmgate Audit</h3>
-                        <p class="text-slate-400 text-[11px] leading-relaxed">Pengujian kadar air tanah dan pemanenan langsung di lahan tani.</p>
-                    </div>
-                    <!-- Step 2 -->
-                    <div class="border border-zinc-200 bg-white p-6 shadow-sm hover:border-accent transition duration-200 group cursor-pointer" onmousemove="updateStepDetail('2')" onmouseleave="clearStepDetail()">
-                        <div class="w-8 h-8 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center text-accent font-bold text-xs mb-4">2</div>
-                        <h3 class="font-bold text-xs uppercase tracking-wider mb-2">Lab Screening</h3>
-                        <p class="text-slate-400 text-[11px] leading-relaxed">Penyaringan aflatoksin dan residu logam berat di laboratorium.</p>
-                    </div>
-                    <!-- Step 3 -->
-                    <div class="border border-zinc-200 bg-white p-6 shadow-sm hover:border-accent transition duration-200 group cursor-pointer" onmousemove="updateStepDetail('3')" onmouseleave="clearStepDetail()">
-                        <div class="w-8 h-8 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center text-accent font-bold text-xs mb-4">3</div>
-                        <h3 class="font-bold text-xs uppercase tracking-wider mb-2">Nitrogen Sealing</h3>
-                        <p class="text-slate-400 text-[11px] leading-relaxed">Kemasan vakum dengan hembusan nitrogen guna menjaga aroma.</p>
-                    </div>
-                    <!-- Step 4 -->
-                    <div class="border border-zinc-200 bg-white p-6 shadow-sm hover:border-accent transition duration-200 group cursor-pointer" onmousemove="updateStepDetail('4')" onmouseleave="clearStepDetail()">
-                        <div class="w-8 h-8 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center text-accent font-bold text-xs mb-4">4</div>
-                        <h3 class="font-bold text-xs uppercase tracking-wider mb-2">Sealed Transit</h3>
-                        <p class="text-slate-400 text-[11px] leading-relaxed">Penyegelan kontainer bea cukai dan pelacakan satelit GPS.</p>
-                    </div>
-                </div>
-
-                <!-- Hover detail readout panel -->
-                <div class="mt-8 bg-white border border-zinc-200 p-5 rounded-lg text-center text-xs font-mono text-slate-500 h-14 flex items-center justify-center" id="stepDetailPanel">
-                    Hover over any sourcing step card to inspect procedural requirements.
-                </div>
-            </div>
-        </section>
-
-        <!-- Product specifications list -->
-        <section id="portfolio" class="py-20 border-b border-zinc-200 bg-white">
-            <div class="max-w-5xl mx-auto px-6">
-                <div class="text-left mb-16">
-                    <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">Export Portfolio</span>
-                    <h2 class="font-extrabold text-3xl text-slateText">Commodities Specifications</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Product 1 -->
-                    <div class="border border-zinc-200 p-8 rounded-xl bg-white hover:border-accent/40 transition duration-300">
-                        <span class="text-[9px] font-bold bg-accent/10 text-accent px-2.5 py-1 rounded">SPICES</span>
-                        <h3 class="font-extrabold text-lg text-slateText mt-4 mb-2 uppercase">Green Cardamom</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                            8mm bold pods sourced from Kerala. Moisture limit 8.4%, volatile oil density 4.8%.
-                        </p>
-                        <a href="#calculator" class="text-xs font-bold uppercase tracking-widest text-slateText hover:text-accent flex items-center gap-1.5">
-                            Calculate Container <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                    <!-- Product 2 -->
-                    <div class="border border-zinc-200 p-8 rounded-xl bg-white hover:border-accent/40 transition duration-300">
-                        <span class="text-[9px] font-bold bg-accent/10 text-accent px-2.5 py-1 rounded">GRAINS</span>
-                        <h3 class="font-extrabold text-lg text-slateText mt-4 mb-2 uppercase">Basmati Rice</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                            Extra-long grain 1121 aged Basmati. Moisture limit 12.0%, average grain length 8.35mm.
-                        </p>
-                        <a href="#calculator" class="text-xs font-bold uppercase tracking-widest text-slateText hover:text-accent flex items-center gap-1.5">
-                            Calculate Container <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="border border-zinc-200 p-8 rounded-xl bg-white hover:border-accent/40 transition duration-300">
-                        <span class="text-[9px] font-bold bg-accent/10 text-accent px-2.5 py-1 rounded">SPICES</span>
-                        <h3 class="font-extrabold text-lg text-slateText mt-4 mb-2 uppercase">Cumin Seeds</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                            99% machine-clean purity level cumin seeds. Volatile oil content 2.5%, moisture limit 9.0%.
-                        </p>
-                        <a href="#calculator" class="text-xs font-bold uppercase tracking-widest text-slateText hover:text-accent flex items-center gap-1.5">
-                            Calculate Container <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Infrastructure Section (New Addition) -->
-        <section id="infra" class="py-20 border-b border-zinc-200 bg-white">
-            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <div class="lg:col-span-4">
-                    <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">Infrastruktur Ekspor</span>
-                    <h2 class="font-extrabold text-3xl text-slateText uppercase tracking-tight">Sortex & Gudang</h2>
-                </div>
-                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs text-slate-500">
+                <!-- Right Stats -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4 text-center font-mono">
                     <div class="border border-zinc-200 p-6 bg-zincbg">
-                        <h3 class="font-bold text-slateText mb-2 uppercase">Optical Grading Lines</h3>
-                        <p class="leading-relaxed">
-                            Mesin penyortir sensor warna CCD optical menyaring produk cacat dengan sensor sensitivitas tinggi guna menjamin keseragaman biji rempah.
-                        </p>
+                        <div class="text-3xl font-black text-slateText">100%</div>
+                        <div class="text-[9px] text-slate-400 uppercase mt-1">Traceable</div>
                     </div>
                     <div class="border border-zinc-200 p-6 bg-zincbg">
-                        <h3 class="font-bold text-slateText mb-2 uppercase">Reefer Container Terminals</h3>
-                        <p class="leading-relaxed">
-                            Stasiun pengisian daya kontainer pendingin internal memastikan unit reefer aktif bekerja konstan selama proses kargo menunggu pemuatan kapal di pelabuhan.
-                        </p>
+                        <div class="text-3xl font-black text-slateText">0%</div>
+                        <div class="text-[9px] text-slate-400 uppercase mt-1">Intermediary</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Compliance & Credentials Section -->
-        <section id="compliance" class="py-20 border-b border-zinc-200 bg-white">
-            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- SOP Steps: Vertical List (RADICAL DESIGN DIFFERENCE FOR PILLARS) -->
+        <section id="sop" class="py-24 bg-zincbg border-b border-zinc-200">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-16">
+                    <span class="text-xs font-mono text-slate-400 uppercase tracking-widest block mb-2">02 // SOP PIPELINE</span>
+                    <h2 class="font-sans font-black text-3xl text-slateText uppercase tracking-tight">Sourcing Protocols</h2>
+                </div>
+
+                <div class="space-y-8 font-mono text-xs">
+                    <!-- Step 01 -->
+                    <div class="border border-zinc-200 p-8 bg-white flex flex-col md:flex-row gap-6 md:gap-12 items-start">
+                        <div class="text-4xl font-black text-slate-300 select-none">01</div>
+                        <div class="flex-grow">
+                            <h4 class="text-slateText font-bold text-sm mb-2 uppercase">Depot Grading</h4>
+                            <p class="text-slate-500 font-sans text-xs font-light leading-relaxed">
+                                Raw crops undergo mechanical screening and density tests immediately upon arrival at local storage silos.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 02 -->
+                    <div class="border border-zinc-200 p-8 bg-white flex flex-col md:flex-row gap-6 md:gap-12 items-start">
+                        <div class="text-4xl font-black text-slate-300 select-none">02</div>
+                        <div class="flex-grow">
+                            <h4 class="text-slateText font-bold text-sm mb-2 uppercase">Lab Verification</h4>
+                            <p class="text-slate-500 font-sans text-xs font-light leading-relaxed">
+                                High-performance chromatography tests check volatile compounds, chemical structures, and purity ratings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="border border-zinc-200 p-8 bg-white flex flex-col md:flex-row gap-6 md:gap-12 items-start">
+                        <div class="text-4xl font-black text-slate-300 select-none">03</div>
+                        <div class="flex-grow">
+                            <h4 class="text-slateText font-bold text-sm mb-2 uppercase">Sealed Loading</h4>
+                            <p class="text-slate-500 font-sans text-xs font-light leading-relaxed">
+                                Grade-approved lots are vacuum-packed and sealed inside carrier containers under C-TPAT security rules.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimalist Table Product Catalog (RADICAL DESIGN DIFFERENCE FOR PRODUCTS) -->
+        <section id="catalog" class="py-24 bg-white border-b border-zinc-200">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-16">
+                    <span class="text-xs font-mono text-slate-400 uppercase tracking-widest block mb-2">03 // COMMODITIES</span>
+                    <h2 class="font-sans font-black text-3xl text-slateText uppercase tracking-tight">Export Specifications</h2>
+                </div>
+
+                <!-- Asymmetric Table-like Layout -->
+                <div class="border-t border-zinc-200 divide-y divide-zinc-200 font-mono text-xs">
+                    <!-- Row 1 -->
+                    <div class="py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-zincbg transition px-4">
+                        <div class="md:w-1/4">
+                            <span class="text-[9px] text-slate-400 block mb-1">COMMODITY // 01</span>
+                            <span class="text-slateText font-bold text-sm uppercase">Coriander Seeds</span>
+                        </div>
+                        <div class="md:w-1/4">
+                            <span class="text-[9px] text-slate-400 block mb-1">GRADE SPEC</span>
+                            <span class="text-slate-600">Essential Oil &gt; 0.35%</span>
+                        </div>
+                        <div class="md:w-1/4">
+                            <span class="text-[9px] text-slate-400 block mb-1">PACKAGING</span>
+                            <span class="text-slate-600">25kg PP Bags / 15 MT Min</span>
+                        </div>
+                        <div class="md:w-1/4 md:text-right">
+                            <a href="#calculator" class="inline-block bg-slateText hover:bg-zinc-800 text-white px-4 py-2 uppercase text-[10px] tracking-wider transition">
+                                Inquire Lot
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-zincbg transition px-4">
+                        <div class="md:w-1/4">
+                            <span class="text-[9px] text-slate-400 block mb-1">COMMODITY // 02</span>
+                            <span class="text-slateText font-bold text-sm uppercase">Dried Ginger Slices</span>
+                        </div>
+                        <div class="md:w-1/4">
+                            <span class="text-[9px] text-slate-400 block mb-1">GRADE SPEC</span>
+                            <span class="text-slate-600">Essential Oil &gt; 2.0%</span>
+                        </div>
+                        <div class="md:w-1/4">
+                            <span class="text-[9px] text-slate-400 block mb-1">PACKAGING</span>
+                            <span class="text-slate-600">25kg Kraft Bags / 10 MT Min</span>
+                        </div>
+                        <div class="md:w-1/4 md:text-right">
+                            <a href="#calculator" class="inline-block bg-slateText hover:bg-zinc-800 text-white px-4 py-2 uppercase text-[10px] tracking-wider transition">
+                                Inquire Lot
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-zincbg transition px-4">
+                        <div class="md:w-1/4">
+                            <span class="text-[9px] text-slate-400 block mb-1">COMMODITY // 03</span>
+                            <span class="text-slateText font-bold text-sm uppercase">Kashmir Saffron</span>
+                        </div>
+                        <div class="md:w-1/4">
+                            <span class="text-[9px] text-slate-400 block mb-1">GRADE SPEC</span>
+                            <span class="text-slate-600">Crocin Value &gt; 220</span>
+                        </div>
+                        <div class="md:w-1/4">
+                            <span class="text-[9px] text-slate-400 block mb-1">PACKAGING</span>
+                            <span class="text-slate-600">5kg Vacuum Pack / 5kg Min</span>
+                        </div>
+                        <div class="md:w-1/4 md:text-right">
+                            <a href="#calculator" class="inline-block bg-slateText hover:bg-zinc-800 text-white px-4 py-2 uppercase text-[10px] tracking-wider transition">
+                                Inquire Lot
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities & Infrastructure -->
+        <section id="infra" class="py-24 bg-zincbg border-b border-zinc-200 font-mono text-xs">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-4">
-                    <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">Verified Registries</span>
-                    <h2 class="font-extrabold text-3xl text-slateText uppercase tracking-tight">Kepatuhan Hukum</h2>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest block mb-2">04 // FACILITIES</span>
+                    <h2 class="font-sans font-black text-3xl text-slateText uppercase tracking-tight leading-none">Automated Depots</h2>
+                    <p class="text-slate-500 font-sans text-xs font-light leading-relaxed mt-4">
+                        Our primary terminals process raw agricultural goods under clean ISO parameters, reducing moisture index ratings before freight container sealing.
+                    </p>
                 </div>
-                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs font-bold text-slateText">
-                    <div class="border border-zinc-200 p-6 bg-zincbg rounded-lg">
-                        <div class="text-slate-400 mb-1">IMPORT EXPORT CODE (IEC)</div>
-                        <div class="text-sm">0416047249</div>
+                
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-slate-500">
+                    <div class="border border-zinc-200 bg-white p-6">
+                        <div class="text-slateText font-bold text-sm uppercase mb-2">Sorting Silos</div>
+                        <p class="leading-relaxed">Vacuum moisture extractors check and lower crop humidity levels pre-loading.</p>
                     </div>
-                    <div class="border border-zinc-200 p-6 bg-zincbg rounded-lg">
-                        <div class="text-slate-400 mb-1">SPICES BOARD LICENSE</div>
-                        <div class="text-sm">SB/REG/2026/0912</div>
+                    <div class="border border-zinc-200 bg-white p-6">
+                        <div class="text-slateText font-bold text-sm uppercase mb-2">C-TPAT Labs</div>
+                        <p class="leading-relaxed">Sterile packing environments secure containers under customs security seals.</p>
                     </div>
-                    <div class="border border-zinc-200 p-6 bg-zincbg rounded-lg">
-                        <div class="text-slate-400 mb-1">ISO ACCREDITATION</div>
-                        <div class="text-sm">ISO 22000:2018 (HACCP Food Safety)</div>
-                    </div>
-                    <div class="border border-zinc-200 p-6 bg-zincbg rounded-lg">
-                        <div class="text-slate-400 mb-1">FDA REGISTRATION STATUS</div>
-                        <div class="text-sm">Registered Facility ID: 1982736294</div>
+                    <div class="border border-zinc-200 bg-white p-6">
+                        <div class="text-slateText font-bold text-sm uppercase mb-2">Gravity Graders</div>
+                        <p class="leading-relaxed">Density sorting tables filter splits, chaff, and foreign residues.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sourcing Route & Container size Calculator -->
-        <section id="calculator" class="py-20 bg-[#F9FAFB] border-b border-zinc-200">
+        <!-- Compliance & Certifications -->
+        <section id="compliance" class="py-24 bg-white border-b border-zinc-200 font-mono text-xs">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-4">
+                    <span class="text-xs text-slate-400 uppercase tracking-widest block mb-2">05 // COMPLIANCE</span>
+                    <h2 class="font-sans font-black text-3xl text-slateText">Global Safety Clear</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-slate-500">
+                    <div class="border border-zinc-200 bg-zincbg p-6">
+                        <div class="text-slateText font-bold mb-1">FDA Registered</div>
+                        <div class="text-[9px] uppercase">Food Facility</div>
+                    </div>
+                    <div class="border border-zinc-200 bg-zincbg p-6">
+                        <div class="text-slateText font-bold mb-1">ISO 22000</div>
+                        <div class="text-[9px] uppercase">Safety Vetted</div>
+                    </div>
+                    <div class="border border-zinc-200 bg-zincbg p-6">
+                        <div class="text-slateText font-bold mb-1">HACCP Vetted</div>
+                        <div class="text-[9px] uppercase">Hazard Control</div>
+                    </div>
+                    <div class="border border-zinc-200 bg-zincbg p-6">
+                        <div class="text-slateText font-bold mb-1">HALAL / KOSHER</div>
+                        <div class="text-[9px] uppercase">Process Audit</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cargo Container Calculator -->
+        <section id="calculator" class="py-24 bg-zincbg font-mono text-xs">
             <div class="max-w-4xl mx-auto px-6">
-                <div class="bg-white border border-zinc-200 rounded-2xl p-8 md:p-12 shadow-sm">
+                <div class="border border-zinc-200 bg-white p-8 md:p-12 shadow-sm relative">
                     <div class="text-center max-w-xl mx-auto mb-10">
-                        <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">Trade Engine</span>
-                        <h3 class="font-extrabold text-2xl uppercase tracking-tight">Container Calculator</h3>
-                        <p class="text-xs text-slate-400 mt-2">Adjust volume requirements to receive instant container size recommendations.</p>
+                        <span class="text-xs text-slate-400 uppercase tracking-widest block mb-2">06 // ENGINE</span>
+                        <h3 class="font-sans font-black text-3xl text-slateText uppercase tracking-tight">Container Estimator</h3>
+                        <p class="text-xs text-slate-500 mt-2 font-sans font-light">Select a commodity lot below to retrieve phytosanitary lab test parameters.</p>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-6">
-                            <!-- Slider input -->
-                            <div class="flex flex-col gap-2">
-                                <div class="flex justify-between text-xs font-bold">
-                                    <span class="text-slate-400">Target Tonnage:</span>
-                                    <span class="text-slateText" id="tonLabel">10 MT</span>
-                                </div>
-                                <input type="range" id="tonSlider" min="2" max="50" value="10" oninput="runNeoCalc()" class="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-accent">
+                    <div class="flex flex-col gap-2 mb-8">
+                        <label class="text-[9px] font-bold uppercase tracking-wider text-slate-500" for="calcRoute">Cargo Lot ID</label>
+                        <select id="calcRoute" onchange="runCalculator()" class="w-full border border-zinc-200 focus:border-slateText focus:outline-none p-4 text-xs font-bold bg-[#F8FAFC] rounded-none text-slate-800">
+                            <option value="LOT-CORIANDER-01">LOT-CORIANDER-01 (Coriander Seeds Bold) - Min 15 MT</option>
+                            <option value="LOT-GINGER-77">LOT-GINGER-77 (Sliced Dried Ginger) - Min 10 MT</option>
+                        </select>
+                    </div>
+
+                    <!-- Readout Details -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-[#F8FAFC] border border-zinc-200 p-6 text-slate-700 mb-8">
+                        <div class="border-b sm:border-b-0 sm:border-r border-zinc-200 pb-4 sm:pb-0 sm:pr-6 space-y-3">
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Moisture / Purity Limits</span>
+                                <div class="font-bold text-slate-800 mt-0.5" id="readoutDays">Moisture &lt; 9.0% (Purity &gt; 98.0%)</div>
                             </div>
-                            
-                            <div class="flex flex-col gap-2">
-                                <label class="text-[9px] font-bold uppercase tracking-wider text-slate-400" for="calcInco">Incoterms</label>
-                                <select id="calcInco" onchange="runNeoCalc()" class="w-full border border-zinc-200 p-3 text-xs font-bold">
-                                    <option value="FOB">FOB (Free on Board)</option>
-                                    <option value="CIF">CIF (Cost, Insurance, Freight)</option>
-                                </select>
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Standard Packaging</span>
+                                <div class="font-bold text-slate-800 mt-0.5" id="readoutDemurrage">25 kg PP Bags</div>
                             </div>
                         </div>
-
-                        <!-- Readout dashboard -->
-                        <div class="bg-zincbg border border-zinc-200 p-6 space-y-4 font-mono text-xs text-slate-500 rounded-xl">
-                            <div class="flex justify-between border-b border-zinc-200 pb-2">
-                                <span>Recom. Container:</span>
-                                <span class="text-slateText font-bold" id="recContainer">1x 20ft FCL Dry</span>
+                        <div class="space-y-3 pl-0 sm:pl-2">
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Phytosanitary ID</span>
+                                <div class="font-bold text-slate-800 mt-0.5" id="readoutCode">PHYTO-JAKARTA-201</div>
                             </div>
-                            <div class="flex justify-between border-b border-zinc-200 pb-2">
-                                <span>Estimated Volume:</span>
-                                <span class="text-slateText font-bold" id="recVolume">20 CBM</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>CO2 Offset Ratio:</span>
-                                <span class="text-emerald-600 font-bold" id="recCo2">0.4 Tons</span>
+                            <div>
+                                <span class="text-[9px] text-slate-400 uppercase font-bold">Est FOB Price / Ton</span>
+                                <div class="font-bold text-accent mt-0.5" id="readoutPrice">$1,150.00 USD</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- B2B Inquiry Submit -->
-                    <form id="neoInquiryForm" class="mt-8 pt-8 border-t border-zinc-200 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="email" id="inquiryEmail" required class="w-full border border-zinc-200 p-3.5 text-xs font-bold" placeholder="your@company.com">
-                        <button type="submit" class="bg-slateText hover:bg-accent text-white font-bold text-xs uppercase py-3.5 transition">
-                            Submit Inquiry Request
+                    <!-- B2B Submission Email -->
+                    <form id="rateForm" class="flex flex-col sm:flex-row gap-3 border-t border-zinc-200 pt-8">
+                        <input type="email" id="submitEmail" required class="flex-grow border border-zinc-200 focus:border-slateText focus:outline-none p-3.5 text-xs font-bold bg-[#F8FAFC]" placeholder="purchasing@company.com">
+                        <button type="submit" class="bg-slateText hover:bg-zinc-800 text-white font-bold text-xs uppercase px-8 py-3.5 transition">
+                            Request Quote
                         </button>
                     </form>
                 </div>
@@ -365,84 +366,81 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slateText text-white py-16 border-t border-zinc-200 text-xs">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <span class="font-bold text-lg uppercase flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> apex.neo</span>
-            <p class="text-slate-400">© 2026 Apex Neo. All rights reserved.</p>
-            <div class="flex gap-6 text-slate-400">
-                <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition">Terms of Service</a>
+    <footer class="bg-white text-slate-500 py-20 text-xs border-t border-zinc-200 font-mono">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16 items-start">
+                <div>
+                    <span class="font-sans font-black text-slateText text-lg">APEX.NEO<span class="text-accent">.</span></span>
+                    <p class="text-slate-400 text-xs leading-relaxed my-6 font-sans font-light">
+                        Integrated agricultural export trade house. Shipping premium tested commodities directly to destination ports.
+                    </p>
+                    <div class="flex flex-col gap-2 text-slateText">
+                        <span>Email: supply@apexneo.com</span>
+                        <span>Tel: +62 21 556 7789</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Jakarta Depot Terminal</h4>
+                    <p class="text-slate-400 leading-relaxed font-sans font-light">
+                        Jalan Logistik Kav. 14, Tanjung Priok, Jakarta Utara - 14310. Indonesia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Trade Registry</h4>
+                    <ul class="space-y-3 text-slate-400 font-sans font-light">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slateText"></span> Indonesian Spices Board Member</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slateText"></span> C-TPAT Certified Exporter</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slateText"></span> Chamber of Commerce Registered</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-zinc-200 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-400">
+                <p>© 2026 Apex Neo Group Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slateText transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-slateText transition">Terms & Conditions</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript interactions -->
     <script>
-        // Flowchart node interactions
-        const FLOW_DETAILS = {
-            sourceNode: "Estate Sourcing: Kami berkontrak langsung dengan koperasi tani di distrik Wayanad (kapulaga) dan Yirgacheffe (kopi) untuk melacak asal komoditas.",
-            labNode: "Moisture Lab Testing: Lot kargo diuji di stasiun laboratorium Chennai untuk memangkas aflatoksin dan residu logam berat di bawah batas EU.",
-            sealNode: "Nitrogen Sealing Packing: Grains dan Spices dikemas vakum dengan hembusan nitrogen untuk menstabilkan aroma volatile oils selama freights.",
-            transitNode: "Vessel Transit: Cargo dimuat ke dalam kontainer reefer bertenaga satelit IoT, bersandar langsung ke terminal tujuan di Rotterdam."
-        };
-
-        function showFlowDetail(nodeId) {
-            document.getElementById('flowReadoutPanel').innerHTML = `<strong>${FLOW_DETAILS[nodeId]}</strong>`;
-        }
-
-        // Sourcing Steps detail tooltips
-        const STEP_DETAILS = {
-            '1': "Farmgate Audit: Kami mengirim staf agronomis lapangan langsung ke gudang tani pembudidaya untuk mengukur temperatur curing dan kelembapan biji/pods di bawah 9%.",
-            '2': "Lab Screening: Pengujian laboratorium terakreditasi untuk memastikan batas toleransi pestisida aflatoksin memenuhi ketentuan ekspor Uni Eropa dan FDA.",
-            '3': "Nitrogen Sealing: Pengemasan menggunakan kantong food-grade bervakum tinggi atau nitrogen flushing untuk mengunci senyawa aromatik (volatile oils).",
-            '4': "Sealed Transit: Penggunaan kontainer reefers bersuhu konstan (+4C) dengan segel bea cukai ganda dan pelacak sensor satelit GPS real-time."
-        };
-
-        function updateStepDetail(stepId) {
-            document.getElementById('stepDetailPanel').innerText = STEP_DETAILS[stepId];
-        }
-
-        function clearStepDetail() {
-            document.getElementById('stepDetailPanel').innerText = "Hover over any sourcing step card to inspect procedural requirements.";
-        }
-
-        // Live calculator logic
-        function runNeoCalc() {
-            const ton = document.getElementById('tonSlider').value;
-            const inco = document.getElementById('calcInco').value;
-            
-            document.getElementById('tonLabel').innerText = `${ton} MT`;
-            
-            // Container recommendation calculations
-            let container = "1x 20ft FCL Dry";
-            let volume = ton * 2;
-            let co2 = (ton * 0.04).toFixed(2);
-
-            if (ton > 15 && ton <= 28) {
-                container = "1x 20ft FCL Reefer";
-            } else if (ton > 28) {
-                container = "1x 40ft FCL Dry";
+        const ROUTE_DATA = {
+            "LOT-CORIANDER-01": {
+                days: "Moisture < 9.0% (Purity > 98.0%)",
+                demurrage: "25 kg PP Bags",
+                code: "PHYTO-JAKARTA-201",
+                price: "$1,150.00 USD"
+            },
+            "LOT-GINGER-77": {
+                days: "Moisture < 10.0% (Purity > 99.0%)",
+                demurrage: "25 kg Kraft Bags",
+                code: "PHYTO-JAKARTA-205",
+                price: "$1,850.00 USD"
             }
+        };
 
-            document.getElementById('recContainer').innerText = container;
-            document.getElementById('recVolume').innerText = `${volume} CBM`;
-            document.getElementById('recCo2').innerText = `${co2} Tons`;
+        function runCalculator() {
+            const routeId = document.getElementById('calcRoute').value;
+            const data = ROUTE_DATA[routeId];
+
+            document.getElementById('readoutDays').innerText = data.days;
+            document.getElementById('readoutDemurrage').innerText = data.demurrage;
+            document.getElementById('readoutCode').innerText = data.code;
+            document.getElementById('readoutPrice').innerText = data.price;
         }
 
-        // Form Submit
-        const neoForm = document.getElementById('neoInquiryForm');
-        if (neoForm) {
-            neoForm.addEventListener('submit', (e) => {
+        const rateForm = document.getElementById('rateForm');
+        if (rateForm) {
+            rateForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                const email = document.getElementById('inquiryEmail').value;
-                alert(`Inquiry received!\n\nWe have logged your tonnage specifications. A proforma template quote has been dispatched to ${email}.`);
-                neoForm.reset();
+                const email = document.getElementById('submitEmail').value;
+                const routeId = document.getElementById('calcRoute').value;
+                alert(`Quotation request logged!\n\nWe have logged your query for ${routeId}. A finalized FOB pricing offer sheet will be sent to ${email} shortly.`);
+                rateForm.reset();
             });
         }
-
-        window.addEventListener('load', () => {
-            runNeoCalc();
-        });
     </script>
 </body>
 </html>
