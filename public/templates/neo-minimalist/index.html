@@ -48,11 +48,32 @@
                 <a href="#calculator" class="hover:text-slateText transition">06 / Calculator</a>
             </nav>
 
-            <a href="#calculator" class="bg-slateText hover:bg-zinc-800 text-white px-5 py-2.5 text-xs font-mono uppercase tracking-wider transition duration-200">
-                Inquire Container
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="#calculator" class="hidden sm:inline-flex bg-slateText hover:bg-zinc-800 text-white px-5 py-2.5 text-xs font-mono uppercase tracking-wider transition duration-200">
+                    Inquire Container
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-slateText hover:text-accent focus:outline-none cursor-pointer" aria-label="Toggle menu">
+                    <svg class="w-6.5 h-6.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="hamburgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden fixed inset-0 top-20 bg-white z-[60] border-t border-zinc-200 md:hidden px-6 py-8">
+        <nav class="flex flex-col gap-6 font-mono text-sm uppercase tracking-wider text-slate-500">
+            <a href="#about" class="hover:text-slateText transition py-2" onclick="toggleMenu()">01 / Profile</a>
+            <a href="#sop" class="hover:text-slateText transition py-2" onclick="toggleMenu()">02 / SOP Steps</a>
+            <a href="#catalog" class="hover:text-slateText transition py-2" onclick="toggleMenu()">03 / Commodities</a>
+            <a href="#infra" class="hover:text-slateText transition py-2" onclick="toggleMenu()">04 / Facility</a>
+            <a href="#compliance" class="hover:text-slateText transition py-2" onclick="toggleMenu()">05 / Compliance</a>
+            <a href="#calculator" class="hover:text-slateText transition py-2" onclick="toggleMenu()">06 / Calculator</a>
+        </nav>
+    </div>
 
     <!-- Main -->
     <main>
@@ -440,6 +461,23 @@
                 alert(`Quotation request logged!\n\nWe have logged your query for ${routeId}. A finalized FOB pricing offer sheet will be sent to ${email} shortly.`);
                 rateForm.reset();
             });
+        }
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = document.getElementById('hamburgerIcon');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        }
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
         }
     </script>
 </body>

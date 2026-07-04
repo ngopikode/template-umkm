@@ -73,11 +73,32 @@
                 <a href="#inquiry" class="hover:text-warmOchre transition py-2">Contact</a>
             </nav>
 
-            <a href="#inquiry" class="bg-coffeeBrown hover:bg-warmOchre text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 transition duration-300">
-                Inquire Estate Cargo
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="#inquiry" class="hidden sm:inline-flex bg-coffeeBrown hover:bg-warmOchre text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 transition duration-300">
+                    Inquire Estate Cargo
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-slate-700 hover:text-warmOchre focus:outline-none cursor-pointer" aria-label="Toggle menu">
+                    <svg class="w-6.5 h-6.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="hamburgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden fixed inset-0 top-24 bg-[#FDFBF7] z-[60] border-t border-amber-900/10 md:hidden px-6 py-8">
+        <nav class="flex flex-col gap-6 font-bold text-sm uppercase tracking-wider text-slate-700">
+            <a href="#about" class="hover:text-warmOchre transition py-2" onclick="toggleMenu()">About Us</a>
+            <a href="#features" class="hover:text-warmOchre transition py-2" onclick="toggleMenu()">Our Pillars</a>
+            <a href="#products" class="hover:text-warmOchre transition py-2" onclick="toggleMenu()">Estates</a>
+            <a href="#infra" class="hover:text-warmOchre transition py-2" onclick="toggleMenu()">Milling</a>
+            <a href="#compliance" class="hover:text-warmOchre transition py-2" onclick="toggleMenu()">Compliance</a>
+            <a href="#inquiry" class="hover:text-warmOchre transition py-2" onclick="toggleMenu()">Contact</a>
+        </nav>
+    </div>
 
     <!-- Main -->
     <main>
@@ -450,6 +471,23 @@
                 alert(`Quotation request logged!\n\nWe have logged your query for ${routeId}. A finalized FOB pricing offer sheet will be sent to ${email} shortly.`);
                 rateForm.reset();
             });
+        }
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = document.getElementById('hamburgerIcon');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        }
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
         }
     </script>
 </body>

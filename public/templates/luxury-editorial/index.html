@@ -47,11 +47,32 @@
                 <a href="#cart" class="hover:text-goldAccent transition">Sample Cart</a>
             </nav>
 
-            <a href="#cart" class="bg-forest hover:bg-goldAccent text-white px-6 py-3 rounded-none font-bold text-xs uppercase tracking-wider transition duration-300">
-                Order Samples
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="#cart" class="hidden sm:inline-flex bg-forest hover:bg-goldAccent text-white px-6 py-3 rounded-none font-bold text-xs uppercase tracking-wider transition duration-300">
+                    Order Samples
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-forest hover:text-goldAccent focus:outline-none cursor-pointer" aria-label="Toggle menu">
+                    <svg class="w-6.5 h-6.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="hamburgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden fixed inset-0 top-22 bg-cream z-[60] border-t border-forest/10 md:hidden px-6 py-8">
+        <nav class="flex flex-col gap-6 font-sans text-sm font-semibold uppercase tracking-wider text-[#2f4a3a]">
+            <a href="#about" class="hover:text-goldAccent transition py-2" onclick="toggleMenu()">Profile</a>
+            <a href="#inspector" class="hover:text-goldAccent transition py-2" onclick="toggleMenu()">Crop Inspector</a>
+            <a href="#ledger" class="hover:text-goldAccent transition py-2" onclick="toggleMenu()">Shipment Ledger</a>
+            <a href="#infra" class="hover:text-goldAccent transition py-2" onclick="toggleMenu()">Infrastructure</a>
+            <a href="#compliance" class="hover:text-goldAccent transition py-2" onclick="toggleMenu()">Compliance</a>
+            <a href="#cart" class="hover:text-goldAccent transition py-2" onclick="toggleMenu()">Sample Cart</a>
+        </nav>
+    </div>
 
     <!-- Main -->
     <main>
@@ -390,6 +411,23 @@
                 luxuryForm.reset();
                 updateCartCounter();
             });
+        }
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = document.getElementById('hamburgerIcon');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        }
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
         }
     </script>
 </body>
