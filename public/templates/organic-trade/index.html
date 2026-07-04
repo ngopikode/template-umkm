@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Hills Sourcing | Certified Organic Spices & Botanical Exports</title>
+    <meta name="description" content="Company profile and B2B export catalog of Green Hills Sourcing. Supplying certified organic black pepper, Ceylon cinnamon, and Assam teas direct from farmgates.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Raleway"', 'sans-serif'],
+                        serif: ['"Lora"', 'serif'],
+                    },
+                    colors: {
+                        mintbg: '#ECFDF5',
+                        forest: '#064E3B',
+                        emeraldAccent: '#059669',
+                        tealCTA: '#0891B2',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-mintbg text-forest font-sans min-h-screen relative overflow-x-hidden selection:bg-emeraldAccent selection:text-white">
+
+    <!-- Topbar (Sourcing info) -->
+    <div class="bg-[#043327] text-[#86efac] text-[10px] font-bold uppercase tracking-widest py-3 px-6 hidden md:block">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    organic@greenhills.com
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    Plantation Hub: Coonoor, Nilgiris
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span>USDA ORGANIC CERTIFIED</span>
+                <span>•</span>
+                <span>EU BIO COMPLIANT EXPORTS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="border-b border-forest/10 sticky top-0 bg-mintbg/90 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-6 h-22 flex justify-between items-center">
+            <a href="#" class="font-serif font-bold text-xl tracking-tight text-forest">
+                GREEN HILLS<span class="text-emeraldAccent">.</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-10 text-xs font-bold uppercase tracking-wider text-forest/80">
+                <a href="#about" class="hover:text-emeraldAccent transition">About Us</a>
+                <a href="#pillars" class="hover:text-emeraldAccent transition">Pillars</a>
+                <a href="#products" class="hover:text-emeraldAccent transition">Crops</a>
+                <a href="#infra" class="hover:text-emeraldAccent transition">Infrastructure</a>
+                <a href="#compliance" class="hover:text-emeraldAccent transition">Certifications</a>
+                <a href="#verifier" class="hover:text-emeraldAccent transition">Traceability</a>
+            </nav>
+
+            <a href="#verifier" class="bg-forest hover:bg-emeraldAccent text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition">
+                Order Samples
+            </a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        
+        <!-- Hero Section (Organic Biophilic with Rounded Card & Badges) -->
+        <section class="py-20 md:py-28 relative border-b border-forest/10 overflow-hidden" style="background-image: radial-gradient(circle at 90% 10%, rgba(5, 150, 105, 0.08), transparent 50%), radial-gradient(circle at 10% 90%, rgba(202, 138, 4, 0.05), transparent 50%), #ECFDF5;">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left: Lora Typography Slogans -->
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <span class="text-xs font-bold text-emeraldAccent uppercase tracking-widest block mb-4">Direct Plantation Trade</span>
+                    <h1 class="font-serif font-normal text-5xl sm:text-6xl md:text-7xl text-forest leading-tight mb-8">
+                        100% Certified <br>Organic <span class="italic text-emeraldAccent">Agricultural</span> Exports.
+                    </h1>
+                    <p class="text-forest/80 text-base leading-relaxed font-light mb-10 max-w-md">
+                        Green Hills Sourcing links global bulk food buyers directly to agricultural cooperatives. We secure certified organic teas, ceylon cinnamon, and pure spices, audited at farmgate.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#products" class="bg-emeraldAccent hover:bg-forest text-white px-6 py-3.5 text-xs font-bold uppercase tracking-wider transition">
+                            Explore Catalog
+                        </a>
+                        <a href="#verifier" class="bg-white/40 hover:bg-white/80 text-forest px-6 py-3.5 text-xs font-bold uppercase tracking-wider transition border border-forest/10">
+                            Verify Crop Lot
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: High-Res Plantation Card with Rounded Curves -->
+                <div class="lg:col-span-5 relative">
+                    <!-- Rounded card frame -->
+                    <div class="aspect-[4/5] bg-white border border-forest/10 p-4 rounded-[2rem] shadow-xl overflow-hidden relative">
+                        <div class="h-4/5 overflow-hidden rounded-[1.5rem] mb-4">
+                            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=500" class="w-full h-full object-cover" alt="Organic Tea Plantation Hills">
+                        </div>
+                        <div class="flex justify-between items-center px-2">
+                            <div class="font-serif font-bold text-sm">Nilgiri Highlands</div>
+                            <span class="text-[9px] font-bold bg-[#fef08a] text-yellow-800 px-2 py-0.5 rounded">Bio-Vetted</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Leaf badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-forest text-white p-4 rounded-2xl shadow-lg flex items-center gap-3 border border-white/10 hidden sm:flex">
+                        <div class="w-8 h-8 rounded-full bg-emeraldAccent/20 flex items-center justify-center text-[#86efac]">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-[9px] text-slate-400 font-bold uppercase">Traceability Index</div>
+                            <div class="text-xs font-bold text-white">100% Origin Vetted</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us & Vision Section -->
+        <section id="about" class="py-24 border-b border-forest/10 bg-white">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-emeraldAccent uppercase tracking-widest block mb-2">Corporate Profile</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-forest uppercase tracking-tight">Visi & Kredibilitas</h2>
+                </div>
+                <div class="lg:col-span-8 space-y-6 text-forest/75 text-sm leading-relaxed">
+                    <p>
+                        Sebagai perusahaan kurator ekspor komoditas bersertifikasi organik, Green Hills Sourcing didirikan untuk menegakkan transparansi penuh dari lahan pertanian ke pelabuhan tujuan. Kami mengeliminasi perantara niaga guna menjamin pasokan pertanian premium yang adil (FairTrade) dan berkualitas konsisten bagi mitra industri makanan global.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-forest/10 text-forest font-bold text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-emeraldAccent">1,200+</div>
+                            <div class="text-[9px] text-slate-400 uppercase tracking-wider mt-1">Acres Vetted</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-emeraldAccent">400+</div>
+                            <div class="text-[9px] text-slate-400 uppercase tracking-wider mt-1">Growers Co-Op Members</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-emeraldAccent">100%</div>
+                            <div class="text-[9px] text-slate-400 uppercase tracking-wider mt-1">Chemical Free</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Pillars Grid (Features) -->
+        <section id="pillars" class="py-24 bg-mintbg/20 border-b border-forest/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="text-xs font-bold text-emeraldAccent uppercase tracking-widest block mb-2">Sourcing Standards</span>
+                    <h2 class="font-serif text-4xl text-forest uppercase">Pilar Utama Sourcing Kami</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pillar 1 -->
+                    <div class="bg-white border border-forest/5 p-8 rounded-2xl shadow-md hover:border-emeraldAccent/20 transition duration-300">
+                        <h3 class="font-serif text-lg text-forest mb-3 uppercase">Direct Grower Alliance</h3>
+                        <p class="text-forest/70 text-xs leading-relaxed">
+                            Membeli langsung dari koperasi tani Nilgiri memberikan kepastian harga yang adil bagi petani dan kontrol kualitas tanah secara berkala.
+                        </p>
+                    </div>
+                    <!-- Pillar 2 -->
+                    <div class="bg-white border border-forest/5 p-8 rounded-2xl shadow-md hover:border-emeraldAccent/20 transition duration-300">
+                        <h3 class="font-serif text-lg text-forest mb-3 uppercase">Pesticide Screening</h3>
+                        <p class="text-forest/70 text-xs leading-relaxed">
+                            Setiap lot kargo diuji residu bahan kimia sintetis di laboratorium SGS guna memenuhi standardisasi impor makanan Uni Eropa & FDA.
+                        </p>
+                    </div>
+                    <!-- Pillar 3 -->
+                    <div class="bg-white border border-forest/5 p-8 rounded-2xl shadow-md hover:border-emeraldAccent/20 transition duration-300">
+                        <h3 class="font-serif text-lg text-forest mb-3 uppercase">Carbon Offset Freight</h3>
+                        <p class="text-forest/70 text-xs leading-relaxed">
+                            Kami menyeimbangkan jejak karbon pengiriman laut dengan mendukung penanaman pohon agroforestry di perkebunan mitra.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commodities Specifications Catalog -->
+        <section id="products" class="py-24 bg-white border-b border-forest/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-left mb-16">
+                    <span class="text-xs font-bold text-emeraldAccent uppercase tracking-widest block mb-2">Crop specifications</span>
+                    <h2 class="font-serif text-4xl text-forest">Organic Commodities</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Product 1 -->
+                    <div class="border border-forest/10 p-6 rounded-2xl bg-mintbg/5 hover:border-emeraldAccent transition duration-300">
+                        <span class="text-[9px] font-bold bg-emeraldAccent/10 text-emeraldAccent px-2 py-0.5 rounded">TEA</span>
+                        <h3 class="font-serif text-lg text-forest mt-4 mb-2 uppercase">Assam Gold Leaf</h3>
+                        <p class="text-forest/70 text-xs leading-relaxed mb-6">
+                            Orthodox premium black tea leaf. 100% Organic, high antioxidants, moisture limit 6.5%.
+                        </p>
+                        <a href="#verifier" class="text-xs font-bold uppercase tracking-widest text-forest hover:text-emeraldAccent flex items-center gap-1.5">
+                            Verify Crop Lot <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="border border-forest/10 p-6 rounded-2xl bg-mintbg/5 hover:border-emeraldAccent transition duration-300">
+                        <span class="text-[9px] font-bold bg-emeraldAccent/10 text-emeraldAccent px-2 py-0.5 rounded">SPICES</span>
+                        <h3 class="font-serif text-lg text-forest mt-4 mb-2 uppercase">Ceylon Cinnamon</h3>
+                        <p class="text-forest/70 text-xs leading-relaxed mb-6">
+                            Premium grade-A quill cinnamon rolls. 100% Organic, sweet aromatic flavor, moisture limit 10.0%.
+                        </p>
+                        <a href="#verifier" class="text-xs font-bold uppercase tracking-widest text-forest hover:text-emeraldAccent flex items-center gap-1.5">
+                            Verify Crop Lot <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="border border-forest/10 p-6 rounded-2xl bg-mintbg/5 hover:border-emeraldAccent transition duration-300">
+                        <span class="text-[9px] font-bold bg-emeraldAccent/10 text-emeraldAccent px-2 py-0.5 rounded">SPICES</span>
+                        <h3 class="font-serif text-lg text-forest mt-4 mb-2 uppercase">Curcumin Turmeric</h3>
+                        <p class="text-forest/70 text-xs leading-relaxed mb-6">
+                            Pure organic turmeric powder. Min 5.2% curcumin index, slow shade dried, moisture limit 9.0%.
+                        </p>
+                        <a href="#verifier" class="text-xs font-bold uppercase tracking-widest text-forest hover:text-emeraldAccent flex items-center gap-1.5">
+                            Verify Crop Lot <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="border border-forest/10 p-6 rounded-2xl bg-mintbg/5 hover:border-emeraldAccent transition duration-300">
+                        <span class="text-[9px] font-bold bg-emeraldAccent/10 text-emeraldAccent px-2 py-0.5 rounded">HERBS</span>
+                        <h3 class="font-serif text-lg text-forest mt-4 mb-2 uppercase">Dried Curry Leaves</h3>
+                        <p class="text-forest/70 text-xs leading-relaxed mb-6">
+                            Slow-dried organic curry leaves. High volatile oils, zero chemical additives, moisture limit 8.0%.
+                        </p>
+                        <a href="#verifier" class="text-xs font-bold uppercase tracking-widest text-forest hover:text-emeraldAccent flex items-center gap-1.5">
+                            Verify Crop Lot <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sourcing Infrastructure (New Addition) -->
+        <section id="infra" class="py-24 border-b border-forest/10 bg-[#fcfaf7]">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-emeraldAccent uppercase tracking-widest block mb-2">Processing Mill</span>
+                    <h2 class="font-serif text-3xl text-forest uppercase">Gudang & Pengeringan</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs text-forest/80">
+                    <div class="border border-forest/10 p-6 bg-white rounded-lg">
+                        <h3 class="font-serif text-base text-forest mb-2 font-semibold">Elevated Shade Racks</h3>
+                        <p class="leading-relaxed">
+                            Rak gantung jaring nilon dengan atap polikarbonat transparan untuk dehidrasi daun teh dan kayu manis bebas dari jamur tanah.
+                        </p>
+                    </div>
+                    <div class="border border-forest/10 p-6 bg-white rounded-lg">
+                        <h3 class="font-serif text-base text-forest mb-2 font-semibold">CCD Color Seed Separator</h3>
+                        <p class="leading-relaxed">
+                            Penyortiran biji rempah kering menggunakan sensor CCD warna guna menyeleksi butiran biji yang pecah atau mengalami diskolorasi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compliance registries section -->
+        <section id="compliance" class="py-24 bg-forest text-white">
+            <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-[#86efac] uppercase tracking-widest block mb-2">Verified Registries</span>
+                    <h2 class="font-serif text-3xl text-white">Organic Compliance Certifications</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs font-bold text-slate-300">
+                    <div class="border border-white/10 p-6 bg-white/5">
+                        <div class="text-[#86efac] mb-1">USDA ORGANIC</div>
+                        <div class="text-sm">NOP Organic Certificate: ORG-2026-9812</div>
+                    </div>
+                    <div class="border border-white/10 p-6 bg-white/5">
+                        <div class="text-[#86efac] mb-1">EUROPEAN BIO CERT</div>
+                        <div class="text-sm">EU Organic Registry: Bio-IN-03912</div>
+                    </div>
+                    <div class="border border-white/10 p-6 bg-white/5">
+                        <div class="text-[#86efac] mb-1">FAIRTRADE ALLIANCE</div>
+                        <div class="text-sm">FairTrade Certified Supplier ID: FT-29012</div>
+                    </div>
+                    <div class="border border-white/10 p-6 bg-white/5">
+                        <div class="text-[#86efac] mb-1">RAINFOREST ALLIANCE</div>
+                        <div class="text-sm">Sustainable Farm Certificate: RA-987654</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traceability Lot verifier & sample request widget -->
+        <section id="verifier" class="py-24 bg-mintbg">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <div class="lg:col-span-5">
+                        <span class="text-xs font-bold text-emeraldAccent uppercase tracking-widest block mb-2">B2B Traceability</span>
+                        <h2 class="font-serif text-4xl text-forest uppercase leading-tight">Organic Lot Verifier</h2>
+                        <p class="text-forest/70 text-sm leading-relaxed mt-6">
+                            Select a crop batch lot number below to retrieve physical laboratory test credentials and plantation grower source details.
+                        </p>
+                    </div>
+
+                    <!-- Verifier Widget -->
+                    <div class="lg:col-span-7 bg-white border-2 border-forest p-8 rounded-2xl shadow-xl">
+                        
+                        <div class="flex flex-col gap-2 mb-6">
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-slate-400" for="calcLot">Select Cargo Lot ID</label>
+                            <select id="calcLot" onchange="runVerifier()" class="border border-forest/10 focus:border-forest focus:outline-none p-3.5 text-xs font-bold bg-mintbg/5 rounded-lg">
+                                <option value="LOT-ASSAM-98">LOT-ASSAM-98 (Assam Gold Tea)</option>
+                                <option value="LOT-CEYLON-12">LOT-CEYLON-12 (Ceylon Cinnamon)</option>
+                                <option value="LOT-TURM-31">LOT-TURM-31 (Curcumin Turmeric)</option>
+                            </select>
+                        </div>
+
+                        <!-- Readout dashboard -->
+                        <div class="bg-mintbg/30 border border-forest/10 p-6 rounded-xl space-y-4 font-mono text-xs text-forest/80 mb-6">
+                            <div class="flex justify-between border-b border-forest/10 pb-2">
+                                <span>Grower Co-Op Source:</span>
+                                <span class="text-forest font-bold" id="readoutCoop">Nilgiri Smallholders Association</span>
+                            </div>
+                            <div class="flex justify-between border-b border-forest/10 pb-2">
+                                <span>Soil pH Level:</span>
+                                <span class="text-forest font-bold" id="readoutPh">6.4 (Optimal Organic)</span>
+                            </div>
+                            <div class="flex justify-between border-b border-forest/10 pb-2">
+                                <span>Harvest Date:</span>
+                                <span class="text-forest font-bold" id="readoutHarvest">May 12, 2026</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Pesticide Res. Test:</span>
+                                <span class="text-emeraldAccent font-bold" id="readoutPesticide">0.0% (ND - Passed)</span>
+                            </div>
+                        </div>
+
+                        <!-- B2B Submission Email -->
+                        <form id="lotSubmitForm" class="flex flex-col sm:flex-row gap-3 border-t border-forest/10 pt-6">
+                            <input type="email" id="submitEmail" required class="flex-grow border border-forest/10 focus:border-forest focus:outline-none p-3.5 text-xs font-bold rounded-lg" placeholder="purchasing@company.com">
+                            <button type="submit" class="bg-forest hover:bg-emeraldAccent text-white font-bold text-xs uppercase px-6 py-3.5 transition rounded-lg">
+                                Request Lot Samples
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#03241b] text-[#cbdad0] py-20 text-xs">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16 items-start">
+                <div>
+                    <span class="font-serif font-bold text-white text-lg">GREEN HILLS<span class="text-emeraldAccent">.</span></span>
+                    <p class="text-slate-400 text-xs leading-relaxed my-6 font-light">
+                        Certified organic tea and spice plantation sourcing house. Exporting direct-from-origin agricultural commodities globally.
+                    </p>
+                    <div class="flex flex-col gap-2 text-white">
+                        <span>Email: organic@greenhills.com</span>
+                        <span>Tel: +91 423 2234981</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Plantation Office</h4>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        14, Club Road, Coonoor, Nilgiris - 643101. Tamilnadu, India.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Accreditations</h4>
+                    <ul class="space-y-3 text-slate-400 font-light">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emeraldAccent"></span> USDA National Organic Program</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emeraldAccent"></span> EU Council Regulation Bio Code</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emeraldAccent"></span> FairTrade International Registered</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500">
+                <p>© 2026 Green Hills Sourcing Pvt Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript interactions -->
+    <script>
+        const LOT_DATA = {
+            "LOT-ASSAM-98": {
+                coop: "Nilgiri Smallholders Association",
+                ph: "6.4 (Optimal Organic)",
+                harvest: "May 12, 2026",
+                pesticide: "0.0% (ND - Passed)"
+            },
+            "LOT-CEYLON-12": {
+                coop: "Sumatra Organics Collective",
+                ph: "5.8 (Acidic Sandy)",
+                harvest: "June 02, 2026",
+                pesticide: "0.0% (ND - Passed)"
+            },
+            "LOT-TURM-31": {
+                coop: "Kerala Growers Cooperative",
+                ph: "6.8 (Neutral Clay)",
+                harvest: "May 25, 2026",
+                pesticide: "0.0% (ND - Passed)"
+            }
+        };
+
+        function runVerifier() {
+            const lotId = document.getElementById('calcLot').value;
+            const data = LOT_DATA[lotId];
+
+            document.getElementById('readoutCoop').innerText = data.coop;
+            document.getElementById('readoutPh').innerText = data.ph;
+            document.getElementById('readoutHarvest').innerText = data.harvest;
+            document.getElementById('readoutPesticide').innerText = data.pesticide;
+        }
+
+        const lotForm = document.getElementById('lotSubmitForm');
+        if (lotForm) {
+            lotForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('submitEmail').value;
+                const lotId = document.getElementById('calcLot').value;
+                alert(`Lot evaluation request submitted!\n\nWe have logged your request for ${lotId}. A detailed chemical certificate file will be sent to ${email} shortly.`);
+                lotForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #059669;
+    --color-secondary: #10B981;
+    --color-cta: #0891B2;
+    --color-bg: #ECFDF5;
+    --color-text: #064E3B;
+    --font-serif: 'Lora', serif;
+    --font-sans: 'Raleway', sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+}
+
+*:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
