@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #2563EB;
+    --color-secondary: #3B82F6;
+    --color-cta: #F97316;
+    --color-bg: #EFF6FF;
+    --color-text: #1E40AF;
+    --font-heading: 'Be Vietnam Pro', sans-serif;
+    --font-body: 'Noto Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+}
+
+*:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
