@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexBuild | Modern Construction Tech</title>
+    <meta name="description" content="Next-generation construction utilizing robotics, AI, and advanced materials.">
+    
+    <!-- Google Fonts: Space Grotesk & DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#0a0a0a',
+                            surface: '#171717',
+                            border: '#262626',
+                            text: '#f5f5f5',
+                            muted: '#a3a3a3',
+                            accent: '#3b82f6', // Electric Blue
+                        }
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 40 40\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cpath d=\\'M0 0h40v40H0V0zm39 39V1H1v38h38z\\' fill=\\'%23262626\\' fill-opacity=\\'0.4\\' fill-rule=\\'evenodd\\'/%3E%3C/svg%3E')"
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glitch-hover:hover {
+            transform: skewX(-10deg);
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-text font-sans min-h-screen selection:bg-brand-accent selection:text-white">
+    <!-- Grid Background Overlay -->
+    <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+    <div class="fixed inset-0 bg-gradient-to-b from-transparent via-brand-bg/80 to-brand-bg pointer-events-none z-0"></div>
+
+    <header class="fixed top-0 w-full z-50 bg-brand-bg/80 backdrop-blur-lg border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="font-display font-bold text-2xl tracking-tighter">
+                NEX<span class="text-brand-accent">BUILD</span><span class="text-brand-muted text-sm">_v2</span>
+            </a>
+            <nav class="hidden md:flex gap-8 font-display text-sm uppercase tracking-widest text-brand-muted">
+                <a href="#" class="hover:text-brand-text transition-colors">Platform</a>
+                <a href="#" class="hover:text-brand-text transition-colors">Robotics</a>
+                <a href="#" class="hover:text-brand-text transition-colors">Projects</a>
+            </nav>
+            <a href="#" class="hidden md:block border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white font-display text-xs uppercase tracking-widest px-6 py-2.5 transition-all glitch-hover">
+                Deploy Project
+            </a>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+        <section class="pt-48 pb-32 px-6 max-w-7xl mx-auto text-center">
+            <div class="inline-block border border-brand-border bg-brand-surface px-4 py-1.5 rounded-full font-display text-xs text-brand-accent uppercase tracking-widest mb-8">
+                Operating System for Construction
+            </div>
+            <h1 class="font-display font-bold text-5xl md:text-8xl tracking-tighter mb-8 leading-none">
+                BUILDING THE <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-blue-400">UNBUILDABLE.</span>
+            </h1>
+            <p class="text-brand-muted text-lg max-w-2xl mx-auto mb-12">
+                We leverage robotics, AI-driven logistics, and advanced material science to construct infrastructure 40% faster with zero carbon footprint.
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="#" class="bg-brand-accent text-white font-display text-sm uppercase tracking-widest px-8 py-4 hover:bg-blue-600 transition-colors">
+                    Request Demo
+                </a>
+                <a href="#" class="border border-brand-border text-brand-text font-display text-sm uppercase tracking-widest px-8 py-4 hover:bg-brand-surface transition-colors">
+                    View Docs
+                </a>
+            </div>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-border">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-brand-surface border border-brand-border p-8 hover:border-brand-accent transition-colors cursor-pointer group">
+                    <div class="w-12 h-12 bg-brand-bg border border-brand-border flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">Robotic Assembly</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">Automated drone and crane synchronization for millimeter-perfect modular installation.</p>
+                </div>
+                <div class="bg-brand-surface border border-brand-border p-8 hover:border-brand-accent transition-colors cursor-pointer group">
+                    <div class="w-12 h-12 bg-brand-bg border border-brand-border flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">AI Logistics</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">Predictive supply chain management ensuring materials arrive exactly when required.</p>
+                </div>
+                <div class="bg-brand-surface border border-brand-border p-8 hover:border-brand-accent transition-colors cursor-pointer group">
+                    <div class="w-12 h-12 bg-brand-bg border border-brand-border flex items-center justify-center text-brand-accent mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">Advanced Materials</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">Carbon-negative concrete and self-healing polymers for infinite durability.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="relative z-10 border-t border-brand-border py-12 px-6 mt-24">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-brand-muted text-sm">
+            <p>&copy; 2026 NexBuild Technologies Inc.</p>
+            <div class="flex gap-6 mt-4 md:mt-0 font-display uppercase tracking-widest text-xs">
+                <a href="#" class="hover:text-brand-text">Github</a>
+                <a href="#" class="hover:text-brand-text">Twitter</a>
+                <a href="#" class="hover:text-brand-text">Status</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

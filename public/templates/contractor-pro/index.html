@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildPro | Enterprise Construction & Contracting</title>
+    <meta name="description" content="BuildPro is a premier enterprise construction and contracting firm, specializing in commercial, industrial, and infrastructure projects.">
+    
+    <!-- Google Fonts: Poppins and Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Open Sans"', 'sans-serif'],
+                        display: ['"Poppins"', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        orange: {
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    },
+                    fontSize: {
+                        'massive': 'clamp(3rem, 10vw, 10rem)',
+                    },
+                    letterSpacing: {
+                        'tightest': '-.075em',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .focus-ring:focus-visible {
+            outline: 2px solid #f97316;
+            outline-offset: 4px;
+        }
+        
+        /* Smooth reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Image hover zoom */
+        .zoom-img {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .zoom-container:hover .zoom-img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen selection:bg-orange-500 selection:text-white">
+
+    <!-- Ultra Minimal Header -->
+    <header class="fixed top-0 w-full z-50 bg-slate-50/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-[90rem] mx-auto px-6 h-24 flex justify-between items-center">
+            <!-- Brand -->
+            <a href="#" class="font-display font-black text-2xl tracking-tighter text-slate-900 uppercase">
+                BUILD<span class="text-orange-500">PRO.</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-12 font-display font-bold text-sm tracking-wider uppercase text-slate-900">
+                <a href="#services" class="hover:text-orange-500 transition-colors duration-300">Expertise</a>
+                <a href="#projects" class="hover:text-orange-500 transition-colors duration-300">Projects</a>
+                <a href="#about" class="hover:text-orange-500 transition-colors duration-300">Company</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="#contact" class="hidden md:inline-flex bg-slate-900 hover:bg-orange-500 text-white font-display font-bold text-xs uppercase tracking-widest px-8 py-4 transition-colors duration-300">
+                    START PROJECT
+                </a>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuBtn" class="lg:hidden text-slate-900 hover:text-orange-500 transition-colors cursor-pointer" aria-label="Toggle menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="hamburgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden fixed inset-0 top-24 bg-slate-50 z-[60] lg:hidden px-6 py-12">
+        <nav class="flex flex-col gap-8 font-display font-black text-4xl uppercase text-slate-900">
+            <a href="#services" class="hover:text-orange-500 transition-colors" onclick="toggleMenu()">Expertise</a>
+            <a href="#projects" class="hover:text-orange-500 transition-colors" onclick="toggleMenu()">Projects</a>
+            <a href="#about" class="hover:text-orange-500 transition-colors" onclick="toggleMenu()">Company</a>
+            <a href="#contact" class="hover:text-orange-500 transition-colors mt-8 text-orange-500" onclick="toggleMenu()">Start Project</a>
+        </nav>
+    </div>
+
+    <main>
+        
+        <!-- Hero Section (Exaggerated Minimalism) -->
+        <section class="pt-40 pb-24 md:pt-56 md:pb-32 px-6 max-w-[90rem] mx-auto">
+            <div class="reveal active">
+                <h1 class="font-display font-black text-massive leading-[0.85] tracking-tightest text-slate-900 uppercase mb-8">
+                    WE BUILD <br>
+                    <span class="text-orange-500">THE FUTURE.</span>
+                </h1>
+                
+                <div class="flex flex-col md:flex-row gap-12 md:gap-24 items-start md:items-end mt-16 md:mt-24">
+                    <p class="text-slate-600 text-lg md:text-xl max-w-xl font-light leading-relaxed">
+                        Pioneering enterprise construction solutions with industrial-grade precision. We deliver complex infrastructure, commercial spaces, and monumental structures that define skylines.
+                    </p>
+                    
+                    <a href="#projects" class="group flex items-center gap-4 text-slate-900 font-display font-bold text-sm uppercase tracking-widest hover:text-orange-500 transition-colors">
+                        View Showcases
+                        <span class="w-12 h-12 rounded-full border border-slate-900 group-hover:border-orange-500 flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Huge Hero Image -->
+            <div class="mt-24 md:mt-32 w-full h-[60vh] md:h-[80vh] overflow-hidden zoom-container bg-slate-200">
+                <img src="https://images.unsplash.com/photo-1541888086925-0c770f4e7dce?q=80&w=2000" alt="Enterprise Construction Site" class="w-full h-full object-cover zoom-img">
+            </div>
+        </section>
+
+        <!-- Stats / Trust Signals -->
+        <section class="py-24 bg-slate-900 text-slate-50">
+            <div class="max-w-[90rem] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 border-t border-slate-800 pt-16">
+                <div>
+                    <div class="font-display font-black text-5xl md:text-7xl text-orange-500 mb-4 tracking-tighter">45+</div>
+                    <div class="text-slate-400 font-bold text-xs uppercase tracking-widest">Years Experience</div>
+                </div>
+                <div>
+                    <div class="font-display font-black text-5xl md:text-7xl text-orange-500 mb-4 tracking-tighter">250</div>
+                    <div class="text-slate-400 font-bold text-xs uppercase tracking-widest">Projects Delivered</div>
+                </div>
+                <div>
+                    <div class="font-display font-black text-5xl md:text-7xl text-orange-500 mb-4 tracking-tighter">$2B</div>
+                    <div class="text-slate-400 font-bold text-xs uppercase tracking-widest">Capital Managed</div>
+                </div>
+                <div>
+                    <div class="font-display font-black text-5xl md:text-7xl text-orange-500 mb-4 tracking-tighter">100%</div>
+                    <div class="text-slate-400 font-bold text-xs uppercase tracking-widest">Safety Compliance</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise (Industries) -->
+        <section id="services" class="py-32 md:py-48 px-6 max-w-[90rem] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start mb-24 reveal">
+                <h2 class="font-display font-black text-5xl md:text-7xl tracking-tighter uppercase text-slate-900 mb-8 md:mb-0">
+                    OUR CORE <br>EXPERTISE.
+                </h2>
+                <p class="text-slate-500 max-w-sm">
+                    Operating across multiple sectors to provide turnkey solutions from architectural concept to final structural delivery.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group bg-slate-100 p-12 hover:bg-slate-900 transition-colors duration-500 reveal cursor-pointer">
+                    <div class="text-slate-300 group-hover:text-orange-500 mb-16 transition-colors">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="font-display font-black text-2xl uppercase tracking-tight text-slate-900 group-hover:text-white mb-6 transition-colors">Commercial Space</h3>
+                    <p class="text-slate-500 group-hover:text-slate-400 transition-colors leading-relaxed">
+                        High-rise offices, retail centers, and hospitality complexes built with modern aesthetics and structural integrity.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-slate-100 p-12 hover:bg-slate-900 transition-colors duration-500 reveal cursor-pointer">
+                    <div class="text-slate-300 group-hover:text-orange-500 mb-16 transition-colors">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-display font-black text-2xl uppercase tracking-tight text-slate-900 group-hover:text-white mb-6 transition-colors">Infrastructure</h3>
+                    <p class="text-slate-500 group-hover:text-slate-400 transition-colors leading-relaxed">
+                        Heavy civil engineering projects including bridges, transit systems, and massive public works.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-slate-100 p-12 hover:bg-slate-900 transition-colors duration-500 reveal cursor-pointer">
+                    <div class="text-slate-300 group-hover:text-orange-500 mb-16 transition-colors">
+                        <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="font-display font-black text-2xl uppercase tracking-tight text-slate-900 group-hover:text-white mb-6 transition-colors">Industrial</h3>
+                    <p class="text-slate-500 group-hover:text-slate-400 transition-colors leading-relaxed">
+                        Manufacturing plants, warehouses, and energy facilities requiring specialized architectural solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Projects (Massive Layout) -->
+        <section id="projects" class="bg-slate-900 py-32 md:py-48 text-white">
+            <div class="max-w-[90rem] mx-auto px-6 mb-24 reveal">
+                <h2 class="font-display font-black text-5xl md:text-7xl tracking-tighter uppercase mb-6">SELECTED WORKS.</h2>
+                <div class="w-32 h-1 bg-orange-500"></div>
+            </div>
+
+            <!-- Project 1 -->
+            <div class="max-w-[90rem] mx-auto px-6 mb-32 md:mb-48 reveal group">
+                <div class="relative h-[50vh] md:h-[75vh] w-full overflow-hidden zoom-container mb-8 bg-slate-800">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600" alt="Nexus Tower" class="w-full h-full object-cover zoom-img opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-8">
+                        <h3 class="font-display font-black text-4xl md:text-6xl uppercase tracking-tighter mb-4">Nexus Financial Tower</h3>
+                        <p class="text-slate-400 text-lg md:text-xl font-light">Commercial High-Rise / 68 Floors</p>
+                    </div>
+                    <div class="md:col-span-4 md:text-right">
+                        <a href="#" class="inline-block text-orange-500 font-display font-bold uppercase tracking-widest text-sm hover:text-white transition-colors">View Case Study →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="max-w-[90rem] mx-auto px-6 mb-32 md:mb-48 reveal group">
+                <div class="relative h-[50vh] md:h-[75vh] w-full overflow-hidden zoom-container mb-8 bg-slate-800">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1600" alt="Delta Manufacturing" class="w-full h-full object-cover zoom-img opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-8">
+                        <h3 class="font-display font-black text-4xl md:text-6xl uppercase tracking-tighter mb-4">Delta Logistics Hub</h3>
+                        <p class="text-slate-400 text-lg md:text-xl font-light">Industrial / 2.5M Sq Ft</p>
+                    </div>
+                    <div class="md:col-span-4 md:text-right">
+                        <a href="#" class="inline-block text-orange-500 font-display font-bold uppercase tracking-widest text-sm hover:text-white transition-colors">View Case Study →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="inline-block border-2 border-slate-700 hover:border-orange-500 text-white font-display font-bold text-sm uppercase tracking-widest px-12 py-5 transition-colors duration-300">
+                    VIEW ALL PROJECTS
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA / Inquiry -->
+        <section id="contact" class="py-32 md:py-48 px-6 max-w-[90rem] mx-auto bg-slate-50">
+            <div class="bg-slate-100 p-8 md:p-24 border border-slate-200 reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="font-display font-black text-5xl md:text-7xl tracking-tighter uppercase text-slate-900 mb-8">
+                            LET'S TALK <br>
+                            <span class="text-orange-500">SCALE.</span>
+                        </h2>
+                        <p class="text-slate-600 text-lg mb-12">
+                            Ready to initiate a monumental project? Contact our sales and engineering team to discuss planning, budgets, and timelines.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-slate-900 flex items-center justify-center text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Global Sales Desk</div>
+                                    <div class="text-slate-900 font-bold text-xl">+1 (800) 555-0199</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-slate-900 flex items-center justify-center text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Email Proposals</div>
+                                    <div class="text-slate-900 font-bold text-xl">build@buildpro.dev</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 md:p-12 shadow-sm border border-slate-200">
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" for="name">Company Name</label>
+                                <input type="text" id="name" required class="w-full bg-slate-50 border border-slate-200 p-4 focus:outline-none focus:border-orange-500 transition-colors text-slate-900">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" for="email">Work Email</label>
+                                <input type="email" id="email" required class="w-full bg-slate-50 border border-slate-200 p-4 focus:outline-none focus:border-orange-500 transition-colors text-slate-900">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" for="type">Project Type</label>
+                                <select id="type" class="w-full bg-slate-50 border border-slate-200 p-4 focus:outline-none focus:border-orange-500 transition-colors text-slate-900">
+                                    <option>Commercial Tower</option>
+                                    <option>Industrial Facility</option>
+                                    <option>Public Infrastructure</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-orange-500 hover:bg-slate-900 text-white font-display font-bold text-sm uppercase tracking-widest px-8 py-5 transition-colors duration-300">
+                                Request Consultation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Massive Footer -->
+    <footer class="bg-slate-900 text-white pt-32 pb-12 border-t border-slate-800 overflow-hidden">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="mb-24">
+                <h2 class="font-display font-black text-massive leading-none tracking-tightest text-slate-800 uppercase select-none pointer-events-none">
+                    BUILDPRO.
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24 font-display">
+                <div class="col-span-1 md:col-span-2">
+                    <p class="text-slate-400 text-lg max-w-sm font-light">
+                        Enterprise construction and infrastructure development. Setting the standard for industrial scaling and safety globally.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-slate-500 mb-6">Offices</h4>
+                    <ul class="space-y-4 text-slate-300 font-light">
+                        <li>New York, USA</li>
+                        <li>London, UK</li>
+                        <li>Dubai, UAE</li>
+                        <li>Singapore</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-slate-500 mb-6">Corporate</h4>
+                    <ul class="space-y-4 text-slate-300 font-light">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Investor Relations</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Safety Record</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Press & Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-800 text-slate-500 text-sm">
+                <p>&copy; 2026 BuildPro Corporation. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                    <a href="#" class="hover:text-white transition-colors">Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS for Mobile Menu and Scroll Animations -->
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = document.getElementById('hamburgerIcon');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        }
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+        }
+
+        // Form Submit
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for reaching out to BuildPro. A representative from our enterprise sales desk will contact you within 24 hours.');
+                form.reset();
+            });
+        }
+
+        // Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        setTimeout(reveal, 100);
+    </script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruh Surya Spices | Strategic Farming Partners</title>
+    <meta name="description" content="Strategic farming partners of Ruh Surya Spices.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        primary: {
+                            900: '#28343C',
+                            950: '#1f2930', 
+                        },
+                        secondary: {
+                            500: '#78B9C8',
+                        },
+                        accent: {
+                            500: '#C89A3D',
+                            400: '#d9a944',
+                        },
+                        surface: {
+                            light: '#F8F6F1',
+                            darker: '#eae4d3',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .focus-ring:focus-visible {
+            outline: 2px solid #C89A3D;
+            outline-offset: 2px;
+        }
+        /* Custom image hover scale */
+        .zoom-img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .zoom-container:hover .zoom-img {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body class="bg-surface-light text-primary-900 font-sans min-h-screen relative overflow-x-hidden selection:bg-accent-500 selection:text-white">
+
+    <!-- Top Info Bar -->
+    <div class="bg-primary-950 text-white text-[10px] font-bold uppercase tracking-widest py-3.5 border-b border-white/10 px-6 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    info@ruhsuryaspices.com
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-accent-400">
+                <span>STRATEGIC FARMING PARTNERS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="border-b border-primary-900/10 sticky top-0 bg-surface-light/90 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col select-none">
+                <span class="font-extrabold text-2xl text-primary-900 tracking-tight leading-none">RUH SURYA</span>
+                <span class="text-[9px] text-accent-500 font-bold uppercase tracking-[0.25em] mt-1.5">Spices</span>
+            </a>
+
+            <!-- Nav links -->
+            <nav class="hidden lg:flex items-center gap-8 font-bold text-xs uppercase tracking-wider text-primary-900">
+                <a href="#about" class="hover:text-accent-500 transition py-2">About Us</a>
+                <a href="#team" class="hover:text-accent-500 transition py-2">Our Team</a>
+                <a href="#products" class="hover:text-accent-500 transition py-2">Commodities</a>
+                <a href="#inquiry" class="hover:text-accent-500 transition py-2">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#inquiry" class="hidden sm:inline-flex bg-accent-500 hover:bg-primary-900 text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 transition duration-300 shadow-lg">
+                    Get B2B Quote
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-primary-900 hover:text-accent-500 focus:outline-none cursor-pointer" aria-label="Toggle menu">
+                    <svg class="w-6.5 h-6.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="hamburgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden fixed inset-0 top-24 bg-surface-light z-[60] border-t border-primary-900/10 lg:hidden px-6 py-8">
+        <nav class="flex flex-col gap-6 font-bold text-sm uppercase tracking-wider text-primary-900">
+            <a href="#about" class="hover:text-accent-500 transition py-2" onclick="toggleMenu()">About Us</a>
+            <a href="#team" class="hover:text-accent-500 transition py-2" onclick="toggleMenu()">Our Team</a>
+            <a href="#products" class="hover:text-accent-500 transition py-2" onclick="toggleMenu()">Commodities</a>
+            <a href="#inquiry" class="hover:text-accent-500 transition py-2" onclick="toggleMenu()">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] flex items-center justify-center py-24 border-b border-primary-900/10 bg-cover bg-center overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(248, 246, 241, 0.85) 0%, rgba(248, 246, 241, 0.95) 100%), url('https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?q=80&w=1200');">
+            
+            <div class="max-w-5xl mx-auto px-6 w-full text-center relative z-10">
+                <!-- Slogan badge -->
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-accent-500 font-bold text-xs tracking-widest uppercase mb-8">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-500 animate-ping"></span> Global Export Import Leader
+                </span>
+                
+                <h1 class="font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-900 tracking-tight leading-none mb-8 uppercase">
+                    Strategic <span class="text-accent-500 italic font-medium">Farming</span> <br>Partners.
+                </h1>
+                
+                <p class="text-primary-900/70 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-12">
+                    Strategic farming partners of Ruh Surya Spices. Connecting global buyer networks directly with verified plantations.
+                </p>
+
+                <!-- Actions -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#products" class="bg-accent-500 hover:bg-primary-900 text-white font-bold text-xs uppercase tracking-widest px-8 py-4 transition shadow-xl w-full sm:w-auto">
+                        Our Products
+                    </a>
+                    <a href="#inquiry" class="bg-white hover:bg-surface-darker text-primary-900 font-bold text-xs uppercase tracking-widest px-8 py-4 transition border border-primary-900/10 w-full sm:w-auto shadow-sm">
+                        Inquire Cargo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate Profile Section -->
+        <section id="about" class="py-24 bg-white border-b border-primary-900/10">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <!-- Left Column text -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold text-accent-500 uppercase tracking-widest block">About Ruh Surya</span>
+                    <h2 class="font-extrabold text-3xl md:text-4xl text-primary-900 tracking-tight uppercase leading-tight">
+                        Your Trusted Strategic Partner in Spices Trade
+                    </h2>
+                    <p class="text-primary-900/70 text-sm leading-relaxed">
+                        Ruh Surya Spices is a premium export-import powerhouse dedicated to connecting global agricultural buyer networks directly with verified plantations. We eliminate middle-agents to lock in fair trading codes and strict quality standards.
+                    </p>
+                    <p class="text-primary-900/70 text-sm leading-relaxed">
+                        Our zero-defect shipping strategy ensures all shipments, grains, and spice cargos clear customs inspection efficiently with complete phytosanitary registries.
+                    </p>
+                    
+                </div>
+
+                <!-- Right Column Photo -->
+                <div class="lg:col-span-6">
+                    <div class="h-96 overflow-hidden border border-primary-900/10 rounded-xl relative shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=600" class="w-full h-full object-cover" alt="Spices harvesting">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-24 bg-surface-light border-b border-primary-900/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="text-xs font-bold text-accent-500 uppercase tracking-widest block mb-2">Leadership</span>
+                    <h2 class="font-extrabold text-4xl text-primary-900 uppercase">Our Team</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team 1 -->
+                    <div class="bg-white border border-primary-900/10 rounded-xl p-6 text-center shadow-lg">
+                        <div class="w-24 h-24 rounded-full bg-surface-darker mx-auto mb-4 overflow-hidden border-2 border-accent-500">
+                            <img src="https://ui-avatars.com/api/?name=Rizal+Damanhuri&background=78B9C8&color=fff" class="w-full h-full object-cover" alt="Rizal Damanhuri">
+                        </div>
+                        <h3 class="font-bold text-lg text-primary-900">Rizal Damanhuri</h3>
+                        <p class="text-accent-500 text-xs font-bold uppercase tracking-wider mt-1">CEO</p>
+                    </div>
+
+                    <!-- Team 2 -->
+                    <div class="bg-white border border-primary-900/10 rounded-xl p-6 text-center shadow-lg">
+                        <div class="w-24 h-24 rounded-full bg-surface-darker mx-auto mb-4 overflow-hidden border-2 border-accent-500">
+                            <img src="https://ui-avatars.com/api/?name=Shumie+Irawati&background=78B9C8&color=fff" class="w-full h-full object-cover" alt="Shumie Irawati">
+                        </div>
+                        <h3 class="font-bold text-lg text-primary-900">Shumie Irawati</h3>
+                        <p class="text-accent-500 text-xs font-bold uppercase tracking-wider mt-1">COO</p>
+                    </div>
+
+                    <!-- Team 3 -->
+                    <div class="bg-white border border-primary-900/10 rounded-xl p-6 text-center shadow-lg">
+                        <div class="w-24 h-24 rounded-full bg-surface-darker mx-auto mb-4 overflow-hidden border-2 border-accent-500">
+                            <img src="https://ui-avatars.com/api/?name=Yuliana+Mujito&background=78B9C8&color=fff" class="w-full h-full object-cover" alt="Yuliana Mujito">
+                        </div>
+                        <h3 class="font-bold text-lg text-primary-900">Yuliana Mujito</h3>
+                        <p class="text-accent-500 text-xs font-bold uppercase tracking-wider mt-1">Marketing Manager</p>
+                    </div>
+
+                    <!-- Team 4 -->
+                    <div class="bg-white border border-primary-900/10 rounded-xl p-6 text-center shadow-lg">
+                        <div class="w-24 h-24 rounded-full bg-surface-darker mx-auto mb-4 overflow-hidden border-2 border-accent-500">
+                            <img src="https://ui-avatars.com/api/?name=Mohammed+Al+Hussein&background=78B9C8&color=fff" class="w-full h-full object-cover" alt="Mohammed Al Hussein">
+                        </div>
+                        <h3 class="font-bold text-lg text-primary-900">Mohammed Al Hussein</h3>
+                        <p class="text-accent-500 text-xs font-bold uppercase tracking-wider mt-1">Manager Marketing of Middle East</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product specifications list -->
+        <section id="products" class="py-24 bg-white border-b border-primary-900/10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="text-xs font-bold text-accent-500 uppercase tracking-widest block mb-2">Our Commodities Portfolio</span>
+                    <h2 class="font-extrabold text-4xl text-primary-900 uppercase">Premium Export Grains & Spices</h2>
+                    <p class="text-primary-900/60 text-xs mt-3">Meticulously sorted, processed, and packed for global corporate requirements.</p>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-surface-light border border-primary-900/10 rounded-2xl overflow-hidden group zoom-container shadow-xl hover:border-accent-500/50 transition duration-300">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=400" class="w-full h-full object-cover zoom-img" alt="Green Cardamom">
+                            <span class="absolute top-4 left-4 text-[9px] font-bold bg-secondary-500 text-white px-2.5 py-1 rounded">SPICES</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-primary-900 mb-2 uppercase">Green Cardamom</h3>
+                            <p class="text-primary-900/70 text-xs leading-relaxed mb-6">
+                                Premium quality green graded pods. Moisture limit 8.4%, volatile oil density 4.8%.
+                            </p>
+                            <a href="#inquiry" class="inline-flex items-center gap-1 text-xs font-bold text-accent-500 hover:text-primary-900 uppercase tracking-wider transition">
+                                Request Quote <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-surface-light border border-primary-900/10 rounded-2xl overflow-hidden group zoom-container shadow-xl hover:border-accent-500/50 transition duration-300">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=400" class="w-full h-full object-cover zoom-img" alt="Whole Cloves">
+                            <span class="absolute top-4 left-4 text-[9px] font-bold bg-secondary-500 text-white px-2.5 py-1 rounded">SPICES</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-primary-900 mb-2 uppercase">Premium Cloves</h3>
+                            <p class="text-primary-900/70 text-xs leading-relaxed mb-6">
+                                Hand-sorted dried whole cloves. High essential eugenol oil content, moisture under 10%.
+                            </p>
+                            <a href="#inquiry" class="inline-flex items-center gap-1 text-xs font-bold text-accent-500 hover:text-primary-900 uppercase tracking-wider transition">
+                                Request Quote <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-surface-light border border-primary-900/10 rounded-2xl overflow-hidden group zoom-container shadow-xl hover:border-accent-500/50 transition duration-300">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1615485500704-8f990f8300f7?q=80&w=400" class="w-full h-full object-cover zoom-img" alt="Cumin Seeds">
+                            <span class="absolute top-4 left-4 text-[9px] font-bold bg-secondary-500 text-white px-2.5 py-1 rounded">SPICES</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg text-primary-900 mb-2 uppercase">Whole Cumin Seeds</h3>
+                            <p class="text-primary-900/70 text-xs leading-relaxed mb-6">
+                                99% machine-clean purity level cumin seeds. Volatile oil content 2.5%, moisture limit 9.0%.
+                            </p>
+                            <a href="#inquiry" class="inline-flex items-center gap-1 text-xs font-bold text-accent-500 hover:text-primary-900 uppercase tracking-wider transition">
+                                Request Quote <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- B2B Quote inquiry Panel -->
+        <section id="inquiry" class="py-24 bg-surface-light">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="border border-primary-900/10 bg-white rounded-2xl p-8 md:p-12 shadow-2xl relative">
+                    <div class="text-center max-w-xl mx-auto mb-10">
+                        <span class="text-xs font-bold text-accent-500 uppercase tracking-widest block mb-2">Commercial Sourcing Desk</span>
+                        <h3 class="font-extrabold text-3xl text-primary-900 uppercase tracking-tight">Request Quote</h3>
+                        <p class="text-xs text-primary-900/60 mt-2">Submit cargo size specifications and target port below.</p>
+                    </div>
+
+                    <form id="inquiryForm" class="space-y-6 text-xs font-bold">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-primary-900 uppercase tracking-wider" for="inqCompany">Company Name</label>
+                                <input type="text" id="inqCompany" required class="bg-surface-light border border-primary-900/20 focus:border-accent-500 focus:outline-none p-3.5 text-primary-900" placeholder="Example Corp">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-primary-900 uppercase tracking-wider" for="inqEmail">Corporate Email</label>
+                                <input type="email" id="inqEmail" required class="bg-surface-light border border-primary-900/20 focus:border-accent-500 focus:outline-none p-3.5 text-primary-900" placeholder="purchasing@example.com">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-primary-900 uppercase tracking-wider" for="inqCrop">Select Commodity</label>
+                                <select id="inqCrop" class="bg-surface-light border border-primary-900/20 focus:border-accent-500 focus:outline-none p-3.5 text-primary-900">
+                                    <option value="Green Cardamom">Green Cardamom</option>
+                                    <option value="Cumin Seeds">Cumin Seeds</option>
+                                    <option value="Cloves">Cloves</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-primary-900 uppercase tracking-wider" for="inqVolume">Quantity (Metric Tons)</label>
+                                <input type="number" id="inqVolume" value="10" min="1" max="1000" class="bg-surface-light border border-primary-900/20 focus:border-accent-500 focus:outline-none p-3.5 text-primary-900">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-primary-900 uppercase tracking-wider" for="inqPort">Destination Port</label>
+                                <input type="text" id="inqPort" value="Rotterdam, NL" required class="bg-surface-light border border-primary-900/20 focus:border-accent-500 focus:outline-none p-3.5 text-primary-900">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-accent-500 hover:bg-primary-900 text-white font-bold py-4 uppercase tracking-widest transition">
+                            Submit Commercial Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-950 text-white py-20 border-t border-primary-900/10 text-xs font-semibold">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16 items-start">
+                <div>
+                    <span class="font-extrabold text-xl text-white">RUH SURYA</span>
+                    <span class="text-[8px] text-accent-500 font-bold uppercase tracking-[0.22em] mt-1.5 block">Spices</span>
+                    <p class="text-white/60 text-xs leading-relaxed my-6 max-w-xs font-light">
+                        Strategic farming partners. Supplying certified agricultural grains and spices globally.
+                    </p>
+                    <div class="flex flex-col gap-2 text-[#f5f5f5]">
+                        <span>Email: info@ruhsuryaspices.com</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-accent-500 uppercase tracking-widest mb-6">Trading Office</h4>
+                    <p class="text-white/80 leading-relaxed font-light">
+                        Bogor Nirwana Residence (BNR)<br>
+                        Jl. Boulevard Grand Harmoni,<br>
+                        No. 25A, Sukamantri, Kec. Tamansari,<br>
+                        Kab. Bogor, Jawa Barat, 16610
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-bold text-accent-500 uppercase tracking-widest mb-6">Verified Compliance</h4>
+                    <ul class="space-y-3 text-white/80 font-light">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span> Import Export Code (IEC)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span> Quality Assured</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-white/50">
+                <p>© 2026 Ruh Surya Spices. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript interactions -->
+    <script>
+        const form = document.getElementById('inquiryForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('inqEmail').value;
+                const crop = document.getElementById('inqCrop').value;
+                const volume = document.getElementById('inqVolume').value;
+                
+                alert(`Inquiry Received!\n\nWe have logged your request for ${volume} MT of ${crop}. A formal pricing sheet will be sent to ${email} within 12 business hours.`);
+                form.reset();
+            });
+        }
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = document.getElementById('hamburgerIcon');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        }
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+        }
+    </script>
+</body>
+</html>
