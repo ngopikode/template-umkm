@@ -115,9 +115,20 @@ function serve404(res) {
     });
 }
 
-server.listen(PORT, () => {
-    console.log("==================================================");
-    console.log("  Server is running at: http://localhost:" + PORT);
-    console.log("==================================================");
-    console.log("Press Ctrl+C to stop.");
-});
+function startServer(port) {
+    server.listen(port, () => {
+        console.log("==================================================");
+        console.log("  Server is running at: http://localhost:" + port);
+        console.log("==================================================");
+        console.log("Press Ctrl+C to stop.");
+    }).on('error', (err) => {
+        if (err.code === 'EADDRINUSE') {
+            console.log(`Port ${port} is busy. Trying port ${port + 1}...`);
+            startServer(port + 1);
+        } else {
+            console.error(err);
+        }
+    });
+}
+
+startServer(PORT);
