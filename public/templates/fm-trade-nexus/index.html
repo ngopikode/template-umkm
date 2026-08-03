@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM Trade Nexus | Global Logistics Terminal</title>
+    <meta name="description" content="Next-generation dark mode global trade terminal.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Exo 2"', 'sans-serif'],
+                        display: ['"Orbitron"', 'sans-serif'],
+                    },
+                    colors: {
+                        terminal: {
+                            bg: '#050a14',
+                            surface: '#0a1226',
+                            border: '#1e293b',
+                            green: '#10b981', // Status Active
+                            cyan: '#06b6d4', // Primary Accent
+                            blue: '#3b82f6',
+                            text: '#e2e8f0',
+                            dim: '#64748b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Terminal Aesthetics */
+        .terminal-grid {
+            background-image: 
+                linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        .glow-border {
+            box-shadow: inset 0 0 0 1px rgba(6, 182, 212, 0.2), 0 0 15px rgba(6, 182, 212, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .glow-border:hover {
+            box-shadow: inset 0 0 0 1px rgba(6, 182, 212, 0.5), 0 0 25px rgba(6, 182, 212, 0.15);
+        }
+
+        .scanline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0) 50%,
+                rgba(6, 182, 212, 0.02) 50%,
+                rgba(6, 182, 212, 0.02)
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* Pulse Animations */
+        @keyframes radar-ping {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+        .animate-radar {
+            animation: radar-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+        
+        .tech-clip {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+        }
+        .tech-clip-rev {
+            clip-path: polygon(15px 0, 100% 0, 100% 100%, 0 100%, 0 15px);
+        }
+    </style>
+</head>
+<body class="bg-terminal-bg text-terminal-text font-sans antialiased selection:bg-terminal-cyan selection:text-terminal-bg relative min-h-screen">
+    
+    <!-- Global Scanline overlay -->
+    <div class="scanline fixed"></div>
+
+    <!-- HUD Navbar -->
+    <nav class="fixed w-full z-40 top-0 border-b border-terminal-border bg-terminal-bg/80 backdrop-blur-md">
+        <div class="max-w-[1600px] mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 tech-clip bg-terminal-cyan/20 border border-terminal-cyan/50 flex items-center justify-center relative">
+                        <div class="w-1.5 h-1.5 bg-terminal-cyan rounded-full animate-pulse"></div>
+                    </div>
+                    <span class="font-display font-bold tracking-widest text-lg text-white">FM_NEXUS<span class="text-terminal-cyan">::</span></span>
+                </div>
+                
+                <!-- Nav Links -->
+                <div class="hidden md:flex items-center gap-8 font-display text-xs tracking-widest text-terminal-dim">
+                    <a href="#" class="hover:text-terminal-cyan transition-colors flex items-center gap-2">
+                        <span class="text-[10px] opacity-50">01</span> DATA_STREAMS
+                    </a>
+                    <a href="#" class="hover:text-terminal-cyan transition-colors flex items-center gap-2">
+                        <span class="text-[10px] opacity-50">02</span> LOGISTICS_GRID
+                    </a>
+                    <a href="#" class="hover:text-terminal-cyan transition-colors flex items-center gap-2 text-white">
+                        <span class="text-[10px] text-terminal-cyan">03</span> COMMODITIES
+                    </a>
+                </div>
+
+                <!-- Status -->
+                <div class="flex items-center gap-3 text-xs font-display tracking-wider">
+                    <span class="text-terminal-dim hidden sm:inline-block">SYS_STATUS:</span>
+                    <div class="flex items-center gap-2 text-terminal-green bg-terminal-green/10 px-3 py-1 tech-clip-rev border border-terminal-green/20">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-terminal-green opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-terminal-green"></span>
+                        </span>
+                        OPTIMAL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Terminal Dashboard -->
+    <section class="pt-24 pb-12 min-h-[90vh] flex flex-col justify-center relative overflow-hidden terminal-grid">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-terminal-cyan/5 blur-[150px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-[1600px] mx-auto px-6 w-full relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                
+                <!-- Main Data Panel (Left) -->
+                <div class="lg:col-span-8 space-y-6">
+                    <!-- Title Box -->
+                    <div class="bg-terminal-surface/80 glow-border p-8 tech-clip backdrop-blur-sm">
+                        <div class="flex items-center gap-2 mb-6">
+                            <div class="h-[1px] w-8 bg-terminal-cyan"></div>
+                            <span class="font-display text-xs tracking-widest text-terminal-cyan uppercase">Terminal Initialization</span>
+                        </div>
+                        
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight tracking-tight mb-6 uppercase">
+                            Global Trade<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-terminal-cyan to-terminal-blue">Synchronization</span>
+                        </h1>
+                        
+                        <p class="text-terminal-dim max-w-xl text-lg font-light leading-relaxed mb-8">
+                            High-frequency B2B procurement and logistics platform. Monitoring real-time global supply chains, maritime freight paths, and industrial commodity indices.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button class="bg-terminal-cyan text-terminal-bg font-display font-bold text-sm tracking-wider uppercase px-8 py-4 tech-clip hover:bg-white transition-colors">
+                                Access Terminal
+                            </button>
+                            <button class="bg-transparent border border-terminal-border text-white font-display font-bold text-sm tracking-wider uppercase px-8 py-4 tech-clip-rev hover:bg-terminal-border transition-colors">
+                                View Protocol
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Metrics Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div class="bg-terminal-surface/50 border border-terminal-border p-5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-16 h-16 bg-terminal-blue/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150"></div>
+                            <div class="font-display text-xs text-terminal-dim mb-2 tracking-widest">VOL // 24H</div>
+                            <div class="text-3xl font-display font-bold text-white mb-1">1.24B</div>
+                            <div class="text-xs text-terminal-green flex items-center gap-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg> +12.4%</div>
+                        </div>
+                        <div class="bg-terminal-surface/50 border border-terminal-border p-5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-16 h-16 bg-terminal-cyan/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150"></div>
+                            <div class="font-display text-xs text-terminal-dim mb-2 tracking-widest">ACTIVE_NODES</div>
+                            <div class="text-3xl font-display font-bold text-white mb-1">8,492</div>
+                            <div class="text-xs text-terminal-dim">Global ports synced</div>
+                        </div>
+                        <div class="bg-terminal-surface/50 border border-terminal-border p-5 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-16 h-16 bg-terminal-green/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150"></div>
+                            <div class="font-display text-xs text-terminal-dim mb-2 tracking-widest">LATENCY</div>
+                            <div class="text-3xl font-display font-bold text-white mb-1">14ms</div>
+                            <div class="text-xs text-terminal-green">Optimal routing</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radar/Map Widget (Right) -->
+                <div class="lg:col-span-4 space-y-6">
+                    <!-- Radar Display -->
+                    <div class="bg-terminal-surface/80 border border-terminal-border p-6 h-[400px] flex flex-col relative overflow-hidden">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-display text-[10px] tracking-widest text-terminal-cyan uppercase">Live Target Tracking</span>
+                            <span class="font-display text-[10px] tracking-widest text-terminal-dim">RADAR_01</span>
+                        </div>
+                        
+                        <!-- Abstract Radar UI -->
+                        <div class="flex-grow relative flex items-center justify-center">
+                            <!-- Circles -->
+                            <div class="absolute w-[280px] h-[280px] rounded-full border border-terminal-border"></div>
+                            <div class="absolute w-[200px] h-[200px] rounded-full border border-terminal-border/50"></div>
+                            <div class="absolute w-[120px] h-[120px] rounded-full border border-terminal-cyan/20"></div>
+                            
+                            <!-- Crosshair -->
+                            <div class="absolute w-full h-[1px] bg-terminal-cyan/20"></div>
+                            <div class="absolute h-full w-[1px] bg-terminal-cyan/20"></div>
+                            
+                            <!-- Sweeper (CSS animation logic simulation) -->
+                            <div class="absolute w-[140px] h-[140px] border-r border-terminal-cyan rounded-full origin-bottom-right" style="animation: spin 4s linear infinite; top: 50%; right: 50%; transform-origin: 100% 100%; border-radius: 140px 0 0 0; background: linear-gradient(135deg, transparent 50%, rgba(6,182,212,0.2) 100%);"></div>
+                            
+                            <!-- Blips -->
+                            <div class="absolute w-2 h-2 bg-terminal-cyan rounded-full top-[30%] left-[60%]"><div class="w-full h-full rounded-full animate-radar bg-terminal-cyan"></div></div>
+                            <div class="absolute w-1.5 h-1.5 bg-terminal-green rounded-full top-[70%] left-[40%]"><div class="w-full h-full rounded-full animate-radar bg-terminal-green"></div></div>
+                            <div class="absolute w-1 h-1 bg-white rounded-full top-[45%] left-[25%]"><div class="w-full h-full rounded-full animate-radar bg-white"></div></div>
+                        </div>
+                        
+                        <style>
+                            @keyframes spin { 100% { transform: rotate(360deg); } }
+                        </style>
+                    </div>
+
+                    <!-- Log Feed -->
+                    <div class="bg-terminal-surface border border-terminal-border p-4 text-[11px] font-mono text-terminal-dim h-[184px] overflow-hidden relative">
+                        <div class="absolute top-0 left-0 w-full h-8 bg-gradient-to-b from-terminal-surface to-transparent z-10"></div>
+                        <div class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-terminal-surface to-transparent z-10"></div>
+                        <ul class="space-y-2 translate-y-4">
+                            <li><span class="text-terminal-cyan">[14:02:05]</span> NEW FREIGHT CONTRACT INITIATED (ID: 8992)</li>
+                            <li><span class="text-terminal-cyan">[14:02:03]</span> CUSTOMS CLEARANCE: SG_PORT - <span class="text-terminal-green">SUCCESS</span></li>
+                            <li><span class="text-terminal-cyan">[14:01:58]</span> COMMODITY UPDATE: POLYMER_RESIN +2.4%</li>
+                            <li><span class="text-terminal-cyan">[14:01:42]</span> MARITIME ROUTE OPTIMIZATION COMPLETE</li>
+                            <li><span class="text-terminal-cyan">[14:01:10]</span> PAYMENT VERIFIED - HONG KONG NODE</li>
+                            <li><span class="text-terminal-cyan">[14:00:55]</span> SYNCING GLOBAL INVENTORY CACHE...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commodities Data Table -->
+    <section class="py-12 border-t border-terminal-border bg-terminal-bg">
+        <div class="max-w-[1600px] mx-auto px-6">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-2 h-8 bg-terminal-cyan"></div>
+                    <h2 class="font-display font-bold text-xl uppercase tracking-widest text-white">Live Index</h2>
+                </div>
+                <div class="font-display text-xs text-terminal-dim tracking-widest uppercase">Auto-updating...</div>
+            </div>
+            
+            <div class="w-full overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-terminal-border text-terminal-dim font-display text-[10px] tracking-widest uppercase">
+                            <th class="py-4 pl-4 font-normal">Asset ID</th>
+                            <th class="py-4 font-normal">Category</th>
+                            <th class="py-4 font-normal">Origin Route</th>
+                            <th class="py-4 font-normal">Vol (MT)</th>
+                            <th class="py-4 font-normal text-right pr-4">Spot Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm font-light">
+                        <tr class="border-b border-terminal-border/50 hover:bg-terminal-surface/50 transition-colors">
+                            <td class="py-4 pl-4 font-display text-white">IND_MET_01</td>
+                            <td class="py-4 text-terminal-dim">Industrial Metals</td>
+                            <td class="py-4 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-terminal-blue"></span> AUS -> CHN</td>
+                            <td class="py-4 font-mono">14,500</td>
+                            <td class="py-4 text-right pr-4 text-terminal-green font-mono">+1.2%</td>
+                        </tr>
+                        <tr class="border-b border-terminal-border/50 hover:bg-terminal-surface/50 transition-colors">
+                            <td class="py-4 pl-4 font-display text-white">AGR_WHT_02</td>
+                            <td class="py-4 text-terminal-dim">Agricultural / Wheat</td>
+                            <td class="py-4 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-yellow-500"></span> CAN -> IND</td>
+                            <td class="py-4 font-mono">22,000</td>
+                            <td class="py-4 text-right pr-4 text-red-400 font-mono">-0.4%</td>
+                        </tr>
+                        <tr class="hover:bg-terminal-surface/50 transition-colors">
+                            <td class="py-4 pl-4 font-display text-white">CHM_PLY_09</td>
+                            <td class="py-4 text-terminal-dim">Chemical / Polymers</td>
+                            <td class="py-4 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-purple-500"></span> KOR -> EUR</td>
+                            <td class="py-4 font-mono">8,250</td>
+                            <td class="py-4 text-right pr-4 text-terminal-green font-mono">+3.1%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
