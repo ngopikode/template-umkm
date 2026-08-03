@@ -90,10 +90,10 @@
             <!-- Filter Pills -->
             <div class="flex flex-wrap justify-center gap-2 mb-4" id="filter-container">
                 <button class="filter-btn active px-4 py-2 rounded-full text-xs font-bold transition-all bg-zinc-900 text-white shadow-md hover:bg-zinc-800" data-filter="all">
-                    All Templates <span class="ml-1 opacity-70">25</span>
+                    All Templates <span class="ml-1 opacity-70">26</span>
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-white border border-zinc-200 text-zinc-600 hover:border-zinc-900 hover:text-zinc-900" data-filter="export">
-                    Export-Import <span class="ml-1 opacity-50">16</span>
+                    Export-Import <span class="ml-1 opacity-50">17</span>
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-white border border-zinc-200 text-zinc-600 hover:border-zinc-900 hover:text-zinc-900" data-filter="b2b">
                     B2B Commerce <span class="ml-1 opacity-50">3</span>
@@ -109,6 +109,38 @@
 
         <!-- Bento Showcase Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20" id="gallery-grid">
+
+<div data-category="export" onclick="window.open(this.querySelector('a').href, '_blank')" class="gallery-card fade-up flex flex-col cursor-pointer group h-full bg-white border border-zinc-200/80 rounded-3xl overflow-hidden">
+                <div class="h-52 card-preview-grid w-full bg-[#02180F] flex items-center justify-center relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay grayscale" alt="Emerald Cargo">
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#02180F] to-transparent"></div>
+                    <div class="hover-overlay absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 z-10 flex items-center justify-center">
+                        <span class="bg-white text-zinc-900 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Open Preview &rarr;</span>
+                    </div>
+                    <div class="flex items-center gap-3 relative z-20">
+                        <span class="px-3 py-1 rounded border border-[#FACC15]/20 bg-[#FACC15]/10 text-[#FACC15] font-bold text-sm tracking-wider">FM</span>
+                        <span class="text-white text-sm opacity-50">x</span>
+                        <span class="px-3 py-1 rounded border border-white/20 bg-white/10 text-white font-bold text-sm tracking-wider">YANOER</span>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <span class="text-xs font-bold text-[#10B981] uppercase tracking-widest mb-2 block">Design A2: Emerald Collab</span>
+                    <h2 class="font-heading font-black text-xl text-zinc-900 mb-3">Global Cargo Emerald</h2>
+                    <p class="text-zinc-500 text-xs leading-relaxed mb-6 flex-grow">
+                        A premium collaboration template featuring a deep emerald green background, gold accents, and a glassmorphism bento grid showcase.
+                    </p>
+                    <ul class="space-y-2 mb-6 border-t border-zinc-100 pt-4 text-xs text-zinc-500">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-[#10B981]"></span> Deep emerald & gold luxury palette</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-[#10B981]"></span> Dual company header integration</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-[#10B981]"></span> Horizontal feature bottom bars</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <a href="templates/global-cargo-emerald/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center bg-[#02180F] hover:bg-[#10B981] text-white font-bold text-xs uppercase py-3.5 rounded-xl transition duration-300">
+                            Preview Template
+                        </a>
+                    </div>
+                </div>
+            </div>
 
 <div data-category="b2b" onclick="window.open(this.querySelector('a').href, '_blank')" class="gallery-card fade-up flex flex-col cursor-pointer group h-full bg-white border border-zinc-200/80 rounded-3xl overflow-hidden">
                 <div class="h-52 card-preview-grid w-full bg-[#f4f4f5] border-b-2 border-[#0A0A0A] flex items-center justify-center relative overflow-hidden bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTM5LjUgMGwuNS41djM5bC0uNS41SC41TC0uNSAzOS41di0zOUwuNSAwem0tMSAxSDFWMzlIMzl6IiBmaWxsPSJyZ2JhKDEwLCAxMCwgMTAsIDAuMSkiLz4KPC9zdmc+')]">
