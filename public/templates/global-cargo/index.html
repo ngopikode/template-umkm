@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,14 +18,16 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Inter"', 'sans-serif'],
+                        sans: ['"Work Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
                     },
                     colors: {
                         cargo: {
-                            orange: '#f59e0b', // Primary orange CTA
-                            orangeHover: '#d97706',
-                            blue: '#0f172a',   // Dark blue panels
-                            light: '#ffffff'
+                            orange: '#F97316',
+                            orangeHover: '#EA580C',
+                            blue: '#1E40AF',
+                            blueLight: '#2563EB',
+                            lightBg: '#F0F9FF'
                         }
                     }
                 }
@@ -56,21 +58,21 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased text-white bg-slate-900 selection:bg-cargo-orange selection:text-white">
+<body class="font-sans antialiased text-white bg-cargo-blue selection:bg-cargo-orange selection:text-white">
 
     <!-- Hero Wrapper (Full viewport height with background image) -->
     <main id="hero" class="relative min-h-screen w-full flex flex-col justify-between overflow-hidden">
         
         <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 z-0 bg-slate-900">
+        <div class="absolute inset-0 z-0 bg-cargo-blue">
             <img src="https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=2560&auto=format&fit=crop" 
                  alt="Cargo Ship in Ocean" 
                  class="w-full h-full object-cover object-center scale-105 opacity-80 mix-blend-overlay">
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-slate-900/30"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-cargo-blue/90 via-cargo-blue/60 to-cargo-blue/30"></div>
         </div>
 
         <!-- Sticky Header / Nav -->
-        <header class="w-full z-50 glass-nav py-4 px-6 md:px-12 relative">
+        <header class="w-full z-50 glass-nav py-4 px-4 sm:px-6 lg:px-8 relative">
             <div class="max-w-7xl mx-auto flex items-center justify-between">
                 
                 <!-- Logo -->
@@ -79,25 +81,25 @@
                         <!-- Box icon SVG -->
                         <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                     </div>
-                    <span class="font-bold text-xl tracking-tight">Global Cargo</span>
+                    <span class="font-bold font-heading text-xl tracking-tight">Global Cargo</span>
                 </div>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
-                    <a href="#hero" class="hover:text-cargo-orange border-b border-white pb-1">Home</a>
-                    <a href="#services" class="hover:text-cargo-orange transition-colors opacity-90">Services</a>
-                    <a href="#tracking" class="hover:text-cargo-orange transition-colors opacity-90">Tracking</a>
-                    <a href="#fleet" class="hover:text-cargo-orange transition-colors opacity-90">Our Fleet</a>
-                    <a href="#about" class="hover:text-cargo-orange transition-colors opacity-90">About</a>
-                    <a href="#contact" class="hover:text-cargo-orange transition-colors opacity-90">Contact</a>
+                    <a href="#" class="hover:text-cargo-orange transition-colors border-b-2 border-transparent hover:border-cargo-orange pb-1">Home</a>
+                    <a href="#" class="hover:text-cargo-orange transition-colors border-b-2 border-transparent hover:border-cargo-orange pb-1 opacity-90">Services</a>
+                    <a href="#" class="hover:text-cargo-orange transition-colors border-b-2 border-transparent hover:border-cargo-orange pb-1 opacity-90">Tracking</a>
+                    <a href="#" class="hover:text-cargo-orange transition-colors border-b-2 border-transparent hover:border-cargo-orange pb-1 opacity-90">Our Fleet</a>
+                    <a href="#" class="hover:text-cargo-orange transition-colors border-b-2 border-transparent hover:border-cargo-orange pb-1 opacity-90">About</a>
+                    <a href="#" class="hover:text-cargo-orange transition-colors border-b-2 border-transparent hover:border-cargo-orange pb-1 opacity-90">Contact</a>
                 </nav>
 
                 <!-- CTA Buttons -->
                 <div class="hidden md:flex items-center gap-4">
-                    <a href="#" class="px-5 py-2 rounded-full border border-white/30 hover:bg-white/10 transition-colors text-sm font-medium">
+                    <a href="#" class="px-5 py-2.5 rounded-full border border-white/30 hover:bg-white/10 hover:border-white transition-all text-sm font-medium font-heading">
                         Expert Help
                     </a>
-                    <a href="#" class="px-6 py-2 rounded-full bg-cargo-orange hover:bg-cargo-orangeHover transition-colors text-sm font-bold text-white shadow-lg">
+                    <a href="#" class="px-6 py-2.5 rounded-full bg-cargo-orange hover:bg-cargo-orangeHover transition-colors text-sm font-bold font-heading text-white shadow-[0_0_15px_rgba(249,115,22,0.4)] hover:shadow-[0_0_20px_rgba(234,88,12,0.6)]">
                         Get a Quote
                     </a>
                 </div>
@@ -110,16 +112,16 @@
         </header>
 
         <!-- Main Hero Content -->
-        <div class="relative z-10 flex-grow flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto w-full pt-20 pb-32">
+        <div class="relative z-10 flex-grow flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full pt-20 pb-32">
             
             <div class="max-w-2xl">
                 <!-- Large Outline Text -->
-                <h1 class="text-6xl md:text-7xl lg:text-[80px] font-bold leading-tight mb-2 tracking-tight">
+                <h1 class="text-5xl md:text-7xl lg:text-[80px] font-bold font-heading leading-tight mb-2 tracking-tight">
                     <span class="text-outline block mb-1">Reliable Global</span>
                     <span class="block">Cargo & Freight</span>
                 </h1>
                 
-                <h2 class="text-2xl md:text-3xl font-medium mt-4 mb-6">
+                <h2 class="text-2xl md:text-3xl font-medium font-heading mt-4 mb-6">
                     Shipping Solutions
                 </h2>
                 
@@ -128,10 +130,10 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#" class="px-8 py-3.5 rounded-full bg-cargo-orange hover:bg-cargo-orangeHover transition-colors text-base font-bold text-white shadow-lg text-center">
+                    <a href="#" class="px-8 py-4 rounded-full bg-cargo-orange hover:bg-cargo-orangeHover transition-colors text-base font-bold font-heading text-white shadow-[0_0_15px_rgba(249,115,22,0.4)] hover:shadow-[0_0_20px_rgba(234,88,12,0.6)] text-center w-full sm:w-auto">
                         Get a Quote
                     </a>
-                    <a href="#" class="px-8 py-3.5 rounded-full border border-white/50 bg-black/20 hover:bg-black/40 backdrop-blur-sm transition-colors text-base font-medium text-center">
+                    <a href="#" class="px-8 py-4 rounded-full border border-white/50 bg-black/20 hover:bg-black/40 hover:border-white backdrop-blur-sm transition-all text-base font-medium font-heading text-center w-full sm:w-auto">
                         Track Order
                     </a>
                 </div>
@@ -140,39 +142,30 @@
         </div>
 
         <!-- Bottom Floating Panels -->
-        <div class="relative z-20 px-6 md:px-12 max-w-7xl mx-auto w-full pb-10 flex flex-col md:flex-row justify-between items-end gap-6 pointer-events-none mt-auto">
+        <div class="relative z-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full pb-10 flex flex-col md:flex-row justify-between items-end gap-6 pointer-events-none mt-auto">
             
-            <!-- Left Panel (Uploading) -->
-            <div class="glass-panel p-6 w-full max-w-[320px] pointer-events-auto flex justify-between items-center relative overflow-hidden">
+                <!-- Left Panel (Uploading) -->
+            <div class="glass-panel p-4 sm:p-6 w-full md:max-w-[320px] pointer-events-auto flex justify-between items-center relative overflow-hidden">
                 <div class="z-10 relative">
                     <div class="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-2">UPLOADING</div>
-                    <h3 class="text-sm font-semibold mb-3 leading-snug">Book Container<br>Uploading Today</h3>
+                    <h3 class="text-sm font-bold font-heading mb-3 leading-snug">Book Container<br>Uploading Today</h3>
                     <a href="#" class="text-xs text-cargo-orange hover:text-white border-b border-cargo-orange/50 pb-0.5 transition-colors">Book Now</a>
                 </div>
                 <!-- 3D Container Illustration placeholder -->
                 <div class="w-24 h-24 right-2 top-2 absolute opacity-80">
-                   <!-- Simplified isometric container using CSS -->
-                   <div class="relative w-full h-full transform -rotate-12 translate-y-4">
-                       <div class="w-16 h-8 bg-yellow-500 absolute bottom-4 left-4 skew-x-[30deg]"></div>
-                       <div class="w-16 h-12 bg-yellow-400 absolute bottom-4 left-4 skew-y-[-30deg]"></div>
-                       <div class="w-8 h-12 bg-yellow-600 absolute bottom-0 left-20 skew-y-[30deg]"></div>
-                       <!-- Container lines -->
-                       <div class="w-[1px] h-12 bg-yellow-800/20 absolute bottom-3 left-8 skew-y-[-30deg]"></div>
-                       <div class="w-[1px] h-12 bg-yellow-800/20 absolute bottom-[7px] left-12 skew-y-[-30deg]"></div>
-                       <div class="w-[1px] h-12 bg-yellow-800/20 absolute bottom-[2px] left-16 skew-y-[-30deg]"></div>
-                   </div>
+                   <svg class="w-full h-full text-cargo-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                 </div>
             </div>
 
             <!-- Right Panel (Tracking) -->
-            <div class="glass-panel p-6 w-full max-w-[400px] pointer-events-auto">
+            <div class="glass-panel p-4 sm:p-6 w-full md:max-w-[400px] pointer-events-auto">
                 <div class="flex justify-between items-center mb-6">
-                    <div class="text-lg font-semibold">CN <span class="font-normal text-gray-300 text-base">SHG</span></div>
+                    <div class="text-lg font-bold font-heading">CN <span class="font-normal text-gray-300 text-base font-sans">SHG</span></div>
                     <!-- Ship icon small -->
                     <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
                         <svg class="w-4 h-4 text-cargo-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 013 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15L5.46 7.82l6.54 3.67 6.54-3.67L12 4.15z"/></svg>
                     </div>
-                    <div class="text-lg font-semibold text-right">US <span class="font-normal text-gray-300 text-base">OAK</span></div>
+                    <div class="text-lg font-bold font-heading text-right">US <span class="font-normal text-gray-300 text-base font-sans">OAK</span></div>
                 </div>
                 
                 <!-- Progress bar -->
@@ -203,102 +196,102 @@
 
     <!-- Services Section -->
     <section class="py-24 bg-white text-slate-900" id="services">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 lg:mb-16 gap-6 lg:gap-8">
                 <div class="max-w-2xl">
                     <span class="text-cargo-orange font-semibold tracking-wider uppercase text-sm mb-2 block">Our Logistics Solutions</span>
-                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Comprehensive Global Freight Services</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold font-heading tracking-tight">Comprehensive Global Freight Services</h2>
                 </div>
-                <a href="#" class="px-6 py-2.5 rounded-full border border-slate-300 hover:border-slate-900 transition-colors text-sm font-medium whitespace-nowrap">
+                <a href="#" class="px-6 py-3 rounded-full border border-slate-300 hover:border-cargo-blue hover:bg-slate-50 transition-colors text-sm font-bold font-heading whitespace-nowrap text-center">
                     View All Services
                 </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="group border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all hover:border-cargo-orange/30 bg-slate-50 hover:bg-white cursor-pointer">
-                    <div class="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-cargo-orange/10 transition-colors">
+                <div class="group border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all hover:border-cargo-orange/30 bg-cargo-lightBg hover:bg-white cursor-pointer">
+                    <div class="w-14 h-14 bg-cargo-blueLight/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-cargo-orange/10 transition-colors">
                         <svg class="w-7 h-7 text-slate-600 group-hover:text-cargo-orange transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Ocean Freight</h3>
+                    <h3 class="text-xl font-bold font-heading mb-3">Ocean Freight</h3>
                     <p class="text-slate-600 leading-relaxed mb-6 text-sm">Full Container Load (FCL) and Less than Container Load (LCL) shipping options across major global ports with optimized routing.</p>
-                    <span class="text-sm font-semibold text-cargo-orange flex items-center gap-2 group-hover:gap-3 transition-all">Explore Service &rarr;</span>
+                    <span class="text-sm font-bold text-cargo-orange flex items-center gap-2 group-hover:gap-3 transition-all">Explore Service &rarr;</span>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="group border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all hover:border-cargo-orange/30 bg-slate-50 hover:bg-white cursor-pointer">
-                    <div class="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-cargo-orange/10 transition-colors">
+                <div class="group border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all hover:border-cargo-orange/30 bg-cargo-lightBg hover:bg-white cursor-pointer">
+                    <div class="w-14 h-14 bg-cargo-blueLight/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-cargo-orange/10 transition-colors">
                         <svg class="w-7 h-7 text-slate-600 group-hover:text-cargo-orange transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Air Freight</h3>
+                    <h3 class="text-xl font-bold font-heading mb-3">Air Freight</h3>
                     <p class="text-slate-600 leading-relaxed mb-6 text-sm">Express global air transport for time-sensitive cargo. Door-to-door delivery with priority customs clearance.</p>
-                    <span class="text-sm font-semibold text-cargo-orange flex items-center gap-2 group-hover:gap-3 transition-all">Explore Service &rarr;</span>
+                    <span class="text-sm font-bold text-cargo-orange flex items-center gap-2 group-hover:gap-3 transition-all">Explore Service &rarr;</span>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="group border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all hover:border-cargo-orange/30 bg-slate-50 hover:bg-white cursor-pointer">
-                    <div class="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-cargo-orange/10 transition-colors">
+                <div class="group border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all hover:border-cargo-orange/30 bg-cargo-lightBg hover:bg-white cursor-pointer">
+                    <div class="w-14 h-14 bg-cargo-blueLight/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-cargo-orange/10 transition-colors">
                         <svg class="w-7 h-7 text-slate-600 group-hover:text-cargo-orange transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Supply Chain Tech</h3>
+                    <h3 class="text-xl font-bold font-heading mb-3">Supply Chain Tech</h3>
                     <p class="text-slate-600 leading-relaxed mb-6 text-sm">Advanced API integrations for your e-commerce platform. Automated dispatch, real-time tracking, and predictive ETA.</p>
-                    <span class="text-sm font-semibold text-cargo-orange flex items-center gap-2 group-hover:gap-3 transition-all">Explore Service &rarr;</span>
+                    <span class="text-sm font-bold text-cargo-orange flex items-center gap-2 group-hover:gap-3 transition-all">Explore Service &rarr;</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Stats / Process Section -->
-    <section class="py-20 bg-slate-900 border-t border-slate-800 relative overflow-hidden">
+    <section class="py-20 bg-cargo-blue border-t border-white/10 relative overflow-hidden">
         <!-- Abstract bg shapes -->
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cargo-orange/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
         
-        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Simplifying International Logistics Complexity</h2>
-                    <p class="text-slate-400 mb-8 leading-relaxed">We handle the red tape, customs documentation, and multi-modal transfers so you can focus on scaling your global business.</p>
+                    <h2 class="text-3xl md:text-5xl font-bold font-heading tracking-tight mb-6">Simplifying International Logistics Complexity</h2>
+                    <p class="text-white/80 mb-8 leading-relaxed">We handle the red tape, customs documentation, and multi-modal transfers so you can focus on scaling your global business.</p>
                     
                     <div class="space-y-6">
                         <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700">
-                                <span class="text-cargo-orange font-bold">1</span>
+                            <div class="w-12 h-12 rounded-full bg-cargo-blueLight flex items-center justify-center shrink-0 border border-white/10">
+                                <span class="text-cargo-orange font-bold font-heading">1</span>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1">Instant Digital Quoting</h4>
-                                <p class="text-slate-400 text-sm">Input your cargo dimensions and get transparent pricing instantly across ocean, air, and land routes.</p>
+                                <h4 class="font-bold font-heading text-lg mb-1">Instant Digital Quoting</h4>
+                                <p class="text-white/80 text-sm">Input your cargo dimensions and get transparent pricing instantly across ocean, air, and land routes.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700">
-                                <span class="text-cargo-orange font-bold">2</span>
+                            <div class="w-12 h-12 rounded-full bg-cargo-blueLight flex items-center justify-center shrink-0 border border-white/10">
+                                <span class="text-cargo-orange font-bold font-heading">2</span>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1">Automated Customs Clearance</h4>
-                                <p class="text-slate-400 text-sm">Our AI-driven system pre-clears commercial invoices to prevent delays at international borders.</p>
+                                <h4 class="font-bold font-heading text-lg mb-1">Automated Customs Clearance</h4>
+                                <p class="text-white/80 text-sm">Our AI-driven system pre-clears commercial invoices to prevent delays at international borders.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Stats Grid -->
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 backdrop-blur-sm">
-                        <div class="text-4xl font-bold text-white mb-2">150<span class="text-cargo-orange">+</span></div>
-                        <div class="text-sm text-slate-400 font-medium">Countries Covered</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 lg:mt-0">
+                    <div class="bg-cargo-blueLight/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                        <div class="text-4xl font-bold font-heading text-white mb-2">150<span class="text-cargo-orange">+</span></div>
+                        <div class="text-sm text-white/80 font-bold">Countries Covered</div>
                     </div>
-                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 backdrop-blur-sm translate-y-8">
-                        <div class="text-4xl font-bold text-white mb-2">2M<span class="text-cargo-orange">+</span></div>
-                        <div class="text-sm text-slate-400 font-medium">TEUs Handled Annually</div>
+                    <div class="bg-cargo-blueLight/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm translate-y-8">
+                        <div class="text-4xl font-bold font-heading text-white mb-2">2M<span class="text-cargo-orange">+</span></div>
+                        <div class="text-sm text-white/80 font-bold">TEUs Handled Annually</div>
                     </div>
-                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 backdrop-blur-sm">
-                        <div class="text-4xl font-bold text-white mb-2">99.8<span class="text-cargo-orange">%</span></div>
-                        <div class="text-sm text-slate-400 font-medium">On-Time Delivery</div>
+                    <div class="bg-cargo-blueLight/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                        <div class="text-4xl font-bold font-heading text-white mb-2">99.8<span class="text-cargo-orange">%</span></div>
+                        <div class="text-sm text-white/80 font-bold">On-Time Delivery</div>
                     </div>
-                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 backdrop-blur-sm translate-y-8">
-                        <div class="text-4xl font-bold text-white mb-2">24/7</div>
-                        <div class="text-sm text-slate-400 font-medium">Real-time Support</div>
+                    <div class="bg-cargo-blueLight/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm translate-y-8">
+                        <div class="text-4xl font-bold font-heading text-white mb-2">24/7</div>
+                        <div class="text-sm text-white/80 font-bold">Real-time Support</div>
                     </div>
                 </div>
             </div>
@@ -306,11 +299,11 @@
     </section>
 
     <!-- Fleet / Product Section -->
-    <section class="py-24 bg-slate-50 relative overflow-hidden" id="fleet">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <section class="py-24 bg-cargo-lightBg relative overflow-hidden" id="fleet">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-cargo-orange font-semibold tracking-wider uppercase text-sm mb-2 block">Our Infrastructure</span>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">Modern Global Fleet</h2>
+                <h2 class="text-4xl md:text-5xl font-bold font-heading tracking-tight text-slate-900 mb-4">Modern Global Fleet</h2>
                 <p class="text-slate-600">Access to a diverse portfolio of transport vessels and vehicles designed to handle any cargo requirement efficiently.</p>
             </div>
 
@@ -320,10 +313,10 @@
                 <!-- Mega Container Ship (Large) -->
                 <div class="md:col-span-8 md:row-span-2 relative rounded-3xl overflow-hidden group">
                     <img src="https://images.unsplash.com/photo-1577749176378-2c2e0be30da9?q=80&w=1200&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Mega Container Ship">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-cargo-blue via-cargo-blue/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8 w-full z-10">
-                        <div class="bg-cargo-orange/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">OCEAN FREIGHT</div>
-                        <h3 class="text-3xl font-bold text-white mb-2">Ultra Large Container Vessels</h3>
+                        <div class="bg-cargo-orange/90 backdrop-blur text-white text-xs font-bold font-heading px-3 py-1 rounded-full inline-block mb-3">OCEAN FREIGHT</div>
+                        <h3 class="text-3xl font-bold font-heading text-white mb-2">Ultra Large Container Vessels</h3>
                         <p class="text-white/80 max-w-md text-sm">Capable of carrying 14,000+ TEUs for heavy-duty trans-Pacific and Asia-Europe trade lanes.</p>
                     </div>
                 </div>
@@ -331,10 +324,10 @@
                 <!-- Cargo Planes (Small Top) -->
                 <div class="md:col-span-4 relative rounded-3xl overflow-hidden group">
                     <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Cargo Aircraft">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-cargo-blue via-cargo-blue/20 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6 w-full z-10">
-                        <div class="bg-blue-600/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">AIR FREIGHT</div>
-                        <h3 class="text-xl font-bold text-white">Boeing 777F Fleet</h3>
+                        <div class="bg-cargo-blueLight/90 backdrop-blur text-white text-xs font-bold font-heading px-3 py-1 rounded-full inline-block mb-2">AIR FREIGHT</div>
+                        <h3 class="text-xl font-bold font-heading text-white">Boeing 777F Fleet</h3>
                         <p class="text-white/80 text-xs mt-1">High-capacity rapid global delivery.</p>
                     </div>
                 </div>
@@ -342,10 +335,10 @@
                 <!-- Logistics Trucks (Small Bottom) -->
                 <div class="md:col-span-4 relative rounded-3xl overflow-hidden group">
                     <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Semi Trucks">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-cargo-blue via-cargo-blue/20 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-6 w-full z-10">
-                        <div class="bg-emerald-600/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">LAND FREIGHT</div>
-                        <h3 class="text-xl font-bold text-white">Smart Trucking Matrix</h3>
+                        <div class="bg-cargo-blue/90 backdrop-blur text-white text-xs font-bold font-heading px-3 py-1 rounded-full inline-block mb-2">LAND FREIGHT</div>
+                        <h3 class="text-xl font-bold font-heading text-white">Smart Trucking Matrix</h3>
                         <p class="text-white/80 text-xs mt-1">Last-mile & cross-border heavy hauling.</p>
                     </div>
                 </div>
@@ -355,11 +348,11 @@
 
     <!-- About Section -->
     <section class="py-24 bg-white" id="about">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
                 <!-- Left: Interactive Map Illustration -->
-                <div class="relative bg-slate-900 rounded-3xl p-8 aspect-square flex items-center justify-center overflow-hidden">
+                <div class="relative bg-cargo-blue rounded-3xl p-4 sm:p-8 aspect-square flex items-center justify-center overflow-hidden">
                     <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop')] object-cover opacity-20 mix-blend-luminosity"></div>
                     
                     <!-- Abstract glowing nodes -->
@@ -374,24 +367,24 @@
                         <!-- Nodes -->
                         <div class="absolute top-[40%] left-[20%]">
                             <div class="w-4 h-4 bg-cargo-orange rounded-full animate-ping absolute opacity-50"></div>
-                            <div class="w-4 h-4 bg-cargo-orange rounded-full border-2 border-slate-900 shadow-[0_0_15px_#f59e0b]"></div>
-                            <span class="absolute top-6 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold tracking-wider">NEW YORK</span>
+                            <div class="w-4 h-4 bg-cargo-orange rounded-full border-2 border-cargo-blue shadow-[0_0_15px_#f59e0b]"></div>
+                            <span class="absolute top-6 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold font-heading tracking-wider">NEW YORK</span>
                         </div>
                         <div class="absolute top-[30%] left-[80%]">
                             <div class="w-4 h-4 bg-cargo-orange rounded-full animate-ping absolute opacity-50"></div>
-                            <div class="w-4 h-4 bg-cargo-orange rounded-full border-2 border-slate-900 shadow-[0_0_15px_#f59e0b]"></div>
-                            <span class="absolute top-6 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold tracking-wider">SHANGHAI</span>
+                            <div class="w-4 h-4 bg-cargo-orange rounded-full border-2 border-cargo-blue shadow-[0_0_15px_#f59e0b]"></div>
+                            <span class="absolute top-6 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold font-heading tracking-wider">SHANGHAI</span>
                         </div>
                         <div class="absolute top-[80%] left-[30%]">
                             <div class="w-4 h-4 bg-cargo-orange rounded-full animate-ping absolute opacity-50"></div>
-                            <div class="w-4 h-4 bg-cargo-orange rounded-full border-2 border-slate-900 shadow-[0_0_15px_#f59e0b]"></div>
-                            <span class="absolute top-6 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold tracking-wider">SÃO PAULO</span>
+                            <div class="w-4 h-4 bg-cargo-orange rounded-full border-2 border-cargo-blue shadow-[0_0_15px_#f59e0b]"></div>
+                            <span class="absolute top-6 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold font-heading tracking-wider">SÃO PAULO</span>
                         </div>
                     </div>
 
                     <!-- Overlay Trust Badge -->
                     <div class="absolute bottom-8 right-8 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl text-white">
-                        <div class="font-bold text-2xl">A+</div>
+                        <div class="font-bold font-heading text-2xl">A+</div>
                         <div class="text-xs opacity-80">FMC Licensed NVOCC</div>
                     </div>
                 </div>
@@ -399,7 +392,7 @@
                 <!-- Right: Content -->
                 <div>
                     <span class="text-cargo-orange font-semibold tracking-wider uppercase text-sm mb-2 block">Who We Are</span>
-                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">Navigating global trade since 1998.</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold font-heading tracking-tight text-slate-900 mb-6">Navigating global trade since 1998.</h2>
                     
                     <p class="text-slate-600 text-lg mb-6 leading-relaxed">
                         What started as a small regional freight forwarder has evolved into a global logistics powerhouse. We don't just move cargo; we engineer supply chain predictability.
@@ -411,26 +404,26 @@
                     <!-- Values List -->
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-start gap-3">
-                            <div class="mt-1 w-6 h-6 rounded bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                            <div class="mt-1 w-6 h-6 rounded bg-cargo-orange/10 text-cargo-orange flex items-center justify-center shrink-0">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             </div>
                             <span class="text-slate-700 font-medium">Fully transparent pricing with no hidden surcharges.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="mt-1 w-6 h-6 rounded bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                            <div class="mt-1 w-6 h-6 rounded bg-cargo-orange/10 text-cargo-orange flex items-center justify-center shrink-0">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             </div>
                             <span class="text-slate-700 font-medium">Dedicated account managers for enterprise clients.</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="mt-1 w-6 h-6 rounded bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                            <div class="mt-1 w-6 h-6 rounded bg-cargo-orange/10 text-cargo-orange flex items-center justify-center shrink-0">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             </div>
                             <span class="text-slate-700 font-medium">Carbon-neutral shipping options available on all routes.</span>
                         </li>
                     </ul>
 
-                    <a href="#" class="inline-flex items-center gap-2 font-bold text-cargo-orange hover:text-cargo-orangeHover transition-colors border-b-2 border-cargo-orange pb-1">
+                    <a href="#" class="inline-flex items-center gap-2 font-bold font-heading text-cargo-orange hover:text-cargo-orangeHover transition-colors border-b-2 border-cargo-orange hover:border-cargo-orangeHover pb-1">
                         Read Our Full History 
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
@@ -441,13 +434,13 @@
     </section>
 
     <!-- Tracking Section -->
-    <section id="tracking" class="py-24 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
+    <section id="tracking" class="py-24 bg-cargo-blue border-t border-white/10 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-cargo-orange font-semibold tracking-wider uppercase text-sm mb-2 block">Live Tracking</span>
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Locate Your Cargo in Real-Time</h2>
-            <p class="text-slate-400 text-lg mb-12">Enter your Bill of Lading (B/L) or container number to access satellite tracking data, temperature logs, and precise ETA.</p>
+            <h2 class="text-3xl md:text-5xl font-bold font-heading text-white mb-6 tracking-tight">Locate Your Cargo in Real-Time</h2>
+            <p class="text-white/80 text-lg mb-12">Enter your Bill of Lading (B/L) or container number to access satellite tracking data, temperature logs, and precise ETA.</p>
             
-            <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-2xl relative overflow-hidden">
+            <div class="bg-cargo-blueLight p-4 sm:p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
                 <!-- Abstract radar sweep in background -->
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(15,23,42,1)_100%)]"></div>
                 
@@ -455,11 +448,11 @@
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <div class="relative w-full sm:w-2/3">
                             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                             </div>
-                            <input type="text" placeholder="e.g. GLB-88392019" class="w-full bg-slate-900 border border-slate-600 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-cargo-orange focus:ring-1 focus:ring-cargo-orange transition-colors">
+                            <input type="text" placeholder="e.g. GLB-88392019" class="w-full bg-cargo-blue border border-white/20 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-cargo-orange focus:ring-1 focus:ring-cargo-orange transition-colors">
                         </div>
-                        <button type="button" class="w-full sm:w-auto bg-cargo-orange hover:bg-cargo-orangeHover text-white font-bold py-4 px-8 rounded-xl transition-colors">
+                        <button type="button" class="w-full sm:w-auto bg-cargo-orange hover:bg-cargo-orangeHover text-white font-bold font-heading py-4 px-8 rounded-xl transition-colors">
                             Locate
                         </button>
                     </div>
@@ -474,11 +467,11 @@
         <div class="absolute inset-0" style="background-image: linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
         
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Ready to optimize your supply chain?</h2>
+            <h2 class="text-4xl md:text-5xl font-bold font-heading text-white mb-6 tracking-tight">Ready to optimize your supply chain?</h2>
             <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">Join thousands of businesses that trust Global Cargo for their international shipping needs.</p>
-            <form class="flex flex-col sm:flex-row gap-2 max-w-lg mx-auto bg-white p-2 rounded-full shadow-2xl">
-                <input type="text" placeholder="Enter Tracking Number or Booking ID" class="flex-grow px-6 py-3 rounded-full text-slate-900 focus:outline-none placeholder:text-slate-400">
-                <button class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full font-bold transition-colors whitespace-nowrap">
+            <form class="flex flex-col sm:flex-row gap-2 max-w-lg mx-auto bg-white p-2 rounded-2xl sm:rounded-full shadow-2xl">
+                <input type="text" placeholder="Enter Tracking Number or Booking ID" class="flex-grow px-4 sm:px-6 py-3 rounded-full text-slate-900 focus:outline-none placeholder:text-slate-400">
+                <button class="bg-cargo-blue hover:bg-cargo-blueLight text-white px-8 py-3 rounded-full font-bold font-heading transition-colors whitespace-nowrap">
                     Track Now
                 </button>
             </form>
@@ -486,23 +479,23 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 pt-16 pb-8 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <footer class="bg-cargo-blue pt-16 pb-8 border-t border-cargo-blueLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 lg:mb-16">
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center gap-2 mb-6">
                         <div class="w-8 h-8 rounded-full bg-cargo-orange flex items-center justify-center">
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                         </div>
-                        <span class="font-bold text-xl tracking-tight text-white">Global Cargo</span>
+                        <span class="font-bold font-heading text-xl tracking-tight text-white">Global Cargo</span>
                     </div>
-                    <p class="text-slate-400 text-sm max-w-sm mb-6 leading-relaxed">
+                    <p class="text-white/80 text-sm max-w-sm mb-6 leading-relaxed">
                         Next-generation freight forwarding and supply chain management for the modern global economy.
                     </p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-3 text-sm text-slate-400">
+                    <h4 class="text-white font-bold font-heading mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-white/80">
                         <li><a href="#" class="hover:text-cargo-orange transition-colors">Request Quote</a></li>
                         <li><a href="#" class="hover:text-cargo-orange transition-colors">Ocean Freight Schedule</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Incoterms Guide</a></li>
@@ -510,8 +503,8 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4">Company</h4>
-                    <ul class="space-y-3 text-sm text-slate-400">
+                    <h4 class="text-white font-bold font-heading mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-white/80">
                         <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
@@ -519,7 +512,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/60">
                 <p>&copy; 2024 Global Cargo Logistics. All rights reserved.</p>
                 <div class="flex gap-4">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
