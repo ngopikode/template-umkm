@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,7 +18,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Inter"', 'sans-serif'],
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        display: ['"Bebas Neue"', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -53,7 +54,7 @@
                 </a>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8 text-[11px] font-bold tracking-widest uppercase text-gray-500">
+                <div class="hidden md:flex items-center gap-8 text-xs font-bold tracking-widest uppercase text-gray-500">
                     <a href="#hero" class="hover:text-brand-orange text-brand-dark transition-colors">Home</a>
                     <a href="#services" class="hover:text-brand-orange transition-colors">Services</a>
                     <a href="#network" class="hover:text-brand-orange transition-colors">Global Network</a>
@@ -63,7 +64,7 @@
 
                 <!-- CTA -->
                 <div class="hidden md:flex">
-                    <a href="#contact" class="border border-gray-200 text-brand-dark hover:border-brand-dark px-5 py-2.5 text-[11px] font-bold tracking-widest uppercase transition-colors">
+                    <a href="#contact" class="border border-gray-200 text-brand-dark hover:border-brand-dark px-6 py-2.5 text-xs font-bold tracking-widest uppercase transition-colors">
                         + Contact
                     </a>
                 </div>
@@ -97,10 +98,10 @@
         <div class="w-full bg-brand-dark px-6 lg:px-10 py-16 md:py-24 border-b border-white/10">
             <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
                 <div class="lg:col-span-7">
-                    <h1 class="text-4xl md:text-6xl font-bold text-white uppercase leading-[1.1] tracking-tight">
-                        Moving Your Cargo<br>
-                        Across Borders<span class="text-brand-orange">—</span><br>
-                        Seamlessly & Securely
+                    <h1 class="text-6xl md:text-8xl font-display text-white leading-[0.9] tracking-tight">
+                        MOVING YOUR CARGO<br>
+                        ACROSS BORDERS<span class="text-brand-orange">—</span><br>
+                        SEAMLESSLY & SECURELY
                     </h1>
                 </div>
                 <div class="lg:col-span-5 flex flex-col items-start lg:items-end gap-6">
@@ -128,10 +129,10 @@
 
             <!-- Big Typography -->
             <div class="max-w-5xl mb-20">
-                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight uppercase">
-                    Delivering Confidence Across Global Trade Routes. With Years Of Experience <span class="text-gray-400">In International Freight Forwarding, We Help Businesses Move Cargo Across Borders With Precision And Reliability.</span>
+                <h2 class="text-5xl md:text-7xl font-display text-gray-900 leading-[0.95] tracking-tight">
+                    DELIVERING CONFIDENCE ACROSS GLOBAL TRADE ROUTES. WITH YEARS OF EXPERIENCE <span class="text-gray-400">IN INTERNATIONAL FREIGHT FORWARDING, WE HELP BUSINESSES MOVE CARGO ACROSS BORDERS WITH PRECISION AND RELIABILITY.</span>
                 </h2>
-                <a href="#" class="inline-flex items-center gap-2 mt-8 text-xs font-bold uppercase tracking-widest border-b-2 border-brand-dark pb-1 hover:text-brand-orange hover:border-brand-orange transition-colors">
+                <a href="#" class="inline-flex items-center gap-2 mt-8 text-sm font-bold uppercase tracking-widest border-b-2 border-brand-dark pb-1 hover:text-brand-orange hover:border-brand-orange transition-colors">
                     + Learn More About Us
                 </a>
             </div>
@@ -142,8 +143,8 @@
                 <div class="bg-brand-orange text-white p-8 rounded-sm flex flex-col justify-between h-[280px]">
                     <svg class="w-8 h-8 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
                     <div>
-                        <div class="text-5xl font-bold mb-2">15+</div>
-                        <div class="text-sm font-medium opacity-90">Years Industry Experience</div>
+                        <div class="text-7xl font-display mb-2">15+</div>
+                        <div class="text-xs font-bold uppercase tracking-wider opacity-90">Years Industry Experience</div>
                     </div>
                 </div>
 
@@ -154,19 +155,19 @@
 
                 <!-- Small Stat 1 -->
                 <div class="bg-brand-gray p-8 rounded-sm flex flex-col justify-center items-center text-center h-[200px]">
-                    <div class="text-4xl md:text-5xl font-bold mb-3">120+</div>
+                    <div class="text-6xl md:text-7xl font-display mb-3">120+</div>
                     <div class="text-xs text-gray-500 font-bold uppercase tracking-wide">Countries Global Network Coverage</div>
                 </div>
 
                 <!-- Small Stat 2 -->
                 <div class="bg-brand-gray p-8 rounded-sm flex flex-col justify-center items-center text-center h-[200px]">
-                    <div class="text-4xl md:text-5xl font-bold mb-3">500K+</div>
+                    <div class="text-6xl md:text-7xl font-display mb-3">500K+</div>
                     <div class="text-xs text-gray-500 font-bold uppercase tracking-wide">Shipments Successfully Delivered</div>
                 </div>
 
                 <!-- Small Stat 3 (Spans 2 cols on md) -->
                 <div class="md:col-span-2 bg-brand-gray p-8 rounded-sm flex flex-col justify-center items-center text-center h-[200px]">
-                    <div class="text-4xl md:text-5xl font-bold mb-3">24/7</div>
+                    <div class="text-6xl md:text-7xl font-display mb-3">24/7</div>
                     <div class="text-xs text-gray-500 font-bold uppercase tracking-wide">Dedicated Logistics Team</div>
                 </div>
             </div>
@@ -186,8 +187,8 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight uppercase tracking-tight mb-6">
-                        Why Businesses Trust Us With Their Cargo <span class="text-gray-400">Delivering International Freight With Speed.</span>
+                    <h2 class="text-5xl md:text-6xl font-display text-gray-900 leading-[0.95] tracking-tight mb-6">
+                        WHY BUSINESSES TRUST US WITH THEIR CARGO <span class="text-gray-400">DELIVERING INTERNATIONAL FREIGHT WITH SPEED.</span>
                     </h2>
                 </div>
                 <div class="rounded-sm overflow-hidden aspect-video md:aspect-[16/9]">
@@ -236,8 +237,8 @@
                 <div class="w-1.5 h-1.5 bg-brand-orange"></div>
             </div>
             
-            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-16 uppercase tracking-tight max-w-2xl mx-auto">
-                Comprehensive International Freight Solutions
+            <h2 class="text-4xl md:text-5xl font-display text-white text-center mb-16 tracking-tight max-w-2xl mx-auto">
+                COMPREHENSIVE INTERNATIONAL FREIGHT SOLUTIONS
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -273,8 +274,8 @@
         <div class="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
             <div class="text-center mb-10">
                 <span class="text-[10px] font-bold tracking-widest uppercase text-brand-orange mb-4 block">Global Coverage</span>
-                <h2 class="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight max-w-2xl mx-auto leading-tight">
-                    Connecting Markets Across Continents
+                <h2 class="text-4xl md:text-6xl font-display text-white tracking-tight max-w-2xl mx-auto leading-[0.95]">
+                    CONNECTING MARKETS ACROSS CONTINENTS
                 </h2>
             </div>
             
@@ -302,19 +303,19 @@
             <!-- Dark Stats Strip -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-0 border-t border-white/10 bg-brand-darkSurface mt-[-1px] relative z-20">
                 <div class="p-8 border-b md:border-b-0 border-r border-white/5 text-center">
-                    <div class="text-3xl font-bold text-brand-orange mb-2">120+</div>
+                    <div class="text-5xl font-display text-brand-orange mb-2">120+</div>
                     <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Countries Active trade routes worldwide</div>
                 </div>
                 <div class="p-8 border-b md:border-b-0 md:border-r border-white/5 text-center">
-                    <div class="text-3xl font-bold text-brand-orange mb-2">200+</div>
+                    <div class="text-5xl font-display text-brand-orange mb-2">200+</div>
                     <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Ports & Airports Strategic global connections</div>
                 </div>
                 <div class="p-8 border-r border-white/5 text-center">
-                    <div class="text-3xl font-bold text-brand-orange mb-2">500+</div>
+                    <div class="text-5xl font-display text-brand-orange mb-2">500+</div>
                     <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Global Partners Trusted logistics collaborations</div>
                 </div>
                 <div class="p-8 text-center">
-                    <div class="text-3xl font-bold text-brand-orange mb-2">24/7</div>
+                    <div class="text-5xl font-display text-brand-orange mb-2">24/7</div>
                     <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Shipment Monitoring Real-time cargo visibility</div>
                 </div>
             </div>
@@ -332,11 +333,11 @@
             </div>
 
             <div class="mb-16 max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight uppercase tracking-tight mb-4">
-                    Specialized Logistics For Diverse Industries
+                <h2 class="text-4xl md:text-5xl font-display text-gray-900 leading-[0.95] tracking-tight mb-4">
+                    SPECIALIZED LOGISTICS FOR DIVERSE INDUSTRIES
                 </h2>
-                <p class="text-gray-400 text-2xl md:text-3xl font-bold uppercase tracking-tight">
-                    Tailored International Freight Solutions Designed.
+                <p class="text-gray-400 text-3xl md:text-4xl font-display tracking-tight">
+                    TAILORED INTERNATIONAL FREIGHT SOLUTIONS DESIGNED.
                 </p>
             </div>
 
@@ -381,12 +382,12 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight uppercase tracking-tight mb-6">
-                        Trusted By Businesses Worldwide To Move Cargo Safely And On Schedule.
+                    <h2 class="text-4xl md:text-5xl font-display text-gray-900 leading-[0.95] tracking-tight mb-6">
+                        TRUSTED BY BUSINESSES WORLDWIDE TO MOVE CARGO SAFELY AND ON SCHEDULE.
                     </h2>
                     
                     <div class="flex items-baseline gap-2 mb-10">
-                        <span class="text-5xl font-bold text-brand-orange">03</span>
+                        <span class="text-6xl font-display text-brand-orange">03</span>
                         <span class="text-sm font-bold text-gray-400">/06</span>
                     </div>
 
@@ -445,10 +446,10 @@
     <!-- Pre-Footer CTA -->
     <section id="contact" class="py-20 bg-brand-orange text-center">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight mb-4">
-                Ready To Move Your Cargo Across Borders?
+            <h2 class="text-4xl md:text-6xl font-display text-white tracking-tight mb-4 leading-[0.95]">
+                READY TO MOVE YOUR CARGO ACROSS BORDERS?
             </h2>
-            <p class="text-white/80 mb-10 max-w-lg mx-auto text-sm">
+            <p class="text-white/80 mb-10 max-w-lg mx-auto text-sm font-medium">
                 Get a customized international freight solution tailored to your business needs. Our team is ready to assist you.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
