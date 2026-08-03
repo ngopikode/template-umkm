@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM Trade House x Yanoer Global | Empowering Global Trade</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#02180F',
+                            light: '#062718',
+                            gold: '#FACC15',
+                            goldHover: '#EAB308'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #02180F; color: white; }
+        .glass-panel { background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); border: 1px solid rgba(250,204,21,0.2); }
+        .text-outline { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.2); }
+    </style>
+</head>
+<body class="font-sans antialiased text-white min-h-screen flex flex-col relative overflow-x-hidden">
+    
+    <!-- Background Texture/Overlay -->
+    <div class="fixed inset-0 z-[-1] opacity-20 pointer-events-none">
+        <img src="https://images.unsplash.com/photo-1559297434-fae8a1916a79?q=80&w=2560&auto=format&fit=crop" alt="Background" class="w-full h-full object-cover grayscale mix-blend-overlay">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-dark/95 to-brand-light/90"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="w-full z-50 py-6 px-4 sm:px-6 lg:px-12 border-b border-brand-gold/10">
+        <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <!-- Logos -->
+            <div class="flex items-center gap-4 text-brand-gold font-heading font-bold text-xl tracking-wide">
+                <span>FM Trade House</span>
+                <span class="text-white/30 text-sm font-light">X</span>
+                <span>Yanoer Global</span>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/80">
+                <a href="#" class="hover:text-brand-gold transition-colors">Home</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">About Us</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Services</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Partners</a>
+            </nav>
+
+            <!-- CTA -->
+            <a href="#" class="px-6 py-2.5 rounded-sm border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all text-sm font-medium font-heading tracking-wide">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col lg:flex-row items-center max-w-[1400px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-12 lg:py-20 gap-12 z-10">
+        
+        <!-- Left: Hero Text -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+            <h1 class="text-5xl md:text-7xl lg:text-[80px] font-bold font-heading leading-[1.1] mb-6 tracking-tight text-white">
+                Empowering<br>
+                <span class="text-brand-gold">Global Trade.</span><br>
+                Growing<br>
+                Together.
+            </h1>
+            <p class="text-lg text-white/70 max-w-md leading-relaxed mb-10 border-l-2 border-brand-gold pl-4">
+                Strategic collaboration delivering premium sourcing, logistics, and market expansion globally.
+            </p>
+        </div>
+
+        <!-- Right: Stats Cards -->
+        <div class="w-full lg:w-1/2 flex flex-col gap-4">
+            <div class="glass-panel p-6 rounded-xl flex items-center justify-between hover:bg-white/5 transition-colors">
+                <div>
+                    <h3 class="text-white/60 text-sm uppercase tracking-wider mb-1">Global Reach</h3>
+                    <div class="text-3xl font-bold font-heading">50+ Countries</div>
+                </div>
+                <div class="text-brand-gold opacity-50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+            </div>
+            
+            <div class="glass-panel p-6 rounded-xl flex items-center justify-between hover:bg-white/5 transition-colors">
+                <div>
+                    <h3 class="text-white/60 text-sm uppercase tracking-wider mb-1">Trusted Partners</h3>
+                    <div class="text-3xl font-bold font-heading">200+</div>
+                </div>
+                <div class="text-brand-gold opacity-50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+            </div>
+            
+            <div class="glass-panel p-6 rounded-xl flex items-center justify-between hover:bg-white/5 transition-colors">
+                <div>
+                    <h3 class="text-white/60 text-sm uppercase tracking-wider mb-1">Products</h3>
+                    <div class="text-3xl font-bold font-heading">1000+</div>
+                </div>
+                <div class="text-brand-gold opacity-50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                </div>
+            </div>
+            
+            <div class="glass-panel p-6 rounded-xl flex items-center justify-between hover:bg-white/5 transition-colors">
+                <div>
+                    <h3 class="text-white/60 text-sm uppercase tracking-wider mb-1">Satisfied Clients</h3>
+                    <div class="text-3xl font-bold font-heading">500+</div>
+                </div>
+                <div class="text-brand-gold opacity-50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Bars Container -->
+    <div class="w-full z-10 border-t border-brand-gold/20 bg-brand-dark/80 backdrop-blur-md">
+        
+        <!-- Features Bar -->
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-6 border-b border-brand-gold/10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm font-medium font-heading">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    </div>
+                    <span>Global Network</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.965 11.965 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <span>Reliable Solutions</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <span>Sustainable Growth</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                    </div>
+                    <span>Customer Focused</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Lowest Bar -->
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="max-w-xs shrink-0">
+                <h4 class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-1">What We Do</h4>
+                <p class="text-sm text-white/80 font-medium">Smart Solutions for Global Opportunities</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/60 font-medium">
+                <span class="hover:text-brand-gold cursor-pointer transition-colors">Export & Import</span>
+                <span class="hover:text-brand-gold cursor-pointer transition-colors">Sourcing & Procurement</span>
+                <span class="hover:text-brand-gold cursor-pointer transition-colors">Logistics & Shipping</span>
+                <span class="hover:text-brand-gold cursor-pointer transition-colors">Market Expansion</span>
+                <span class="hover:text-brand-gold cursor-pointer transition-colors">Custom Solutions</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
