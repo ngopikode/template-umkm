@@ -273,9 +273,9 @@
             </div>
 
             <!-- Middle Stats Bar (Below Hero Text) -->
-            <div class="w-full relative z-30 flex flex-col lg:flex-row items-stretch gap-6 mt-12">
+            <div class="w-full relative z-30 flex flex-col items-center mt-12 gap-6">
                 <!-- Highlight Grid (Left/Top) -->
-                <div class="w-full lg:w-[60%] grid grid-cols-2 md:grid-cols-4 gap-6 glass-panel rounded-2xl p-6 border-white/10 shrink-0">
+                <div class="w-full lg:w-[60%] self-start grid grid-cols-2 md:grid-cols-4 gap-6 glass-panel rounded-2xl p-6 border-white/10 shrink-0">
                     <div class="flex items-start gap-3">
                         <svg class="w-8 h-8 text-emerald-mintLight opacity-90 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
                         <div>
@@ -306,51 +306,71 @@
                     </div>
                 </div>
 
-                <!-- What We Do (Right/Bottom) -->
-                <div class="w-full lg:w-auto flex-grow flex flex-col md:flex-row items-center justify-between gap-6 bg-emerald-base/80 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-xl">
-                    <div class="shrink-0 lg:w-32">
+            <!-- Full Width Bottom Feature Bar (WHAT WE DO) Inside Hero -->
+            <div class="w-full mt-6 relative z-30 mb-[-4rem]">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8 border border-white/5 rounded-2xl p-6 lg:p-8 bg-emerald-base/90 backdrop-blur-md shadow-xl w-full">
+
+                    <div class="shrink-0 lg:w-48">
                         <div class="text-[10px] font-bold text-emerald-muted tracking-widest uppercase mb-1">WHAT WE DO</div>
-                        <div class="text-base font-bold font-heading leading-tight text-white">Smart Solutions for<br><span class="text-emerald-gold">Global Opportunities</span></div>
+                        <div class="text-lg font-bold font-heading leading-tight text-white">Smart Solutions for<br><span class="text-emerald-gold">Global Opportunities</span></div>
                     </div>
-                    
-                    <div class="w-full h-px md:w-px md:h-12 bg-white/10 mx-2 shrink-0"></div>
-                    
-                    <div class="flex-grow grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 w-full justify-items-start">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-8 h-8 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+
+                    <div class="w-full h-px lg:w-px lg:h-12 bg-white/10 mx-2"></div>
+
+                    <div class="flex-grow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 xl:gap-8 w-full justify-items-start">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-10 h-10 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            </svg>
                             <div>
-                                <div class="text-[11px] font-bold text-white mb-0.5 whitespace-nowrap">Export &amp; Import</div>
+                                <div class="text-xs font-bold text-white mb-0.5 whitespace-nowrap">Export &amp; Import</div>
+                                <div class="text-[10px] text-emerald-muted leading-tight">Seamless global trade<br>solutions</div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-8 h-8 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+
+                        <div class="flex items-center gap-3">
+                            <svg class="w-10 h-10 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
                             <div>
-                                <div class="text-[11px] font-bold text-white mb-0.5 whitespace-nowrap">Sourcing</div>
+                                <div class="text-xs font-bold text-white mb-0.5 whitespace-nowrap">Sourcing &amp; Procurement</div>
+                                <div class="text-[10px] text-emerald-muted leading-tight">Finding the best quality</div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-8 h-8 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+
+                        <div class="flex items-center gap-3">
+                            <svg class="w-10 h-10 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                            </svg>
                             <div>
-                                <div class="text-[11px] font-bold text-white mb-0.5 whitespace-nowrap">Logistics</div>
+                                <div class="text-xs font-bold text-white mb-0.5 whitespace-nowrap">Logistics &amp; Shipping</div>
+                                <div class="text-[10px] text-emerald-muted leading-tight">Efficient delivery<br>worldwide</div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2 hidden lg:flex xl:hidden 2xl:flex">
-                            <svg class="w-8 h-8 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+
+                        <div class="flex items-center gap-3">
+                            <svg class="w-10 h-10 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
                             <div>
-                                <div class="text-[11px] font-bold text-white mb-0.5 whitespace-nowrap">Expansion</div>
+                                <div class="text-xs font-bold text-white mb-0.5 whitespace-nowrap">Market Expansion</div>
+                                <div class="text-[10px] text-emerald-muted leading-tight">Helping your business</div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2 hidden xl:flex">
-                            <svg class="w-8 h-8 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+
+                        <div class="flex items-center gap-3">
+                            <svg class="w-10 h-10 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                            </svg>
                             <div>
-                                <div class="text-[11px] font-bold text-white mb-0.5 whitespace-nowrap">Custom</div>
+                                <div class="text-xs font-bold text-white mb-0.5 whitespace-nowrap">Custom Solutions</div>
+                                <div class="text-[10px] text-emerald-muted leading-tight">Tailored strategies</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
 
     <!-- Services Section -->
