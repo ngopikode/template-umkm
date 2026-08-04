@@ -90,7 +90,7 @@
         </div>
 
         <!-- Sticky Header / Nav -->
-        <header class="w-full z-50 glass-nav py-4 px-4 sm:px-6 lg:px-8 relative">
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-4 px-4 sm:px-6 lg:px-8 transition-all duration-300 w-full backdrop-blur-md bg-transparent">
             <div class="max-w-7xl mx-auto flex items-center justify-between">
 
                 <!-- Logo -->
@@ -141,7 +141,7 @@
                 </div>
 
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2 text-white transition-transform hover:scale-110">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-white transition-transform hover:scale-110 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-gold">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -152,20 +152,20 @@
             <!-- Mobile Menu Dropdown -->
             <div id="mobile-menu"
                 class="hidden lg:hidden absolute top-full left-0 w-full bg-emerald-base/95 backdrop-blur-md border-b border-white/10 py-4 px-4 shadow-xl">
-                <nav class="flex flex-col gap-4 text-sm font-medium">
-                    <a href="#hero" class="mobile-link text-emerald-gold border-l-2 border-emerald-gold pl-3">Home</a>
+                <nav class="flex flex-col gap-2 text-sm font-medium">
+                    <a href="#hero" class="mobile-link min-h-[44px] flex items-center text-emerald-gold border-l-2 border-emerald-gold pl-3">Home</a>
                     <a href="#about"
-                        class="mobile-link hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">About
+                        class="mobile-link min-h-[44px] flex items-center hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">About
                         Us</a>
                     <a href="#services"
-                        class="mobile-link hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">Our
+                        class="mobile-link min-h-[44px] flex items-center hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">Our
                         Services</a>
                     <a href="#fleet"
-                        class="mobile-link hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">Products</a>
+                        class="mobile-link min-h-[44px] flex items-center hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">Products</a>
                     <a href="#tracking"
-                        class="mobile-link hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">Tracking</a>
+                        class="mobile-link min-h-[44px] flex items-center hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">Tracking</a>
                     <a href="#contact"
-                        class="mobile-link hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">Contact
+                        class="mobile-link min-h-[44px] flex items-center hover:text-emerald-gold text-white pl-3 border-l-2 border-transparent transition-colors">Contact
                         Us</a>
                 </nav>
             </div>
@@ -173,7 +173,7 @@
 
         <!-- Main Hero Content -->
         <div
-            class="relative z-10 flex-grow flex flex-col justify-center px-0 sm:px-2 lg:px-4 max-w-7xl mx-auto w-full pt-20 pb-32">
+            class="relative z-10 flex-grow flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full pt-28 pb-20">
 
             <div class="flex flex-col lg:flex-row items-center w-full relative">
                 <!-- Left Text Content -->
@@ -324,7 +324,7 @@
                 <div class="w-full h-px lg:w-px lg:h-12 bg-white/10 mx-2"></div>
 
                 <div
-                    class="flex-grow grid grid-cols-2 md:grid-cols-5 gap-6 xl:gap-8 w-full justify-items-center xl:justify-items-start">
+                    class="flex-grow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 xl:gap-8 w-full justify-items-start">
                     <div class="flex items-center gap-3">
                         <svg class="w-10 h-10 text-emerald-gold opacity-80 shrink-0" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
@@ -861,7 +861,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
+            const header = document.getElementById('main-header');
 
+            // Toggle mobile menu
             btn.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
             });
@@ -873,6 +875,20 @@
                     menu.classList.add('hidden');
                 });
             });
+            
+            // Sticky header background opacity on scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('bg-emerald-base/90', 'shadow-lg');
+                    header.classList.remove('bg-transparent');
+                } else {
+                    header.classList.remove('bg-emerald-base/90', 'shadow-lg');
+                    header.classList.add('bg-transparent');
+                }
+            });
+            
+            // Trigger scroll event on load to set correct header state
+            window.dispatchEvent(new Event('scroll'));
         });
     </script>
 </body>
