@@ -54,12 +54,18 @@
             -webkit-text-stroke: 1px white;
         }
 
-        /* Glass Panels bottom left/right */
-        .glass-panel transition-all duration-300 ease-in-out cursor-pointer {
-            background: rgba(15, 23, 42, 0.7); /* Deep blue with opacity */
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
+        /* Glass Panels */
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(14, 61, 48, 0.4) 0%, rgba(11, 53, 40, 0.2) 100%);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 163, 67, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .glass-panel:hover {
+            border: 1px solid rgba(212, 163, 67, 0.4);
+            background: linear-gradient(135deg, rgba(14, 61, 48, 0.6) 0%, rgba(11, 53, 40, 0.3) 100%);
         }
     </style>
 </head>
@@ -150,7 +156,7 @@
         <div class="relative z-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full pb-10 flex flex-col md:flex-row justify-between items-end gap-6 pointer-events-none mt-auto">
             
                 <!-- Left Panel (Uploading) -->
-            <div class="glass-panel transition-all duration-300 ease-in-out cursor-pointer p-4 sm:p-6 w-full md:max-w-[320px] pointer-events-auto flex justify-between items-center relative overflow-hidden">
+            <div class="glass-panel transition-all duration-300 ease-in-out cursor-pointer p-4 sm:p-6 w-full md:max-w-[320px] pointer-events-auto flex justify-between items-center relative overflow-hidden rounded-xl">
                 <div class="z-10 relative">
                     <div class="text-[10px] uppercase tracking-wider text-emerald-muted font-semibold mb-2">UPLOADING</div>
                     <h3 class="text-sm font-bold font-heading mb-3 leading-snug">Book Container<br>Uploading Today</h3>
@@ -163,7 +169,7 @@
             </div>
 
             <!-- Right Panel (Tracking) -->
-            <div class="glass-panel transition-all duration-300 ease-in-out cursor-pointer p-4 sm:p-6 w-full md:max-w-[400px] pointer-events-auto">
+            <div class="glass-panel transition-all duration-300 ease-in-out cursor-pointer p-4 sm:p-6 w-full md:max-w-[400px] pointer-events-auto rounded-xl">
                 <div class="flex justify-between items-center mb-6">
                     <div class="text-lg font-bold font-heading">CN <span class="font-normal text-emerald-mutedLight text-base font-sans">SHG</span></div>
                     <!-- Ship icon small -->
