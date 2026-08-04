@@ -9,7 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,7 +18,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ['"Inter"', 'sans-serif'],
                         heading: ['"Plus Jakarta Sans"', 'sans-serif'],
                     },
                     colors: {
@@ -55,7 +55,7 @@
         }
 
         /* Glass Panels bottom left/right */
-        .glass-panel {
+        .glass-panel transition-all duration-300 ease-in-out cursor-pointer {
             background: rgba(15, 23, 42, 0.7); /* Deep blue with opacity */
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -150,7 +150,7 @@
         <div class="relative z-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full pb-10 flex flex-col md:flex-row justify-between items-end gap-6 pointer-events-none mt-auto">
             
                 <!-- Left Panel (Uploading) -->
-            <div class="glass-panel p-4 sm:p-6 w-full md:max-w-[320px] pointer-events-auto flex justify-between items-center relative overflow-hidden">
+            <div class="glass-panel transition-all duration-300 ease-in-out cursor-pointer p-4 sm:p-6 w-full md:max-w-[320px] pointer-events-auto flex justify-between items-center relative overflow-hidden">
                 <div class="z-10 relative">
                     <div class="text-[10px] uppercase tracking-wider text-emerald-muted font-semibold mb-2">UPLOADING</div>
                     <h3 class="text-sm font-bold font-heading mb-3 leading-snug">Book Container<br>Uploading Today</h3>
@@ -163,7 +163,7 @@
             </div>
 
             <!-- Right Panel (Tracking) -->
-            <div class="glass-panel p-4 sm:p-6 w-full md:max-w-[400px] pointer-events-auto">
+            <div class="glass-panel transition-all duration-300 ease-in-out cursor-pointer p-4 sm:p-6 w-full md:max-w-[400px] pointer-events-auto">
                 <div class="flex justify-between items-center mb-6">
                     <div class="text-lg font-bold font-heading">CN <span class="font-normal text-emerald-mutedLight text-base font-sans">SHG</span></div>
                     <!-- Ship icon small -->
@@ -283,15 +283,15 @@
                 <!-- Stats Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 lg:mt-0">
                     <div class="bg-emerald-panelLight/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                        <div class="text-4xl font-bold font-heading text-white mb-2">150<span class="text-emerald-gold">+</span></div>
+                        <div class="text-4xl font-bold font-heading text-white mb-2">150<span class="text-[#4ADE80]">+</span></div>
                         <div class="text-sm text-white/80 font-bold">Countries Covered</div>
                     </div>
                     <div class="bg-emerald-panelLight/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm translate-y-8">
-                        <div class="text-4xl font-bold font-heading text-white mb-2">2M<span class="text-emerald-gold">+</span></div>
+                        <div class="text-4xl font-bold font-heading text-white mb-2">2M<span class="text-[#4ADE80]">+</span></div>
                         <div class="text-sm text-white/80 font-bold">TEUs Handled Annually</div>
                     </div>
                     <div class="bg-emerald-panelLight/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                        <div class="text-4xl font-bold font-heading text-white mb-2">99.8<span class="text-emerald-gold">%</span></div>
+                        <div class="text-4xl font-bold font-heading text-white mb-2">99.8<span class="text-[#4ADE80]">%</span></div>
                         <div class="text-sm text-white/80 font-bold">On-Time Delivery</div>
                     </div>
                     <div class="bg-emerald-panelLight/50 p-6 rounded-2xl border border-white/10 backdrop-blur-sm translate-y-8">
@@ -455,9 +455,9 @@
                             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                 <svg class="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a5 5 0 11-14 0 5 5 0 0114 0z"></path></svg>
                             </div>
-                            <input type="text" placeholder="e.g. GLB-88392019" class="w-full bg-emerald-base border border-white/20 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-emerald-gold focus:ring-1 focus:ring-emerald-gold transition-colors">
+                            <input type="text" placeholder="e.g. GLB-88392019" class="w-full bg-emerald-base border border-white/20  py-4 pl-12 pr-4 text-white focus:outline-none focus:border-emerald-gold focus:ring-1 focus:ring-emerald-gold transition-colors">
                         </div>
-                        <button type="button" class="w-full sm:w-auto bg-emerald-gold hover:bg-emerald-goldHover text-white font-bold font-heading py-4 px-8 rounded-xl transition-colors">
+                        <button type="button" class="w-full sm:w-auto bg-emerald-gold hover:bg-emerald-goldHover text-white font-bold font-heading py-4 px-8  transition-colors">
                             Locate
                         </button>
                     </div>
